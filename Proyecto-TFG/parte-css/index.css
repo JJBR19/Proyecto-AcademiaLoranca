@@ -1,0 +1,217 @@
+
+/*--------------------------------------------------------------*/
+/*CARRUSEL CSS*/
+/*---------------------------------------------------------------*/
+.carrusel{
+width:100%;
+max-width:1500px;
+margin:40px auto;
+position:relative;
+overflow:hidden;
+border-radius:12px;
+background:#000;
+}
+
+
+.carrusel .slides{
+display:flex;
+transition: transform 0.6s ease-in-out;
+}
+
+
+.carrusel .slides img{
+width:100%;
+height:480px;
+object-fit: cover;
+flex-shrink:0;
+}
+
+
+/* Botones */
+.carrusel .btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+border:none;
+color:white;
+font-size:35px;
+padding:10px 15px;
+cursor:pointer;
+z-index:10;
+border-radius:50%;
+}
+
+
+.carrusel .btn.left{ left:15px; }
+.carrusel .btn.right{ right:15px; }
+
+
+.carrusel .btn:hover{
+background:rgba(193, 187, 187, 0.9);
+}
+
+
+@media(max-width:768px){
+.carrusel .slides img{ max-height:260px; }
+}
+/*------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------*/
+/*CSS PARTE INFORMACION GENERAL*/
+/*----------------------------------------------------------*/
+
+/* BLOQUE PRINCIPAL */
+.bloque-principal {
+    margin: 0 auto 60px auto;
+    background: #fff;
+    color: #000;
+    padding: 50px 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HERO ACADÉMICO */
+.hero-academia {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.hero-academia h1 {
+    font-size: 38px;
+    color: #2b6cb0;
+    margin-bottom: 10px;
+}
+
+.hero-academia h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #1a365d;
+}
+
+.hero-academia p {
+    font-size: 18px;
+    max-width: 850px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.hero-botones a {
+    margin: 0 10px;
+}
+
+/* DECORACIONES HERO */
+.decor-left, .decor-right {
+    position: absolute;
+    width: 150px;
+    opacity: 0.5;
+}
+
+.decor-left {
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.decor-right {
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* INFO GENERAL */
+.info-general {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.info-box {
+    background: #eef2f7;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.info-img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* NIVELES EDUCATIVOS */
+.niveles-educativos {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.niveles-educativos h2 {
+    color: #2b6cb0;
+    margin-bottom: 30px;
+}
+
+.niveles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.nivel-card {
+    background: #f0f4fa;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* OBJETIVOS */
+.objetivos {
+    text-align: center;
+}
+
+.objetivos h2 {
+    color: #2b6cb0;
+    margin-bottom: 25px;
+}
+
+.objetivos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .info-general,
+    .niveles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .decor-left, .decor-right {
+        display: none;
+    }
+}
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
