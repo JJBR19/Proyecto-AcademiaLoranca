@@ -769,7 +769,7 @@ section h2 {
 ================================ */
 .inscripcion {
     background:
-        linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(99, 102, 241, 0.9)),
+        linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(148, 149, 195, 0.9)),
         url("imagenes/inscripcion.jpg") center/cover no-repeat;
     color: white;
     text-align: center;
@@ -827,12 +827,12 @@ section h2 {
 .footer {
     background-color: #3962e9; /* Azul corporativo */
     color: white;
-    padding: 50px 0 20px 0;
+    padding: 50px 0 0px 0;
     font-family: sans-serif;
 }
 
 .footer-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
@@ -918,6 +918,11 @@ section h2 {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 20px;
     text-align: center;
+    background-color: #657b95;
+    padding-bottom: 30px;
+    bottom: 0;
+    
+    
 }
 
 .footer-legal a {
