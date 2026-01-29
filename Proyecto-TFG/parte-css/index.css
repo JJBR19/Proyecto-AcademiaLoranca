@@ -60,14 +60,14 @@
 
         .link-encabezado {
             text-decoration: none;
-            color: #000000;
+            color: #ffffff;
             font-weight: 500;
             transition: 0.3s ease;
             cursor: pointer;
         }
 
         .link-encabezado:hover {
-            color: #cdd1d6;
+            color: #dbdbdb;
             transform:scale(1.2,1.2);
             padding: 0px 12px;
         }
