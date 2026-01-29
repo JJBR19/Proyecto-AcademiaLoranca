@@ -462,19 +462,6 @@ section h2 {
 }
 
 
-.sobre-nosotros::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    right: -80px;
-    width: 200px;
-    height: 200px;
-    background: var(--yellow);
-    border-radius: 50%;
-    opacity: 0.15;
-}
-
-
 .sobre-nosotros .intro {
     text-align: center;
     max-width: 850px;
