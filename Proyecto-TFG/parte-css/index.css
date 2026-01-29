@@ -1,3 +1,79 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+
+/*PARTE HEADER*/
+
+    /*-------------- ESTILOS HEADER -------------*/
+        header {
+            width: 100%;
+            background: #3962e9;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-sizing: border-box;
+        }
+
+        header > div {
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    /*------------------------------------------*/
+
+    /*------------------ LOGO ------------------*/
+        #logo {
+            height: 90px;
+            cursor: pointer;
+        }
+
+        /* Div logo + nombre */
+        #div-logo {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-direction: row;
+        }
+
+        /* Nombre academia */
+        #nombre_academia {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 22px;
+            font-weight: 700;
+            font-style: italic;
+            color: #f2f3f0;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+    /*------------------------------------------*/
+
+    /*------------------ MENÚ ------------------*/
+        #menu-header {
+            display: flex;
+            gap: 25px;
+        }
+
+        .link-encabezado {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .link-encabezado:hover {
+            color: #cdd1d6;
+            transform:scale(1.2,1.2);
+            padding: 0px 12px;
+        }
+    /*------------------------------------------*/
+
+/**/   
 
 /*--------------------------------------------------------------*/
 /*CARRUSEL CSS*/
@@ -212,6 +288,11 @@ background:rgba(193, 187, 187, 0.9);
     .decor-left, .decor-right {
         display: none;
     }
+    #menu-header {
+        display: none;
+    }
+
+    #logo {
+        height: 50px;
+    }
 }
-/*----------------------------------------------------------------*/
-/*----------------------------------------------------------------*/
