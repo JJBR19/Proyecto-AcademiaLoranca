@@ -1,79 +1,83 @@
 * {
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /*PARTE HEADER*/
 
-    /*-------------- ESTILOS HEADER -------------*/
-        header {
-            width: 100%;
-            background: #3962e9;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-sizing: border-box;
-        }
+/*-------------- ESTILOS HEADER -------------*/
+header {
+    width: 100%;
+    background: #3962e9;
+    background: linear-gradient(440deg, #2a17cf, #00d5ff);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box;
+}
 
-        header > div {
-            max-width: 1200px;
-            margin: auto;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    /*------------------------------------------*/
+header>div {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    /*------------------ LOGO ------------------*/
-        #logo {
-            height: 90px;
-            cursor: pointer;
-        }
+/*------------------------------------------*/
 
-        /* Div logo + nombre */
-        #div-logo {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            flex-direction: row;
-        }
+/*------------------ LOGO ------------------*/
+#logo {
+    height: 90px;
+    cursor: pointer;
+}
 
-        /* Nombre academia */
-        #nombre_academia {
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 22px;
-            font-weight: 700;
-            font-style: italic;
-            color: #f2f3f0;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
-    /*------------------------------------------*/
+/* Div logo + nombre */
+#div-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+}
 
-    /*------------------ MENÚ ------------------*/
-        #menu-header {
-            display: flex;
-            gap: 25px;
-        }
+/* Nombre academia */
+#nombre_academia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    color: #f2f3f0;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
 
-        .link-encabezado {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
-            transition: 0.3s ease;
-            cursor: pointer;
-        }
+/*------------------------------------------*/
 
-        .link-encabezado:hover {
-            color: #dbdbdb;
-            transform:scale(1.2,1.2);
-            padding: 0px 12px;
-        }
-    /*------------------------------------------*/
+/*------------------ MENÚ ------------------*/
+#menu-header {
+    display: flex;
+    gap: 25px;
+}
 
-/**/   
+.link-encabezado {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.link-encabezado:hover {
+    color: #dbdbdb;
+    transform: scale(1.2, 1.2);
+    padding: 0px 12px;
+}
+
+/*------------------------------------------*/
+
+/**/
 
 /*--------------------------------------------------------------*/
 /*--------------------------CARRUSEL CSS-------------------------*/
@@ -192,7 +196,7 @@
 /* BOTÓN */
 .cta-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(15deg, #000acc, #03dafb);
     color: white;
     padding: 10px 22px;
     border-radius: 30px;
@@ -200,7 +204,8 @@
     font-weight: 600;
     font-size: 0.9rem;
     transition: 0.3s;
-    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+    box-shadow: 0 8px 20px rgba(36, 32, 141, 0.4);
+    background-color: #0c0aa5;
 }
 
 
@@ -411,6 +416,8 @@ body {
 
 .btn-primary {
     background: var(--accent);
+    background: linear-gradient(60deg, #2f3f95, #000c8c);
+    background-color: #6e6f8d;
     color: white;
     padding: 15px 36px;
     border-radius: 50px;
@@ -428,17 +435,19 @@ body {
 
 .btn-secondary {
     background: white;
+    background: linear-gradient(15deg, #6064af, #26cae3);
     color: var(--primary);
     padding: 15px 36px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    color: #ffffff;
 }
 
 
 .btn-secondary:hover {
-    background: #eef2ff;
+    background: #00d9ff;
 }
 
 
@@ -457,144 +466,261 @@ section h2 {
    SOBRE NOSOTROS
 ================================ */
 .sobre-nosotros {
-    background: white;
-    position: relative;
+    background: #f8faff;
+    padding: 60px 20px 40px 20px;
 }
 
+.sobre-nosotros h2 {
+    font-size: 2.8rem;
+    color: #1e293b;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 800;
+}
 
 .sobre-nosotros .intro {
     text-align: center;
-    max-width: 850px;
+    max-width: 800px;
     margin: 0 auto 60px;
-    color: var(--muted);
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
 
+/* VALORES GRID */
 .valores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
 }
-
 
 .valor-card {
-    background: linear-gradient(135deg, #ffffff, #f0f6ff);
-    padding: 28px;
-    text-align: center;
+    background: #ffffff;
+    padding: 30px 25px;
     border-radius: 20px;
-    font-weight: 600;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    text-align: center;
 }
-
 
 .valor-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.valor-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+.valor-card p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.6;
 }
 
 
-/* ================================
+/* ==============================
    SERVICIOS
 ================================ */
+
+
+
 .servicios {
-    background: var(--bg-soft);
+    padding: 40px 20px 5px 20px;
+    background-color: #f9fafb;
 }
 
-
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-
-
-.servicio-card {
-    background: white;
-    padding: 30px 25px;
-    border-radius: 22px;
+.servicios h2 {
     text-align: center;
-    font-weight: 600;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-    position: relative;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: #1e3a8a; /* Azul oscuro */
+    font-weight: 700;
 }
 
-
-.servicio-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    opacity: 0.05;
-    border-radius: 22px;
-}
-
-
-.servicio-card:hover {
-    transform: translateY(-8px) scale(1.02);
-}
-
-
-/* ================================
-   ASIGNATURAS PRO
-================================ */
-.asignaturas {
-    background: white;
-}
-
-
-.asignaturas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 22px;
-}
-
-
-/* CARD */
-.asignatura-card {
-    background: linear-gradient(135deg, #f0f6ff, #ffffff);
-    border-radius: 18px;
-    padding: 16px;
-    text-align: center;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-
-.asignatura-card:hover {
-    transform: translateY(-6px) scale(1.03);
-}
-
-
-/* CONTENEDOR IMAGEN */
-.asignatura-img {
-    width: 100%;
-    height: 130px;
-    border-radius: 14px;
-    overflow: hidden;
-    margin-bottom: 12px;
-    background: #eaf1ff;
+.servicio-item {
     display: flex;
     align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
+.servicio-item.reverse {
+    flex-direction: row-reverse;
+}
 
-/* IMAGEN */
+.servicio-img {
+    flex: 1 1 350px;
+    min-width: 280px;
+    max-width: 450px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.servicio-text {
+    flex: 2 1 500px;
+    min-width: 300px;
+}
+
+.servicio-text h3 {
+    font-size: 1.8rem;
+    color: #2563eb; /* Azul llamativo */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.servicio-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #334155; /* Gris oscuro */
+}
+
+.servicio-text ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.servicio-text ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2563eb; /* Azul para listas */
+    position: relative;
+}
+
+.servicio-text ul li::before {
+    content: "✔";
+    color: #16a34a; /* Verde check */
+    margin-right: 8px;
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+    .servicio-item {
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .servicio-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicio-item,
+    .servicio-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio-img {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .servicio-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .servicio-text p,
+    .servicio-text ul li {
+        font-size: 0.95rem;
+    }
+
+    .servicio-item {
+        margin-bottom: 50px;
+    }
+}
+
+
+
+/* ==============================
+   ASIGNATURAS
+================================ */
+.asignaturas {
+    background: #ffffff;
+    padding: 40px 20px 40px 20px;
+}
+
+.asignaturas h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.asignaturas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 75px;
+}
+
+.asignatura-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.asignatura-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.asignatura-img {
+    width: 100%;
+    height: 140px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
 .asignatura-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.asignatura-card h3 {
+    font-size: 1.2rem;
+    color: #1e40af;
+    margin-bottom: 10px;
+}
 
-/* TEXTO */
-.asignatura-card span {
-    display: block;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #1e293b;
+.asignatura-card p {
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.5;
 }
 
 
@@ -625,15 +751,36 @@ section h2 {
 /* ================================
    NIVELES PRO
 ================================ */
+
 .niveles {
-    background: var(--bg-soft);
+
+    position: relative;
+    min-height: 200px;
+    color: #000;
+    background-size: cover;
+    
+}
+
+.niveles::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b8fbff;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 200px;
 }
 
 
 .niveles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
+    gap: 48px;
 }
 
 
@@ -714,29 +861,142 @@ section h2 {
 
 
 
-/* ================================
+/* ==============================
    METODOLOGÍA
 ================================ */
+
+
+
 .metodologia {
-    background: white;
+    padding: 40px 20px 40px 20px;
+    background-color: #ffffff;
 }
 
-
-.metodologia-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
-}
-
-
-.metodo-card {
-    background: linear-gradient(135deg, #f0f6ff, #ffffff);
-    padding: 24px;
-    border-radius: 18px;
+.metodologia h2 {
     text-align: center;
-    font-weight: 600;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: #1e3a8a; /* Azul oscuro */
+    font-weight: 700;
 }
+
+.metodologia-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.metodologia-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.metodo-img {
+    flex: 1 1 350px;
+    min-width: 280px;
+    max-width: 450px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.metodo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.metodo-text {
+    flex: 2 1 500px;
+    min-width: 300px;
+}
+
+.metodo-text h3 {
+    font-size: 1.8rem;
+    color: #2563eb; /* Azul llamativo */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.metodo-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #334155; /* Gris oscuro */
+}
+
+.metodo-text ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.metodo-text ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2563eb; /* Azul para listas */
+    position: relative;
+}
+
+.metodo-text ul li::before {
+    content: "✔";
+    color: #16a34a; /* Verde check */
+    margin-right: 8px;
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 1024px) {
+    .metodologia-item {
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .metodo-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .metodologia-item,
+    .metodologia-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .metodo-img {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .metodo-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .metodo-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .metodo-text p,
+    .metodo-text ul li {
+        font-size: 0.95rem;
+    }
+
+    .metodologia-item {
+        margin-bottom: 50px;
+    }
+}
+
 
 
 /* ================================
@@ -744,6 +1004,7 @@ section h2 {
 ================================ */
 .beneficios {
     background: var(--bg-soft);
+    background-color: #e8f3f3;
 }
 
 
@@ -755,7 +1016,7 @@ section h2 {
 
 
 .beneficios-lista li {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 16px 20px;
     margin-bottom: 14px;
     border-radius: 14px;
@@ -820,12 +1081,15 @@ section h2 {
         font-size: 1.2rem;
     }
 }
+
 /*----------------------------------------------------------------*/
 /*--------------------------FOOTER--------------------------------*/
 /*----------------------------------------------------------------*/
 
 .footer {
-    background-color: #3962e9; /* Azul corporativo */
+    background-color: #3962e9;
+    background: linear-gradient(440deg, #2a17cf, #298a9d);
+    /* Azul corporativo */
     color: white;
     padding: 50px 0 0px 0;
     font-family: sans-serif;
@@ -887,10 +1151,10 @@ section h2 {
     display: flex;
     align-items: center;
     color: rgba(255, 255, 255, 0.8);
-    
+
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
@@ -921,8 +1185,8 @@ section h2 {
     background-color: #657b95;
     padding-bottom: 30px;
     bottom: 0;
-    
-    
+
+
 }
 
 .footer-legal a {
@@ -948,3 +1212,64 @@ section h2 {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+
+/* ================================
+   MENÚ MÓVIL
+================================ */
+
+.menu-mobile-btn {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* MODO MÓVIL */
+@media (max-width: 768px) {
+
+    /* Ocultamos menú normal */
+    #menu-header {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #3962e9;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    /* Links más grandes */
+    .link-encabezado {
+        font-size: 1.2rem;
+    }
+
+    /* Mostramos botón */
+    .menu-mobile-btn {
+        display: block;
+    }
+
+    /* Menú activo */
+    #menu-header.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+}
+
+/* Animación */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
