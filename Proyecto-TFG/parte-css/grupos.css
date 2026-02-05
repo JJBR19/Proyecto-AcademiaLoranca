@@ -1,0 +1,120 @@
+main{
+    background-color: #c1d9da;
+}
+
+.pagina-clases {
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 160px; 
+}
+
+.titulo {
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    color: #0f172a;
+    text-align: center;
+}
+
+.clases {
+    padding-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.zona-clase {
+    width: 75%;
+    max-width: 1100px;
+    background: linear-gradient(135deg, #f0f6ff, #ffffff);
+    padding: 45px 50px;
+    border-radius: 26px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.zona-clase:hover {
+    transform: translateY(-8px);
+}
+
+.zona-clase h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    color: #3b82f6;
+}
+
+.zona-clase p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.zona-grupos {
+    width: 350px;
+    height: 250px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color:#bff0bf;
+}
+
+.div-grupos {
+    display: flex;
+    gap: 120px;
+}
+
+
+.div-apuntarme {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton-apuntarse {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 16px 55px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
+    transition: 0.3s ease;
+}
+
+.boton-apuntarse:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/*Responsivo*/
+
+@media (max-width: 900px) {
+    .zona-clase {
+        width: 90%;
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-clases {
+        font-size: 2rem;
+    }
+
+    .zona-clase h2 {
+        font-size: 1.4rem;
+    }
+
+    .zona-clase p {
+        font-size: 0.95rem;
+    }
+}
+
+
