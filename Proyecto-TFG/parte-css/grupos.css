@@ -1,120 +1,120 @@
-main{
-    background-color: #c1d9da;
+/* CONTENEDOR PRINCIPAL */
+main {
+    background-color: #eef6f7;
 }
 
-.pagina-clases {
-    min-height: 100vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 120px 20px 160px; 
-}
-
-.titulo {
-    font-size: 2.6rem;
-    margin-bottom: 40px;
-    padding-top: 20px;
-    color: #0f172a;
-    text-align: center;
-}
-
+/* SECCIÓN CLASES */
 .clases {
-    padding-top: 60px;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    gap: 26px;
 }
 
+/* TARJETAS DE CLASE */
 .zona-clase {
-    width: 75%;
-    max-width: 1100px;
-    background: linear-gradient(135deg, #f0f6ff, #ffffff);
-    padding: 45px 50px;
-    border-radius: 26px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-}
-
-.zona-clase:hover {
-    transform: translateY(-8px);
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .zona-clase h2 {
-    font-size: 1.7rem;
-    margin-bottom: 18px;
-    color: #3b82f6;
+    font-size: 1.9rem;
+    color: #1e3a8a;
+    margin-bottom: 14px;
 }
 
 .zona-clase p {
     font-size: 1.05rem;
-    color: #64748b;
-    line-height: 1.7;
+    color: #475569;
+    line-height: 1.8;
 }
 
+/* BLOQUE GRUPOS */
+.div-grupos {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.div-grupos > h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* TARJETAS DE GRUPO */
 .zona-grupos {
-    width: 350px;
-    height: 250px;
-    border: 2px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    background-color:#bff0bf;
+    flex: 1;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    border-radius: 16px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
 }
 
+.zona-grupos:hover {
+    transform: translateY(-5px);
+}
+
+.zona-grupos h2 {
+    font-size: 1.3rem;
+    color: #1e40af;
+    line-height: 1.4;
+}
+
+/* DISTRIBUCIÓN DE LOS GRUPOS */
 .div-grupos {
     display: flex;
-    gap: 120px;
+    flex-direction: column;
+    gap: 30px;
 }
 
+.div-grupos .zona-grupos {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
+/* BOTÓN */
 .div-apuntarme {
-    margin-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
 }
 
 .boton-apuntarse {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(135deg, #16a34a, #22c55e);
     color: white;
-    padding: 16px 55px;
+    padding: 12px 40px;
     border-radius: 50px;
-    text-decoration: none;
+    font-size: 1.1rem;
     font-weight: 600;
-    font-size: 1rem;
-    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
-    transition: 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 14px 35px rgba(34, 197, 94, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .boton-apuntarse:hover {
     transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 18px 40px rgba(34, 197, 94, 0.5);
 }
 
-/*Responsivo*/
-
-@media (max-width: 900px) {
-    .zona-clase {
-        width: 90%;
-        padding: 35px 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .titulo-clases {
-        font-size: 2rem;
-    }
-
-    .zona-clase h2 {
-        font-size: 1.4rem;
-    }
-
-    .zona-clase p {
-        font-size: 0.95rem;
+@media (min-width: 900px) {
+    .div-grupos {
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
 
+img{
+    width: 140px;
+}
