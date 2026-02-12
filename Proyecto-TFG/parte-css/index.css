@@ -32,6 +32,12 @@ header>div {
 #logo {
     height: 90px;
     cursor: pointer;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#logo:hover {
+    transform: scale(1.05);
 }
 
 /* Div logo + nombre */
@@ -51,6 +57,11 @@ header>div {
     color: #f2f3f0;
     letter-spacing: 1px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#nombre_academia:hover{
+    transform: scale(1.05);
 }
 
 /*------------------------------------------*/
@@ -487,6 +498,17 @@ section h2 {
     line-height: 1.8;
 }
 
+.sobre-nosotros .experiencia{
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-top: 0%;
+    margin-bottom: 80px;
+    padding: 0%;
+    text-align: center;
+}
+
 
 /* VALORES GRID */
 .valores-grid {
@@ -529,7 +551,7 @@ section h2 {
 
 
 .servicios {
-    padding: 40px 20px 5px 20px;
+    padding: 70px 20px 20px 20px;
     background-color: #f9fafb;
 }
 
@@ -665,7 +687,7 @@ section h2 {
 ================================ */
 .asignaturas {
     background: #ffffff;
-    padding: 40px 20px 40px 20px;
+    padding: 10px 20px 20px 20px;
 }
 
 .asignaturas h2 {
@@ -756,9 +778,13 @@ section h2 {
 
     position: relative;
     min-height: 200px;
-    color: #000;
+    color: #ffffff;
     background-size: cover;
     
+}
+
+.nivelesTitulo{
+    color: #010057;
 }
 
 .niveles::before {
@@ -829,6 +855,7 @@ section h2 {
     margin-bottom: 12px;
     font-size: 1.3rem;
     color: var(--dark);
+    color: #1e4169;
 }
 
 
@@ -1270,6 +1297,250 @@ section h2 {
         opacity: 1;
         transform: translateY(0);
     }
+
+
+
 }
+
+/* =====================================================
+   MICROINTERACCIONES PROFESIONALES
+===================================================== */
+
+/* Animación base suave */
+* {
+    transition: all 0.25s ease;
+}
+
+/* =====================================================
+   BOTONES PRO
+===================================================== */
+
+.btn-primary,
+.btn-secondary,
+.cta-btn,
+.btn-prueba {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover,
+.cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* efecto click */
+.btn-primary:active,
+.btn-secondary:active,
+.cta-btn:active {
+    transform: scale(0.96);
+}
+
+/* =====================================================
+   TARJETAS PREMIUM
+===================================================== */
+
+.valor-card,
+.asignatura-card,
+.nivel-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.valor-card:hover,
+.asignatura-card:hover,
+.nivel-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* zoom imagen suave */
+.servicio-img img,
+.metodo-img img,
+.asignatura-img img,
+.nivel-img img {
+    transition: transform 0.5s ease;
+}
+
+.servicio-item:hover img,
+.metodologia-item:hover img,
+.asignatura-card:hover img,
+.nivel-card:hover img {
+    transform: scale(1.06);
+}
+
+/* =====================================================
+   HEADER MÁS PROFESIONAL
+===================================================== */
+
+header {
+    backdrop-filter: blur(12px);
+}
+
+.link-encabezado {
+    position: relative;
+}
+
+/* subrayado elegante */
+.link-encabezado::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.link-encabezado:hover::after {
+    width: 100%;
+}
+
+/* =====================================================
+   EFECTO SCROLL SUAVE (usar clase .reveal)
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================================
+   SECCIONES MÁS PREMIUM
+===================================================== */
+
+section {
+    position: relative;
+}
+
+/* sombra suave entre bloques */
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: rgba(0,0,0,0.04);
+}
+
+/* =====================================================
+   BENEFICIOS MÁS VISUALES
+===================================================== */
+
+.beneficios-lista li {
+    transition: transform 0.3s ease;
+}
+
+.beneficios-lista li:hover {
+    transform: translateX(10px);
+}
+
+/* =====================================================
+   FOOTER PRO
+===================================================== */
+
+.footer-col ul li {
+    transition: transform 0.25s ease;
+}
+
+.footer-col ul li:hover {
+    transform: translateX(6px);
+}
+
+/* =====================================================
+   HERO MÁS VIVO
+===================================================== */
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h1 { animation-delay: 0.2s; }
+.hero-content h2 { animation-delay: 0.4s; }
+.hero-content p  { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   SCROLLBAR MODERNA
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef2ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#3b82f6,#6366f1);
+    border-radius: 20px;
+}
+
+
+/* =====================================
+   ANIMACIONES AL HACER SCROLL
+===================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s ease;
+}
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+/* cuando se activa */
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-zoom.active {
+    opacity: 1;
+    transform: none;
+}
+
+
+
 
 
