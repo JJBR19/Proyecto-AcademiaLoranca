@@ -7,7 +7,24 @@
         <title>AcademiaLoranca</title>
         <link rel="stylesheet" href="../parte-css/index.css">
         <link rel="stylesheet" href="../parte-css/grupos.css">
+        <script>
+            function abrirPOPUP(id) {
+                document.getElementById(id).style.display = "flex";
+            }
 
+            function cerrarPOPUP(id) {
+                document.getElementById(id).style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                let POPUPs = document.getElementsByClassName("POPUP");
+                for (let POPUP of POPUPs) {
+                    if (event.target == POPUP) {
+                        POPUP.style.display = "none";
+                    }
+                }
+            }
+        </script>
 
     </head>
 
@@ -36,21 +53,21 @@
             <section class="clases">
 
                 <div class="zona-clase">
-                    <h2>Clases de Refuerzo</h2>
+                    <h2>📖 Clases de Refuerzo 📖</h2>
                     <p>
                         Refuerzo para primaria, ESO y bachillerato, resolución de dudas y seguimiento continuo para mejorar el rendimiento académico.
                     </p>
                 </div>
 
                 <div class="zona-clase">
-                    <h2>Preparación de Exámenes</h2>
+                    <h2>📝 Preparación de Exámenes 📝</h2>
                     <p>
-                        Preparación para exámenes, recuperaciones y EVAU.Técnicas de estudio y simulacros para afrontar las pruebas con seguridad.
+                        Preparación para exámenes, recuperaciones y PAU.Técnicas de estudio y simulacros para afrontar las pruebas con seguridad.
                     </p>
                 </div>
 
                 <div class="zona-clase">
-                    <h2>Estudios generales, desde matemáticas hasta geografía</h2>
+                    <h2>🎓 Estudios generales, desde matemáticas hasta geografía 🎓</h2>
                     <p>
                         Acompañamos al estudiante en el aprendizaje de cualquier asignatura, ofreciendo explicaciones claras, 
                         apoyo continuo y una enseñanza adaptada para lograr resultados reales.
@@ -60,20 +77,79 @@
                 
                 <div class="div-grupos">
                     <h2>GRUPOS:</h2>
-                    <div class="zona-grupos">
+                    <div class="zona-grupos" onclick="abrirPOPUP('POPUP1')">
                         <h2>Grupo 1: PRIMARIA + 1º ESO</h2>
-                        <img src="../imagenes/niños_grupos1.png">
+                        <img id="fotos-grupos" src="../imagenes/niños_grupos1.png">
                     </div>
-                    <div class="zona-grupos">
+                    <div class="zona-grupos" onclick="abrirPOPUP('POPUP2')">
                         <h2>Grupo 2: 2-4º ESO+ BACHILLERATO</h2>
+                        <img id="fotos-grupos" src="../imagenes/adolescentes_grupos.png">
                     </div>
                 </div>
 
             </section>
-
+            <!-- 
             <div class="div-apuntarme">
-                <a href="#" class="boton-apuntarse">Apuntarme</a>
+                <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
             </div>
+           -->
+
+            <!-- POP-UP 1 -->
+                <div id="POPUP1" class="POPUP">
+                    <div class="POPUP-contenido">
+                        <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
+                        <h2>Grupo 1: Primaria + 1º ESO</h2>
+                        
+                        <p><strong>Profesora:</strong>Isabel</p>
+                        <p><strong>Horario:</strong>Lunes a Jueves(15:00-21:00)</p>
+                        <p><strong>Plazas:</strong>8 personas por grupo</p>
+                        <p><strong>Precio:</strong>Según nº asignaturas</p>
+                        
+                        <h3>Información adicional:</h3>
+                        <ul>
+                            <li>Todas las asignaturas cuestan los mismo</li>
+                            <li>Ofrecemos un día de prueba para conocer como enseñamos</li>
+                            <li>Para contactarnos estamos disponibles durantes las horas fuera del horario</li>
+                            <li>Comunicación directa con los padres/alumnos para cualquier problema</li>
+                        </ul>
+
+                        <p><strong>Incluye:</strong> Material de apoyo y evaluaciones mensuales.</p>
+                        
+                        <div class="div-apuntarme">
+                            <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- POP-UP 2 -->
+                <div id="POPUP2" class="POPUP">
+                    <div class="POPUP-contenido">
+                        <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
+                        <h2>Grupo 2: 2º-4º ESO + Bachillerato</h2>
+                        
+                        <p><strong>Profesora:</strong>Laura</p>
+                        <p><strong>Horario:</strong>Lunes a Jueves(15:00-21:00)</p>
+                        <p><strong>Plazas:</strong>8 personas por grupo</p>
+                        <p><strong>Precio:</strong>Según nº asignaturas</p>
+                        
+
+                        <h3>Información adicional:</h3>
+                        <ul>
+                            <li>Todas las asignaturas cuestan los mismo</li>
+                            <li>Ofrecemos un día de prueba para conocer como enseñamos</li>
+                            <li>Para contactarnos estamos disponibles durantes las horas fuera del horario</li>
+                            <li>Comunicación directa con los padres/alumnos para cualquier problema</li>
+                        </ul>
+
+                        <p><strong>Incluye:</strong> Material específico y evaluaciones mensuales.</p>
+
+                        <div class="div-apuntarme">
+                            <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+                        </div>
+                    </div>
+                </div>
+            
         </main>
 
         <!--Pie de página-->
@@ -132,6 +208,7 @@
             </div>
             </footer>
         <!---------------->
+
     </body>
 
 
