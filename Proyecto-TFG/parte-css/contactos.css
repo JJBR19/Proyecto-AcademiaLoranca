@@ -1,6 +1,105 @@
+/* Contenedor que divide en dos columnas */
+.contacto-main-container {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 20px;
+    gap: 50px;
+    align-items: center; /* Centra verticalmente si una columna es más larga */
+}
+
+/* Estilos para la columna de texto */
+.contacto-info {
+    flex: 1; /* Ocupa el mismo espacio que el formulario */
+    color: #333;
+    margin-top: 60px;
+}
+
+.info-titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.subrayado-amarillo {
+    background: linear-gradient(180deg, transparent 60%, #fff176 60%);
+    display: inline;
+}
+
+.info-cuerpo p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+.destacado {
+    font-weight: 600;
+    color: #2d3748;
+    border-left: 4px solid #25d366;
+    padding-left: 15px;
+}
+
+.info-detalles {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.detalle-item {
+    background: #00d0ff58;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Ajuste para que el formulario no se vea gigante */
+.formulario-responsivo {
+    flex: 1;
+    margin: 0; /* Quitamos el margin auto para que se alinee a la derecha */
+}
+
+/* RESPONSIVE: En móviles se pone uno debajo de otro */
+@media (max-width: 900px) {
+    .contacto-main-container {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    
+    .contacto-info {
+        text-align: center;
+    }
+    
+    .destacado {
+        border-left: none;
+        border-top: 2px solid #25d366;
+        padding-top: 10px;
+        padding-left: 0;
+    }
+}
+
 /* =========================================
    ESTILOS ESPECÍFICOS DEL FORMULARIO
    ========================================= */
+.form-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra el bloque completo en la pantalla */
+    align-items: flex-start;
+    
+    /* ESPACIO EN LOS LATERALES */
+    max-width: 1300px;    /* Ancho máximo de la web */
+    margin: 80px auto;    /* Centra el contenedor y da espacio arriba/abajo */
+    padding: 0 10px;      /* Margen interno para que no toque los bordes del navegador */
+    
+    /* ESPACIO ENTRE LOS DOS DIVS */
+    gap: 80px;            /* Crea una separación clara entre texto y formulario */
+    
+    box-sizing: border-box; 
+}
+
 
 /* Contenedor principal del formulario */
 .formulario-responsivo {
