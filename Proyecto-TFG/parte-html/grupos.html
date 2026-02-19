@@ -1,174 +1,176 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AcademiaLoranca</title>
-        <link rel="stylesheet" href="../parte-css/index.css">
-        <link rel="stylesheet" href="../parte-css/grupos.css">
-        <script>
-            function abrirPOPUP(id) {
-                document.getElementById(id).style.display = "flex";
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Academia Loranca</title>
+    <link rel="stylesheet" href="../parte-css/index.css">
+    <link rel="stylesheet" href="../parte-css/grupos.css">
+    <script>
+        function abrirPOPUP(id) {
+            document.getElementById(id).style.display = "flex";
+        }
 
-            function cerrarPOPUP(id) {
-                document.getElementById(id).style.display = "none";
-            }
+        function cerrarPOPUP(id) {
+            document.getElementById(id).style.display = "none";
+        }
 
-            window.onclick = function(event) {
-                let POPUPs = document.getElementsByClassName("POPUP");
-                for (let POPUP of POPUPs) {
-                    if (event.target == POPUP) {
-                        POPUP.style.display = "none";
-                    }
+        window.onclick = function (event) {
+            let POPUPs = document.getElementsByClassName("POPUP");
+            for (let POPUP of POPUPs) {
+                if (event.target == POPUP) {
+                    POPUP.style.display = "none";
                 }
             }
-        </script>
+        }
+    </script>
+</head>
 
-    </head>
+<body>
+    <!--Encabezado-->
+    <header>
+        <div>
+            <div id="div-logo">
+                <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
+                <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
+            </div>
+            <menu id="menu-header">
+                <a class="link-encabezado" href="../Index.html">Inicio</a>
+                <a class="link-encabezado" href="grupos.html">Cursos</a>
+                <a class="link-encabezado" href="#">Servicios</a>
+                <a class="link-encabezado" href="#">Horarios</a>
+                <a class="link-encabezado" href="contactos.html">Contacto</a>
+            </menu>
+        </div>
+    </header>
 
-    <body>
-        <!--Encabezado-->
-            <header>
-                <div>
-                    <!--DIV LOGO-->
-                    <div id="div-logo">
-                        <img src="../imagenes/logo.png" id="logo">
-                        <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
+    <!-- MAIN CURSOS -->
+    <main>
+        <section class="clases">
+            <h1 class="titulo-seccion">Nuestros Cursos</h1>
+
+            <!-- Clases de Refuerzo SBS -->
+            <div class="curso-sbs">
+                <div class="curso-texto">
+                    <h2>📚 Clases de Refuerzo</h2>
+                    <p>Nuestras clases de refuerzo están diseñadas para <strong>acompañar al estudiante en su aprendizaje diario</strong>, resolver dudas y consolidar conocimientos. Trabajamos con ejercicios prácticos, seguimiento individual y técnicas de estudio personalizadas.</p>
+                    <p><strong>Ventajas:</strong> Atención individual, seguimiento semanal, informes de progreso y comunicación directa con familias.</p>
+                </div>
+                <div class="curso-imagen">
+                    <img src="../imagenes/niños_estudiando.jpg" alt="Estudiantes en clase">
+                </div>
+            </div>
+
+            <!-- Preparación de Exámenes SBS -->
+            <div class="curso-sbs reverse">
+                <div class="curso-texto">
+                    <h2>📝 Preparación de Exámenes</h2>
+                    <p>Preparamos a los alumnos para <strong>exámenes escolares, recuperaciones y la EVAU</strong>. Aplicamos simulacros, técnicas de planificación y estrategias de resolución de problemas para que afronten las pruebas con seguridad y eficiencia.</p>
+                    <p><strong>Metodología:</strong> Evaluación inicial, plan de trabajo personalizado y sesiones de práctica intensiva.</p>
+                </div>
+                <div class="curso-imagen">
+                    <img src="../imagenes/examenes.jpg" alt="Estudiantes haciendo examen">
+                </div>
+            </div>
+
+            <!-- Estudios Generales SBS -->
+            <div class="curso-sbs">
+                <div class="curso-texto">
+                    <h2>🎓 Estudios Generales</h2>
+                    <p>Ofrecemos apoyo integral en todas las asignaturas para estudiantes de Primaria, ESO y Bachillerato. Nuestro enfoque combina explicaciones claras, actividades dinámicas y seguimiento constante para que cada alumno avance a su ritmo.</p>
+                    <p><strong>Beneficios:</strong> Refuerzo académico adaptado a cada estudiante, desarrollo de habilidades de estudio y motivación para el aprendizaje autónomo.</p>
+                </div>
+                <div class="curso-imagen">
+                    <img src="../imagenes/estudios.jpg" alt="Tutor dando clase">
+                </div>
+            </div>
+
+            <!-- SECCIÓN DE GRUPOS -->
+            <div class="div-grupos">
+                <h2>Grupos Disponibles</h2>
+
+                <div class="zona-grupos">
+                    <h3>👦 Grupo 1: Primaria + 1º ESO</h3>
+                    <img src="../imagenes/niños_grupos1.png" alt="Grupo Primaria + 1º ESO">
+                    <p><strong>Edad recomendada:</strong> 6-12 años</p>
+                    <p><strong>Nivel:</strong> Primaria y 1º ESO</p>
+                    <div class="div-apuntarme">
+                        <a class="boton-info" onclick="abrirPOPUP('POPUP1')">Más Información</a>
                     </div>
-                    <!--ZONA LINKS-->
-                    <menu id="menu-header">
-                        <a class="link-encabezado" href="../Index.html">Inicio</a>
-                        <a class="link-encabezado" href="grupos.html">Cursos</a>
-                        <a class="link-encabezado">Servicios</a>
-                        <a class="link-encabezado">Horarios</a>
-                        <a class="link-encabezado" href="contactos.html">Contacto</a>
-                    </menu>
-                </div>
-            </header>
-        <!-------------->
-
-        <main>
-            <section class="clases">
-
-                <div class="zona-clase">
-                    <h2>📖 Clases de Refuerzo 📖</h2>
-                    <p>
-                        Refuerzo para primaria, ESO y bachillerato, resolución de dudas y seguimiento continuo para mejorar el rendimiento académico.
-                    </p>
                 </div>
 
-                <div class="zona-clase">
-                    <h2>📝 Preparación de Exámenes 📝</h2>
-                    <p>
-                        Preparación para exámenes, recuperaciones y PAU.Técnicas de estudio y simulacros para afrontar las pruebas con seguridad.
-                    </p>
-                </div>
-
-                <div class="zona-clase">
-                    <h2>🎓 Estudios generales, desde matemáticas hasta geografía 🎓</h2>
-                    <p>
-                        Acompañamos al estudiante en el aprendizaje de cualquier asignatura, ofreciendo explicaciones claras, 
-                        apoyo continuo y una enseñanza adaptada para lograr resultados reales.
-                    </p>
-                </div>
-
-                
-                <div class="div-grupos">
-                    <h2>GRUPOS:</h2>
-                    <div class="zona-grupos">
-                        <h2>Grupo 1: PRIMARIA + 1º ESO</h2>
-                        <img id="fotos-grupos" src="../imagenes/niños_grupos1.png">
-                        <div class="div-apuntarme">
-                            <a class="boton-info" onclick="abrirPOPUP('POPUP1')">Más Información</a>
-                        </div>
-                    </div>
-                    <div class="zona-grupos">
-                        <h2>Grupo 2: 2-4º ESO+ BACHILLERATO</h2>
-                        <img id="fotos-grupos" src="../imagenes/adolescentes_grupos.png">
-                        <div class="div-apuntarme">
-                            <a class="boton-info" onclick="abrirPOPUP('POPUP2')">Más Información</a>
-                        </div>
+                <div class="zona-grupos">
+                    <h3>👩‍🎓 Grupo 2: 2º- 4º ESO + Bachillerato</h3>
+                    <img src="../imagenes/adolescentes_grupos.png" alt="Grupo ESO y Bachillerato">
+                    <p><strong>Edad recomendada:</strong> 13-18 años</p>
+                    <p><strong>Nivel:</strong> ESO y Bachillerato</p>
+                    <div class="div-apuntarme">
+                        <a class="boton-info" onclick="abrirPOPUP('POPUP2')">Más Información</a>
                     </div>
                 </div>
+            </div>
 
-            </section>
-            <!-- 
+        </section>
+    </main>
+
+    <!-- POPUPS FUNCIONALES -->
+    <div id="POPUP1" class="POPUP">
+        <div class="POPUP-contenido">
+            <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
+            <h2>👦 Grupo 1: Primaria + 1º ESO</h2>
+            <p><strong>Profesora:</strong> Isabel Martínez, licenciada en Educación Primaria y especializada en técnicas de aprendizaje infantil.</p>
+            <p><strong>Horario:</strong> Lunes a Jueves (15:00-21:00), sesiones de 90 minutos.</p>
+            <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
+            <h3>Información adicional:</h3>
+            <ul>
+                <li>Día de prueba gratuito para conocer nuestra metodología.</li>
+                <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
+                <li>Evaluaciones periódicas y comunicación constante con padres.</li>
+                <li>Actividades complementarias para potenciar habilidades de estudio.</li>
+            </ul>
             <div class="div-apuntarme">
                 <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
             </div>
-           
-            -->
+        </div>
+    </div>
 
-            <!-- POP-UP 1 -->
-                <div id="POPUP1" class="POPUP">
-                    <div class="POPUP-contenido">
-                        <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
-                        <h2>Grupo 1: Primaria + 1º ESO</h2>
-                        
-                        <p><strong>Profesora:</strong> Isabel</p>
-                        <p><strong>Horario:</strong> Lunes a Jueves(15:00-21:00)</p>
-                        <p><strong>Plazas:</strong> 8 personas por grupo</p>
-                        
-                        <h3>Información adicional:</h3>
-                        <ul>
-                            <li>Ofrecemos un día de prueba para conocer como enseñamos</li>
-                            <li>Para contactarnos estamos disponibles durantes las horas fuera del horario</li>
-                            <li>Comunicación directa con los padres/alumnos para cualquier problema</li>
-                        </ul>
-                        
-                        <div class="div-apuntarme">
-                            <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
-                        </div>
-                    </div>
-                </div>
+    <div id="POPUP2" class="POPUP">
+        <div class="POPUP-contenido">
+            <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
+            <h2>👩‍🎓 Grupo 2: 2º- 4º ESO + Bachillerato</h2>
+            <p><strong>Profesora:</strong> Laura Gómez, especialista en Ciencias Sociales y Matemáticas, con más de 10 años de experiencia en preparación de exámenes.</p>
+            <p><strong>Horario:</strong> Lunes a Jueves (15:00-21:00), sesiones adaptadas al nivel de cada alumno.</p>
+            <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
+            <h3>Información adicional:</h3>
+            <ul>
+                <li>Día de prueba gratuito para conocer nuestra metodología.</li>
+                <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
+                <li>Evaluaciones periódicas con informes de progreso.</li>
+                <li>Preparación específica para exámenes finales y EVAU.</li>
+            </ul>
+            <div class="div-apuntarme">
+                <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+            </div>
+        </div>
+    </div>
 
-
-            <!-- POP-UP 2 -->
-                <div id="POPUP2" class="POPUP">
-                    <div class="POPUP-contenido">
-                        <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
-                        <h2>Grupo 2: 2º-4º ESO + Bachillerato</h2>
-                        
-                        <p><strong>Profesora:</strong> Laura</p>
-                        <p><strong>Horario:</strong> Lunes a Jueves(15:00-21:00)</p>
-                        <p><strong>Plazas:</strong> 8 personas por grupo</p>
-                        
-
-                        <h3>Información adicional:</h3>
-                        <ul>
-                            <li>Ofrecemos un día de prueba para conocer como enseñamos</li>
-                            <li>Para contactarnos estamos disponibles durantes las horas fuera del horario</li>
-                            <li>Comunicación directa con los padres/alumnos para cualquier problema</li>
-                        </ul>
-
-                        <div class="div-apuntarme">
-                            <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
-                        </div>
-                    </div>
-                </div>
-            
-        </main>
-
-        <!--Pie de página-->
-            <footer class="footer">
-            <div class="footer-container">
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-col branding">
                 <div id="div-logo-footer">
                     <img src="../imagenes/logo.png" alt="Logo">
                     <div class="nombre-footer">ACADEMIA <br>LORANCA</div>
                 </div>
                 <a href="#contacto" class="btn-prueba">SOLICITAR INFORMACIÓN</a>
-                <div class="social-icons">
-                    tlf: +34 652 08 17 00
-                </div>
+                <div class="social-icons">📞 +34 652 08 17 00</div>
             </div>
 
             <div class="footer-col">
                 <h4>EXPLORA</h4>
                 <ul>
-                    <li><a href="#">Inicio</a></li>                
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#">Cursos</a></li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Horarios</a></li>
@@ -195,20 +197,16 @@
                     <li>Técnicas de estudio</li>
                 </ul>
             </div>
-            </div>
-
-            <div class="footer-legal">
+        </div>
+        <div class="footer-legal">
             <p>
-                <a href="#">Política de Privacidad</a> | 
-                <a href="#">Política de Cookies</a> | 
+                <a href="#">Política de Privacidad</a> |
+                <a href="#">Política de Cookies</a> |
                 <a href="#">Aviso Legal</a>
             </p>
             <p class="copyright">© 2026 Academia Loranca - Todos los derechos reservados.</p>
-            </div>
-            </footer>
-        <!---------------->
-
-    </body>
-
+        </div>
+    </footer>
+</body>
 
 </html>

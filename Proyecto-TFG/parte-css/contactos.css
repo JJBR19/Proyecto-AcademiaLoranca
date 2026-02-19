@@ -23,7 +23,7 @@
 }
 
 .subrayado-amarillo {
-    background: linear-gradient(180deg, transparent 60%, #fff176 60%);
+    background: linear-gradient(180deg, transparent 60%, #00ffe1 60%);
     display: inline;
 }
 
@@ -251,3 +251,4 @@ input[type="checkbox"] {
         margin: 30px 15px;
     }
 }
+
