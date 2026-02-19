@@ -1240,11 +1240,11 @@ section h2 {
 ======================== */
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(91, 255, 244, 0.476);
     padding: 20px;
     text-align: center;
     font-size: 0.85rem;
-    background: rgba(0,0,0,0.1);
+    background: rgba(254, 254, 254, 0.1);
 }
 
 .footer-bottom p {
