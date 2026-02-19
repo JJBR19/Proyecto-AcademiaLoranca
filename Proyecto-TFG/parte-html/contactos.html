@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,150 +9,171 @@
     <link rel="stylesheet" href="../parte-css/index.css">
     <script type="module" src="../parte-logica/Components/header.js"></script>
 </head>
+
 <body>
     <!--Encabezado-->
     <header-componente></header-componente>
 
     <div class="form-cont">
         <div class="contacto-info">
-    <h1 class="info-titulo">
-        Ponte en contacto con nuestra academia en Loranca para 
-        <span class="subrayado-amarillo">reservar la plaza de tu hijo/a</span>
-    </h1>
-    
-    <div class="info-cuerpo">
-        <p>Somos una academia de nueva apertura en <strong>Loranca (Madrid)</strong>, creada con la ilusión de ofrecer un apoyo educativo cercano, personalizado y de calidad.</p>
-        
-        <p>Disponemos de <strong>grupos reducidos</strong> de máximo <strong>8 alumnos</strong> adaptados a todos los niveles, desde <strong>Primaria hasta Bachillerato</strong>, lo que nos permite atender de forma individual las necesidades de cada alumno.</p>
-        
-        <p>Ofrecemos refuerzo escolar general, preparación de exámenes, técnicas de estudio y apoyo en asignaturas específicas, con seguimiento continuo y comunicación directa con las familias.</p>
-        
-        <p>Si quieres asegurar una formación de calidad y mejorar sus resultados académicos, consulta nuestras plazas disponibles.</p>
-        
-        <p class="destacado">
-            Llámanos o escríbenos un mensaje ahora mismo para informarte sobre horarios, metodología y promociones de apertura. 
-            ¡Te esperamos para empezar a trabajar juntos en su futuro!
-        </p>
-    </div>
-    
-    <div class="info-detalles">
-        <div class="detalle-item">📍 C/ de la Alegría 4, 28942 Fuenlabrada-Madrid</div>
-        <div class="detalle-item">📞 +34 652 08 17 00</div>
-    </div>
-</div>
+            <h1 class="info-titulo">
+                Ponte en contacto con nuestra academia en Loranca para
+                <span class="subrayado-amarillo">reservar la plaza de tu hijo/a</span>
+            </h1>
+
+            <div class="info-cuerpo">
+                <p>Somos una academia de nueva apertura en <strong>Loranca (Madrid)</strong>, creada con la ilusión de
+                    ofrecer un apoyo educativo cercano, personalizado y de calidad.</p>
+
+                <p>Disponemos de <strong>grupos reducidos</strong> de máximo <strong>8 alumnos</strong> adaptados a
+                    todos los niveles, desde <strong>Primaria hasta Bachillerato</strong>, lo que nos permite atender de
+                    forma individual las necesidades de cada alumno.</p>
+
+                <p>Ofrecemos refuerzo escolar general, preparación de exámenes, técnicas de estudio y apoyo en
+                    asignaturas específicas, con seguimiento continuo y comunicación directa con las familias.</p>
+
+                <p>Si quieres asegurar una formación de calidad y mejorar sus resultados académicos, consulta nuestras
+                    plazas disponibles.</p>
+
+                <p class="destacado">
+                    Llámanos o escríbenos un mensaje ahora mismo para informarte sobre horarios, metodología y
+                    promociones de apertura.
+                    ¡Te esperamos para empezar a trabajar juntos en su futuro!
+                </p>
+            </div>
+
+            <div class="info-detalles">
+                <div class="detalle-item">📍 C/ de la Alegría 4, 28942 Fuenlabrada-Madrid</div>
+                <div class="detalle-item">📞 +34 652 08 17 00</div>
+            </div>
+        </div>
 
 
 
 
 
         <!--FORMULARIO-->
-        
+
         <form id="formulario-interactivo" class="formulario-responsivo">
 
-          <h2 class="titulo-animado">Formulario de Contacto</h2>
-
-          <div class="grupo-campo">
-            <label for="nombre-completo">Nombre completo:</label>
-            <input type="text" id="nombre-completo" name="nombre_completo" minlength="3" maxlength="50" required placeholder="Escribe tu nombre">
-          </div>
-
-          <div class="grupo-campo">
-            <label for="correo-electronico">Correo electrónico:</label>
-            <input type="email" id="correo-electronico" name="correo" required placeholder="ejemplo@correo.com">
-          </div>
-
-          <div class="fila-formulario">
+            <h2 class="titulo-animado">Formulario de Contacto</h2>
 
             <div class="grupo-campo">
-              <label for="edad-usuario">Edad (18-99):</label>
-              <input type="number" id="edad-usuario" name="edad" min="18" max="99" required>
+                <label for="nombre-completo">Nombre completo:</label>
+                <input type="text" id="nombre-completo" name="nombre_completo" minlength="3" maxlength="50" required
+                    placeholder="Escribe tu nombre">
             </div>
-
-          </div>
-
-          <div class="fila-formulario">
 
             <div class="grupo-campo">
-              <label for="telefono-contacto">Teléfono (9 dígitos):</label>
-              <input type="tel" id="telefono-contacto" name="telefono" pattern="[0-9]{9}" required placeholder="600123456">
+                <label for="correo-electronico">Correo electrónico:</label>
+                <input type="email" id="correo-electronico" name="correo" required placeholder="ejemplo@correo.com">
             </div>
 
-          </div>
+            <div class="fila-formulario">
 
-          <div class="grupo-campo">
-            <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
-            <textarea id="biografia-personal" name="biografia" maxlength="200" rows="4" required></textarea>
-            <small class="contador-texto">0 / 200</small>
-          </div>
+                <div class="grupo-campo">
+                    <label for="edad-usuario">Edad (18-99):</label>
+                    <input type="number" id="edad-usuario" name="edad" min="18" max="99" required>
+                </div>
 
-          <div class="grupo-campo-checkbox">
-            <label>
-              <input type="checkbox" id="aceptar-condiciones" name="condiciones" required>
-              Acepto los términos y condiciones
-            </label>
-          </div>
+            </div>
 
-          <button type="submit" class="boton-enviar">Enviar Formulario</button>
+            <div class="fila-formulario">
 
-          
+                <div class="grupo-campo">
+                    <label for="telefono-contacto">Teléfono (9 dígitos):</label>
+                    <input type="tel" id="telefono-contacto" name="telefono" pattern="[0-9]{9}" required
+                        placeholder="600123456">
+                </div>
+
+            </div>
+
+            <div class="grupo-campo">
+                <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
+                <textarea id="biografia-personal" name="biografia" maxlength="200" rows="4" required></textarea>
+                <small class="contador-texto">0 / 200</small>
+            </div>
+
+            <div class="grupo-campo-checkbox">
+                <label>
+                    <input type="checkbox" id="aceptar-condiciones" name="condiciones" required>
+                    Acepto los términos y condiciones
+                </label>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar Formulario</button>
+
+
         </form>
     </div>
 
 
-        <!--Pie de página-->
-        <footer class="footer">
+    <!--Pie de página-->
+    <!-- ================= FOOTER PROFESIONAL ================= -->
+    <footer class="footer">
         <div class="footer-container">
-        <div class="footer-col branding">
-            <div id="div-logo-footer">
-                <img src="../imagenes/logo.png" alt="Logo">
-                <div class="nombre-footer">ACADEMIA <br>LORANCA</div>
+
+            <!-- COLUMNA 1 - MARCA -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="../imagenes/logo.png" alt="Academia Loranca">
+                    <h3>Academia Loranca</h3>
+                </div>
+
+                <p>
+                    Academia especializada en refuerzo escolar, preparación de exámenes y acompañamiento educativo
+                    personalizado en Fuenlabrada - Loranca.
+                </p>
+
+                <div class="footer-contact">
+                    <p>📍 Fuenlabrada - Loranca, Madrid</p>
+                    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a></p>
+                    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
+                </div>
             </div>
-            <a href="#contacto" class="btn-prueba">SOLICITAR INFORMACIÓN</a>
-            <div class="social-icons">
-                tlf: +34 652 08 17 00   
+
+            <!-- COLUMNA 2 - ENLACES -->
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#inscripcion">Inscripción</a></li>
+                    <li><a href="#contacto">Ubicación</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA 3 - NIVELES -->
+            <div class="footer-col">
+                <h4>Niveles educativos</h4>
+                <ul>
+                    <li>Educación Primaria</li>
+                    <li>ESO</li>
+                    <li>Bachillerato</li>
+                    <li>Preparación EVAU</li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA 4 - CTA -->
+            <div class="footer-col footer-cta">
+                <h4>¿Te interesa?</h4>
+                <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
+                <a href="#contacto" class="footer-btn">Solicitar información</a>
+            </div>
+
+        </div>
+
+        <!-- BARRA INFERIOR -->
+        <div class="footer-bottom">
+            <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Aviso Legal</a>
             </div>
         </div>
-
-        <div class="footer-col">
-            <h4>EXPLORA</h4>
-            <ul>
-                <li><a href="#">Inicio</a></li>                
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Horarios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>NIVELES</h4>
-            <ul>
-                <li>Educación Primaria</li>
-                <li>Secundaria (ESO)</li>
-                <li>Bachillerato</li>
-                <li>Preparación EVAU</li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>ASIGNATURAS</h4>
-            <ul>
-                <li>Matemáticas</li>
-                <li>Lengua e Inglés</li>
-                <li>Física y Química</li>
-                <li>Técnicas de estudio</li>
-            </ul>
-        </div>
-        </div>
-
-        <div class="footer-legal">
-        <p>
-            <a href="#">Política de Privacidad</a> | 
-            <a href="#">Política de Cookies</a> | 
-            <a href="#">Aviso Legal</a>
-        </p>
-        <p class="copyright">© 2026 Academia Loranca - Todos los derechos reservados.</p>
-        </div>
-        </footer>
+    </footer>
 </body>
+
 </html>
