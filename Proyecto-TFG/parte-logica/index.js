@@ -6,3 +6,4 @@ function toggleWhatsapp() {
         card.style.display = 'block';
     }
 }
+

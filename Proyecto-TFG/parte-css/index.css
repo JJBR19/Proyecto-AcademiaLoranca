@@ -1608,6 +1608,48 @@ section::after {
 }
 
 
+/* ================================
+   ANIMACIÓN SERVICIOS EDUCATIVOS
+================================ */
 
+/* Estado inicial oculto */
+.servicio-img {
+    opacity: 0;
+    transition: all 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Imagen que viene desde la izquierda */
+.servicio-item:nth-child(even) .servicio-img {
+    transform: translateX(-120px);
+}
+
+/* Imagen que viene desde la derecha */
+.servicio-item:nth-child(odd) .servicio-img {
+    transform: translateX(120px);
+}
+
+/* Cuando se activa */
+.servicio-item.active .servicio-img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* ================================
+   ANIMACIÓN BENEFICIOS
+================================ */
+
+.beneficios-lista li {
+    opacity: 0;
+    transform: translateX(60px) translateY(0); /* todos salen desde la derecha */
+    transition: all 1s ease; /* velocidad de aparición */
+    position: relative;
+}
+
+/* cuando se activan */
+.beneficios-lista li.active {
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* posición final */
+}
 
 
