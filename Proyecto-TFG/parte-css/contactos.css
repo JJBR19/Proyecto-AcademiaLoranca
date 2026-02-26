@@ -1,15 +1,19 @@
 /* Contenedor que divide en dos columnas */
 .contacto-main-container {
     display: flex;
+    flex-wrap: wrap; /* permite bajar columnas */
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
+    margin: 80px auto;
     padding: 0 20px;
-    gap: 50px;
-    align-items: center; /* Centra verticalmente si una columna es más larga */
+    gap: 60px;
 }
 
 /* Estilos para la columna de texto */
 .contacto-info {
-    flex: 1; /* Ocupa el mismo espacio que el formulario */
+    flex: 1 1 500px; /* Ocupa el mismo espacio que el formulario */
+    max-width: 600px;
     color: #333;
     margin-top: 60px;
 }
@@ -59,7 +63,8 @@
 
 /* Ajuste para que el formulario no se vea gigante */
 .formulario-responsivo {
-    flex: 1;
+    flex: 1 1 500px;
+    max-width: 600px;
     margin: 0; /* Quitamos el margin auto para que se alinee a la derecha */
 }
 
@@ -87,19 +92,13 @@
    ========================================= */
 .form-cont{
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centra el bloque completo en la pantalla */
+    flex-wrap: wrap;  /*  clave */
+    justify-content: center;
     align-items: flex-start;
-    
-    /* ESPACIO EN LOS LATERALES */
-    max-width: 1300px;    /* Ancho máximo de la web */
-    margin: 80px auto;    /* Centra el contenedor y da espacio arriba/abajo */
-    padding: 0 10px;      /* Margen interno para que no toque los bordes del navegador */
-    
-    /* ESPACIO ENTRE LOS DOS DIVS */
-    gap: 80px;            /* Crea una separación clara entre texto y formulario */
-    
-    box-sizing: border-box; 
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 20px;
+    gap: 60px;
 }
 
 
@@ -250,5 +249,54 @@ input[type="checkbox"] {
         padding: 25px 20px;
         margin: 30px 15px;
     }
+}
+
+@media (max-width: 1024px) {
+
+    .contacto-main-container,
+    .form-cont {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-detalles {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contacto-info {
+        margin-top: 20px;
+    }
+
+    .info-titulo {
+        font-size: 1.8rem;
+    }
+
+    .info-cuerpo p {
+        font-size: 1rem;
+    }
+
+    .detalle-item {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .formulario-responsivo {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .boton-enviar {
+        font-size: 1rem;
+        padding: 14px;
+    }
+}
+
+html {
+    font-size: clamp(14px, 1vw, 18px);
 }
 

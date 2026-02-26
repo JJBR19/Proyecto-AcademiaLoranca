@@ -7,6 +7,7 @@
     <title>Cursos - Academia Loranca</title>
     <link rel="stylesheet" href="../parte-css/index.css">
     <link rel="stylesheet" href="../parte-css/grupos.css">
+    <script src="../parte-logica/animaciones.js"></script>
     <script>
         function abrirPOPUP(id) {
             document.getElementById(id).style.display = "flex";
@@ -21,6 +22,51 @@
             for (let POPUP of POPUPs) {
                 if (event.target == POPUP) {
                     POPUP.style.display = "none";
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------*/
+        /*----------------ANIMACINONES POPUP FOTOS---------------------*/
+        /*--------------------------------------------------------------*/
+
+        function abrirPOPUP(id) {
+            const popup = document.getElementById(id);
+            popup.style.display = "flex";
+
+            const video = popup.querySelector('video');
+            if (video) {
+                // Intenta reproducir el video
+                video.currentTime = 0; // empieza desde el inicio
+                video.play().catch(err => {
+                    console.log("El video no se pudo reproducir automáticamente:", err);
+                });
+
+                // Se detiene al terminar
+                video.addEventListener('ended', () => {
+                    video.pause();
+                    video.currentTime = video.duration;
+                }, { once: true });
+            }
+        }
+
+        function cerrarPOPUP(id) {
+            const popup = document.getElementById(id);
+            popup.style.display = "none";
+
+            // Pausar video si está reproduciéndose
+            const video = popup.querySelector('video');
+            if (video) {
+                video.pause();
+            }
+        }
+
+        // Cerrar popup al hacer click fuera
+        window.onclick = function (event) {
+            const POPUPs = document.getElementsByClassName("POPUP");
+            for (let POPUP of POPUPs) {
+                if (event.target === POPUP) {
+                    cerrarPOPUP(POPUP.id);
                 }
             }
         }
@@ -56,8 +102,11 @@
             <div class="curso-sbs reverse">
                 <div class="curso-texto">
                     <h2>📝 Preparación de Exámenes</h2>
-                    <p>Preparamos a los alumnos para <strong>exámenes escolares, recuperaciones y la EVAU/PAU</strong>. Aplicamos simulacros, técnicas de planificación y estrategias de resolución de problemas para que afronten las pruebas con seguridad y eficiencia.</p>
-                    <p><strong>Metodología:</strong> Evaluación inicial, plan de trabajo personalizado y sesiones de práctica intensiva.</p>
+                    <p>Preparamos a los alumnos para <strong>exámenes escolares, recuperaciones y la EVAU/PAU</strong>.
+                        Aplicamos simulacros, técnicas de planificación y estrategias de resolución de problemas para
+                        que afronten las pruebas con seguridad y eficiencia.</p>
+                    <p><strong>Metodología:</strong> Evaluación inicial, plan de trabajo personalizado y sesiones de
+                        práctica intensiva.</p>
                 </div>
                 <div class="curso-imagen">
                     <img src="../imagenes/examenes.jpg" alt="Estudiantes haciendo examen">
@@ -82,22 +131,23 @@
             <!-- SECCIÓN DE GRUPOS -->
             <div class="div-grupos">
                 <h2>Grupos Disponibles</h2>
-
-                <div class="zona-grupos">
-                    <h3>👦 Grupo 1:</h3>
-                    <img src="../imagenes/niños_grupos1.png" alt="Grupo Primaria + 1º ESO">
-                    <p><strong>Nivel: Primaria y 1º ESO</strong></p>
-                    <div class="div-apuntarme">
-                        <a class="boton-info" onclick="abrirPOPUP('POPUP1')">Más Información</a>
+                <div class="DivGrupos">
+                    <div class="zona-grupos">
+                        <h3>👦 Grupo 1:</h3>
+                        <img src="../imagenes/niños_grupos1.png" alt="Grupo Primaria + 1º ESO">
+                        <p><strong>Nivel: Primaria y 1º ESO</strong></p>
+                        <div class="div-apuntarme">
+                            <a class="boton-info" onclick="abrirPOPUP('POPUP1')">Más Información</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="zona-grupos">
-                    <h3>👩‍🎓 Grupo 2:</h3>
-                    <img src="../imagenes/adolescentes_grupos.png" alt="Grupo ESO y Bachillerato">
-                    <p><strong>Nivel: 2º- 4º ESO y Bachillerato</strong></p>
-                    <div class="div-apuntarme">
-                        <a class="boton-info" onclick="abrirPOPUP('POPUP2')">Más Información</a>
+                    <div class="zona-grupos">
+                        <h3>👩‍🎓 Grupo 2:</h3>
+                        <img src="../imagenes/adolescentes_grupos.png" alt="Grupo ESO y Bachillerato">
+                        <p><strong>Nivel: 2º- 4º ESO y Bachillerato</strong></p>
+                        <div class="div-apuntarme">
+                            <a class="boton-info" onclick="abrirPOPUP('POPUP2')">Más Información</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,13 +156,21 @@
     </main>
 
     <!-- POPUPS FUNCIONALES -->
+    <!-- POPUP FUNCIONAL -->
     <div id="POPUP1" class="POPUP">
-        <div class="POPUP-contenido">
+        <div class="POPUP-contenido animar-popup">
             <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
+
+            <!-- Video avatar -->
+            <div class="avatar-container">
+                <video class="avatar-video" muted playsinline>
+                    <source src="../../Saludo con la mano Isabel.mp4" type="video/mp4">
+                </video>
+            </div>
+
             <h2>👦 Grupo 1: Primaria + 1º ESO</h2>
-            <p><strong>Profesora:</strong> Isabel Martínez, licenciada en Educación Primaria y especializada en técnicas
-                de aprendizaje infantil.</p>
-            <p><strong>Horario:</strong> Lunes a Jueves (15:00-21:00), sesiones de 90 minutos.</p>
+            <p><strong>Profesora:</strong> Isabel Rodriguez</p>
+            <p><strong>Horario:</strong> Lunes a Jueves (15:00-20:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
             <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
             <h3>Información adicional:</h3>
             <ul>
@@ -126,14 +184,17 @@
             </div>
         </div>
     </div>
-
     <div id="POPUP2" class="POPUP">
         <div class="POPUP-contenido">
+             <div class="avatar-container">
+                <video class="avatar-video" muted playsinline>
+                    <source src="../../Saludo Silencioso con la Mano.mp4" type="video/mp4">
+                </video>
+            </div>
             <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
             <h2>👩‍🎓 Grupo 2: 2º- 4º ESO + Bachillerato</h2>
-            <p><strong>Profesora:</strong> Laura Gómez, especialista en Ciencias Sociales y Matemáticas, con más de 10
-                años de experiencia en preparación de exámenes.</p>
-            <p><strong>Horario:</strong> Lunes a Jueves (15:00-21:00), sesiones adaptadas al nivel de cada alumno.</p>
+            <p><strong>Profesora:</strong> Laura Barroso</p>
+            <p><strong>Horario:</strong> Lunes a Jueves (16:00-21:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
             <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
             <h3>Información adicional:</h3>
             <ul>

@@ -40,4 +40,3 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
