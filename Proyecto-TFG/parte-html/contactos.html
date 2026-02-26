@@ -7,12 +7,16 @@
     <title>contactanos</title>
     <link rel="stylesheet" href="../parte-css/contactos.css">
     <link rel="stylesheet" href="../parte-css/index.css">
-    <script type="module" src="../parte-logica/Components/header.js"></script>
+    <script type="module" src="../parte-logica/Components/header.js" defer></script>
+    <script type="module" src="../parte-logica/Components/footer.js" defer></script>
+    <script type="module" src="../parte-logica/Components/whatsapp.js" defer></script>
+
 </head>
 
 <body>
     <!--Encabezado-->
     <header-componente></header-componente>
+    <whatsapp-componente></whatsapp-componente>
 
     <div class="form-cont">
         <div class="contacto-info">
@@ -107,73 +111,8 @@
         </form>
     </div>
 
-
-    <!--Pie de página-->
-    <!-- ================= FOOTER PROFESIONAL ================= -->
-    <footer class="footer">
-        <div class="footer-container">
-
-            <!-- COLUMNA 1 - MARCA -->
-            <div class="footer-col footer-brand">
-                <div class="footer-logo">
-                    <img src="../imagenes/logo.png" alt="Academia Loranca">
-                    <h3>Academia Loranca</h3>
-                </div>
-
-                <p>
-                    Academia especializada en refuerzo escolar, preparación de exámenes y acompañamiento educativo
-                    personalizado en Fuenlabrada - Loranca.
-                </p>
-
-                <div class="footer-contact">
-                    <p>📍 Fuenlabrada - Loranca, Madrid</p>
-                    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a></p>
-                    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
-                </div>
-            </div>
-
-            <!-- COLUMNA 2 - ENLACES -->
-            <div class="footer-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#inscripcion">Inscripción</a></li>
-                    <li><a href="#contacto">Ubicación</a></li>
-                </ul>
-            </div>
-
-            <!-- COLUMNA 3 - NIVELES -->
-            <div class="footer-col">
-                <h4>Niveles educativos</h4>
-                <ul>
-                    <li>Educación Primaria</li>
-                    <li>ESO</li>
-                    <li>Bachillerato</li>
-                    <li>Preparación EVAU</li>
-                </ul>
-            </div>
-
-            <!-- COLUMNA 4 - CTA -->
-            <div class="footer-col footer-cta">
-                <h4>¿Te interesa?</h4>
-                <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
-                <a href="#contacto" class="footer-btn">Solicitar información</a>
-            </div>
-
-        </div>
-
-        <!-- BARRA INFERIOR -->
-        <div class="footer-bottom">
-            <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
-            <div class="footer-legal">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
-                <a href="#">Aviso Legal</a>
-            </div>
-        </div>
-    </footer>
+    <footer-componente></footer-componente>
+    
 </body>
 
 </html>
