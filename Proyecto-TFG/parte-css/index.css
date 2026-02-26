@@ -1609,27 +1609,30 @@ section::after {
 
 
 /* ================================
-   ANIMACIÓN SERVICIOS EDUCATIVOS
+   ANIMACIÓN SERVICIOS + METODOLOGÍA
 ================================ */
 
 /* Estado inicial oculto */
-.servicio-img {
+.servicio-img, .metodo-img {
     opacity: 0;
     transition: all 1.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Imagen que viene desde la izquierda */
-.servicio-item:nth-child(even) .servicio-img {
+.servicio-item:nth-child(even) .servicio-img,
+.metodologia-item:nth-child(even) .metodo-img {
     transform: translateX(-120px);
 }
 
 /* Imagen que viene desde la derecha */
-.servicio-item:nth-child(odd) .servicio-img {
+.servicio-item:nth-child(odd) .servicio-img,
+.metodologia-item:nth-child(odd) .metodo-img {
     transform: translateX(120px);
 }
 
 /* Cuando se activa */
-.servicio-item.active .servicio-img {
+.servicio-item.active .servicio-img,
+.metodologia-item.active .metodo-img {
     opacity: 1;
     transform: translateX(0);
 }
@@ -1653,3 +1656,18 @@ section::after {
 }
 
 
+/* ===================================
+   ANIMACIÓN SOBRE NOSOTROS
+=================================== */
+
+.valor-card {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Cuando se activa */
+.valor-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -25,7 +25,8 @@
             }
         }
     </script>
-    <script type="module" src="../parte-logica/Components/header.js"></script>
+    <script type="module" defer src="../parte-logica/Components/header.js"></script>
+    <script type="module" defer src="../parte-logica/Components/componente-grupos.js"></script>
 </head>
 
 <body>
@@ -80,9 +81,28 @@
             </div>
 
             <!-- SECCIÓN DE GRUPOS -->
-            <div class="div-grupos">
-                <h2>Grupos Disponibles</h2>
 
+                <grupo-componente
+                    id-grupo="1" 
+                    nombre="👦 Grupo 1" 
+                    nivel="Primaria y 1º ESO" 
+                    img="../imagenes/niños_grupos1.png" 
+                    profesora="Isabel Martínez"
+                    horario="Lunes a Jueves (15:00-21:00)"
+                    plazas="8 alumnos">
+                </grupo-componente>
+
+                <grupo-componente 
+                    id-grupo="2" 
+                    nombre="👩‍🎓 Grupo 2" 
+                    nivel="ESO y Bachillerato" 
+                    img="../imagenes/adolescentes_grupos.png" 
+                    profesora="Laura Gómez"
+                    horario="Lunes a Jueves (15:00-21:00)"
+                    plazas="8 alumnos">
+                </grupo-componente>
+
+                <!--
                 <div class="zona-grupos">
                     <h3>👦 Grupo 1:</h3>
                     <img src="../imagenes/niños_grupos1.png" alt="Grupo Primaria + 1º ESO">
@@ -99,7 +119,7 @@
                     <div class="div-apuntarme">
                         <a class="boton-info" onclick="abrirPOPUP('POPUP2')">Más Información</a>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </section>
