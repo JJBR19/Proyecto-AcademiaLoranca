@@ -35,7 +35,6 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-
 /* ANIMACIÓN SOBRE NOSOTROS */
 
 const valores = document.querySelectorAll(".valor-card");
