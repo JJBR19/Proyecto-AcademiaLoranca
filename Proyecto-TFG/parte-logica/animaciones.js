@@ -1,25 +1,21 @@
-/* =========================
-   ANIMACIÓN SERVICIOS
-========================= */
+/* ANIMACIÓN SERVICIOS + METODOLOGÍA */
 
-const servicios = document.querySelectorAll(".servicio-item");
+const elementosAnimados = document.querySelectorAll(".servicio-item, .metodologia-item");
 
 window.addEventListener("scroll", () => {
-    servicios.forEach((servicio) => {
+    elementosAnimados.forEach((elemento) => {
         const windowHeight = window.innerHeight;
-        const elementTop = servicio.getBoundingClientRect().top;
+        const elementTop = elemento.getBoundingClientRect().top;
         const visible = 120;
 
         if (elementTop < windowHeight - visible) {
-            servicio.classList.add("active");
+            elemento.classList.add("active");
         }
     });
 });
 
 
-/* =========================
-   ANIMACIÓN BENEFICIOS
-========================= */
+/* ANIMACIÓN BENEFICIOS */
 
 const beneficios = document.querySelectorAll(".beneficios-lista li");
 
@@ -39,5 +35,23 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+/* ANIMACIÓN SOBRE NOSOTROS */
 
+const valores = document.querySelectorAll(".valor-card");
 
+const observerValores = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+            valores.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("active");
+                }, index * 340); // velocidad entre tarjetas
+            });
+
+            observerValores.disconnect(); // se ejecuta solo una vez
+        }
+    });
+}, { threshold: 0.3 });
+
+observerValores.observe(document.querySelector(".valores-grid"));
