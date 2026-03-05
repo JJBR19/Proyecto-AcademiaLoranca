@@ -188,6 +188,12 @@ header>div {
     animation: float 3s ease-in-out infinite;
 }
 
+.cta-box:hover{
+
+        animation-play-state: paused;
+
+}
+
 
 /* TEXTO */
 .cta-box h3 {
@@ -627,11 +633,7 @@ section h2 {
     position: relative;
 }
 
-.servicio-text ul li::before {
-    content: "✔";
-    color: #16a34a; /* Verde check */
-    margin-right: 8px;
-}
+
 
 /* =================== RESPONSIVE =================== */
 
@@ -971,11 +973,7 @@ section h2 {
     position: relative;
 }
 
-.metodo-text ul li::before {
-    content: "✔";
-    color: #16a34a; /* Verde check */
-    margin-right: 8px;
-}
+
 
 /* =================== RESPONSIVE =================== */
 
@@ -1032,6 +1030,7 @@ section h2 {
 .beneficios {
     background: var(--bg-soft);
     background-color: #e8f3f3;
+    padding-bottom: 100px;
 }
 
 

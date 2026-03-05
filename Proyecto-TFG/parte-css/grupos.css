@@ -220,7 +220,12 @@ body::before {
     position: relative;
     animation: popupFade 0.45s ease forwards;
     max-height: 90vh;   /* nunca más alto que la pantalla */
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.POPUP-contenido::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
 }
 
 @keyframes fadeUp {
@@ -247,26 +252,22 @@ body::before {
 
 .POPUP-contenido ul {
     list-style: none;
-    padding-left: 0;
+    padding-left: 40px;
     margin: 18px 0;
+    list-style-type: disc;
 }
 
 .POPUP-contenido ul li {
+    margin-bottom: 10px;
     position: relative;
-    padding-left: 28px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     color: #2563eb;
     font-weight: 500;
     font-size: 1rem;
+    padding-left: 0%;
 }
 
-.POPUP-contenido ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #16a34a;
-    font-size: 1.1rem;
-}
+
 
 .cerrar {
     position: absolute;
