@@ -147,7 +147,7 @@ toggleWhatsapp() {
                 <p>En nuestra academia ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas y lograr
                     sus objetivos.</p>
                 <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
-                <a href="https://wa.me/1234567890" target="_blank" class="send-btn">
+                <a href="https://wa.me/617522488" target="_blank" class="send-btn">
                     Abrir chat
                 </a>
             </div>
