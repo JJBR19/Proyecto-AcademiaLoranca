@@ -227,7 +227,7 @@ class HeaderComponent extends HTMLElement {
                 <menu id="menu-header">
                     <a class="link-encabezado" href="./Index.html">Inicio</a>
                     <a class="link-encabezado" href="./grupos.html">Cursos</a>
-                    <a class="link-encabezado">Servicios</a>
+                    <a class="link-encabezado" href="./Index.html#servicios">Servicios</a>
                     <a class="link-encabezado">Horarios</a>
                     <a class="link-encabezado" href="./contactos.html">Contacto</a>
                 </menu>

@@ -230,11 +230,11 @@ class FooterComponent extends HTMLElement {
         <div class="footer-col">
             <h4>Navegación</h4>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#inscripcion">Inscripción</a></li>
-                <li><a href="#contacto">Ubicación</a></li>
+                <li><a href="./Index.html">Inicio</a></li>
+                <li><a href="./grupos.html">Cursos</a></li>
+                <li><a href="./Index.html#servicios">Servicios</a></li>
+                <li><a href="./contactos.html">Inscripción</a></li>
+                <li><a href="./Index.html#contacto">Ubicación</a></li>
             </ul>
         </div>
 
@@ -253,7 +253,7 @@ class FooterComponent extends HTMLElement {
         <div class="footer-col footer-cta">
             <h4>¿Te interesa?</h4>
             <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
-            <a href="#contacto" class="footer-btn">Solicitar información</a>
+            <a href="./contactos.html" class="footer-btn">Solicitar información</a>
         </div>
 
     </div>
