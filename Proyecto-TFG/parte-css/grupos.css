@@ -208,6 +208,8 @@ body::before {
     padding: 20px;
 }
 
+
+
 .POPUP-contenido {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(15px);

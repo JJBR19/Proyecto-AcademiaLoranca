@@ -27,7 +27,9 @@ class FooterComponent extends HTMLElement {
     padding: 0 20px 50px 20px;
     display: grid;
     grid-template-columns: 1.3fr 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
+    border: 2px solid black
+    display: flex;
 }
 
 /* ========================
@@ -35,7 +37,7 @@ class FooterComponent extends HTMLElement {
 ======================== */
 
 .footer-brand p {
-    margin: 20px 0;
+    margin:  0;
     line-height: 1.6;
     color: rgba(255,255,255,0.85);
     font-size: 0.95rem;
@@ -77,6 +79,14 @@ class FooterComponent extends HTMLElement {
 /* ========================
    COLUMNAS
 ======================== */
+
+.footer-col {
+
+        margin: 0
+        border: 2px solid black;
+        padding: 0px;
+
+}
 
 .footer-col h4 {
     margin-bottom: 20px;
@@ -200,75 +210,87 @@ class FooterComponent extends HTMLElement {
 `+ this.template;
     }
 
-    get template(){
-        return `
-        <!--Pie de página-->
-   <!-- ================= FOOTER PROFESIONAL ================= -->
-<footer class="footer">
-    <div class="footer-container">
+    get template() {
+    return `
+    <!--Pie de página-->
+    <!-- ================= FOOTER PROFESIONAL ================= -->
+    <footer class="footer">
+        <div class="footer-container">
 
-        <!-- COLUMNA 1 - MARCA -->
-        <div class="footer-col footer-brand">
-            <div class="footer-logo">
-                <img src="../imagenes/logo.png" alt="Academia Loranca">
-                <h3>Academia Loranca</h3>
+            <!-- COLUMNA 1 - MARCA -->
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="../imagenes/logo.png" alt="Academia Loranca">
+                    <h3>Academia Loranca</h3>
+                </div>
+
+                <p>
+                    Academia especializada en refuerzo escolar, preparación de exámenes y acompañamiento educativo
+                    personalizado en Fuenlabrada - Loranca.
+
+                </p>
+
+
+                <div class="footer-contact"><br>
+                    <p>📍 Fuenlabrada - Loranca, Madrid</p>
+                    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="../parte-html/grupos.html#POPUP1">(Isabel Grupo 1)</a></p>
+                    <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="../parte-html/grupos.html#POPUP2">(Laura Grupo 2)</a></p>
+                    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
+                </div>
             </div>
 
-            <p>
-                Academia especializada en refuerzo escolar, preparación de exámenes y acompañamiento educativo
-                personalizado en Fuenlabrada - Loranca.
-            </p>
+            <!-- COLUMNA 2 - ENLACES -->
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="./Index.html">Inicio</a></li>
+                    <li><a href="./grupos.html">Cursos</a></li>
+                    <li><a href="./Index.html#servicios">Servicios</a></li>
+                    <li><a href="./contactos.html">Inscripción</a></li>
+                    <li><a href="./Index.html#contacto">Ubicación</a></li>
+                </ul>
+            </div>
 
-            <div class="footer-contact">
-                <p>📍 Fuenlabrada - Loranca, Madrid</p>
-                <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a></p>
-                <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
+            <!-- COLUMNA 3 - NIVELES -->
+            <div class="footer-col">
+                <h4>Niveles educativos</h4>
+                <ul>
+                    <li>Educación Primaria</li>
+                    <li>ESO</li>
+                    <li>Bachillerato</li>
+                    <li>Preparación EVAU</li>
+                </ul>
+            </div>
+
+            <!-- COLUMNA 5 - CTA -->
+            <div class="footer-col footer-cta">
+                <h4>¿Te interesa?</h4>
+                <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
+                <a href="./contactos.html" class="footer-btn">Solicitar información</a>
+            </div>
+
+             <!-- COLUMNA 4 - HORARIOS -->
+            <div class="footer-col">
+                <h4>Horarios</h4>
+                <ul>
+                    <li><strong>Lunes a Jueves:</strong> 15:00 - 20:00 (Grupo 1)</li>
+                    <li><strong>Lunes a Jueves:</strong> 16:00 - 21:00 (Grupo 2)</li>
+                    
+            </div>
+
+        </div>
+
+        <!-- BARRA INFERIOR -->
+        <div class="footer-bottom">
+            <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Aviso Legal</a>
             </div>
         </div>
-
-        <!-- COLUMNA 2 - ENLACES -->
-        <div class="footer-col">
-            <h4>Navegación</h4>
-            <ul>
-                <li><a href="./Index.html">Inicio</a></li>
-                <li><a href="./grupos.html">Cursos</a></li>
-                <li><a href="./Index.html#servicios">Servicios</a></li>
-                <li><a href="./contactos.html">Inscripción</a></li>
-                <li><a href="./Index.html#contacto">Ubicación</a></li>
-            </ul>
-        </div>
-
-        <!-- COLUMNA 3 - NIVELES -->
-        <div class="footer-col">
-            <h4>Niveles educativos</h4>
-            <ul>
-                <li>Educación Primaria</li>
-                <li>ESO</li>
-                <li>Bachillerato</li>
-                <li>Preparación EVAU</li>
-            </ul>
-        </div>
-
-        <!-- COLUMNA 4 - CTA -->
-        <div class="footer-col footer-cta">
-            <h4>¿Te interesa?</h4>
-            <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
-            <a href="./contactos.html" class="footer-btn">Solicitar información</a>
-        </div>
-
-    </div>
-
-    <!-- BARRA INFERIOR -->
-    <div class="footer-bottom">
-        <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
-        <div class="footer-legal">
-            <a href="#">Política de Privacidad</a>
-            <a href="#">Política de Cookies</a>
-            <a href="#">Aviso Legal</a>
-        </div>
-    </div>
-</footer>
-        `;
-    }
+    </footer>
+    `;
+}
 }
 export let etiquetaFooter = window.customElements.define('footer-componente', FooterComponent);
