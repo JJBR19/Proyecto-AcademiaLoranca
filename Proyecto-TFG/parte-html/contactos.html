@@ -10,34 +10,35 @@
     <script type="module" src="../parte-logica/Components/header.js" defer></script>
     <script type="module" src="../parte-logica/Components/footer.js" defer></script>
     <script type="module" src="../parte-logica/Components/whatsapp.js" defer></script>
-
+    <script type="module" src="../parte-logica/Components/lector-pagina.js"></script>
 </head>
 
 <body>
     <!--Encabezado-->
     <header-componente></header-componente>
+    <lector-pagina></lector-pagina>
     <whatsapp-componente></whatsapp-componente>
+    <main>
+        <div class="form-cont">
+            <div class="contacto-info">
+                <h1 class="info-titulo">
+                    Ponte en contacto con nuestra academia en Loranca para
+                    <span class="subrayado-amarillo">reservar la plaza de tu hijo/a</span>
+                </h1>
 
-    <div class="form-cont">
-        <div class="contacto-info">
-            <h1 class="info-titulo">
-                Ponte en contacto con nuestra academia en Loranca para
-                <span class="subrayado-amarillo">reservar la plaza de tu hijo/a</span>
-            </h1>
+                <div class="info-cuerpo">
+                    <p>Somos una academia de nueva apertura en <strong>Loranca (Madrid)</strong>, creada con la ilusión de
+                        ofrecer un apoyo educativo cercano, personalizado y de calidad.</p>
 
-            <div class="info-cuerpo">
-                <p>Somos una academia de nueva apertura en <strong>Loranca (Madrid)</strong>, creada con la ilusión de
-                    ofrecer un apoyo educativo cercano, personalizado y de calidad.</p>
+                    <p>Disponemos de <strong>grupos reducidos</strong> de máximo <strong>8 alumnos</strong> adaptados a
+                        todos los niveles, desde <strong>Primaria hasta Bachillerato</strong>, lo que nos permite atender de
+                        forma individual las necesidades de cada alumno.</p>
 
-                <p>Disponemos de <strong>grupos reducidos</strong> de máximo <strong>8 alumnos</strong> adaptados a
-                    todos los niveles, desde <strong>Primaria hasta Bachillerato</strong>, lo que nos permite atender de
-                    forma individual las necesidades de cada alumno.</p>
+                    <p>Ofrecemos refuerzo escolar general, preparación de exámenes, técnicas de estudio y apoyo en
+                        asignaturas específicas, con seguimiento continuo y comunicación directa con las familias.</p>
 
-                <p>Ofrecemos refuerzo escolar general, preparación de exámenes, técnicas de estudio y apoyo en
-                    asignaturas específicas, con seguimiento continuo y comunicación directa con las familias.</p>
-
-                <p>Si quieres asegurar una formación de calidad y mejorar sus resultados académicos, consulta nuestras
-                    plazas disponibles.</p>
+                    <p>Si quieres asegurar una formación de calidad y mejorar sus resultados académicos, consulta nuestras
+                        plazas disponibles.</p>
 
                 <p class="destacado">
                     Llámanos o escríbenos un mensaje ahora mismo para informarte sobre horarios, metodología y
@@ -66,60 +67,61 @@
 
 
 
-        <!--FORMULARIO-->
+            <!--FORMULARIO-->
 
-        <form id="formulario-interactivo" class="formulario-responsivo">
+            <form id="formulario-interactivo" class="formulario-responsivo">
 
-            <h2 class="titulo-animado">Formulario de Contacto</h2>
-
-            <div class="grupo-campo">
-                <label for="nombre-completo">Nombre completo:</label>
-                <input type="text" id="nombre-completo" name="nombre_completo" minlength="3" maxlength="50" required
-                    placeholder="Escribe tu nombre">
-            </div>
-
-            <div class="grupo-campo">
-                <label for="correo-electronico">Correo electrónico:</label>
-                <input type="email" id="correo-electronico" name="correo" required placeholder="ejemplo@correo.com">
-            </div>
-
-            <div class="fila-formulario">
+                <h2 class="titulo-animado">Formulario de Contacto</h2>
 
                 <div class="grupo-campo">
-                    <label for="edad-usuario">Edad (18-99):</label>
-                    <input type="number" id="edad-usuario" name="edad" min="18" max="99" required>
+                    <label for="nombre-completo">Nombre completo:</label>
+                    <input type="text" id="nombre-completo" name="nombre_completo" minlength="3" maxlength="50" required
+                        placeholder="Escribe tu nombre">
                 </div>
-
-            </div>
-
-            <div class="fila-formulario">
 
                 <div class="grupo-campo">
-                    <label for="telefono-contacto">Teléfono (9 dígitos):</label>
-                    <input type="tel" id="telefono-contacto" name="telefono" pattern="[0-9]{9}" required
-                        placeholder="600123456">
+                    <label for="correo-electronico">Correo electrónico:</label>
+                    <input type="email" id="correo-electronico" name="correo" required placeholder="ejemplo@correo.com">
                 </div>
 
-            </div>
+                <div class="fila-formulario">
 
-            <div class="grupo-campo">
-                <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
-                <textarea id="biografia-personal" name="biografia" maxlength="200" rows="4" required></textarea>
-                <small class="contador-texto">0 / 200</small>
-            </div>
+                    <div class="grupo-campo">
+                        <label for="edad-usuario">Edad (18-99):</label>
+                        <input type="number" id="edad-usuario" name="edad" min="18" max="99" required>
+                    </div>
 
-            <div class="grupo-campo-checkbox">
-                <label>
-                    <input type="checkbox" id="aceptar-condiciones" name="condiciones" required>
-                    Acepto los términos y condiciones
-                </label>
-            </div>
+                </div>
 
-            <button type="submit" class="boton-enviar">Enviar Formulario</button>
+                <div class="fila-formulario">
+
+                    <div class="grupo-campo">
+                        <label for="telefono-contacto">Teléfono (9 dígitos):</label>
+                        <input type="tel" id="telefono-contacto" name="telefono" pattern="[0-9]{9}" required
+                            placeholder="600123456">
+                    </div>
+
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
+                    <textarea id="biografia-personal" name="biografia" maxlength="200" rows="4" required></textarea>
+                    <small class="contador-texto">0 / 200</small>
+                </div>
+
+                <div class="grupo-campo-checkbox">
+                    <label>
+                        <input type="checkbox" id="aceptar-condiciones" name="condiciones" required>
+                        Acepto los términos y condiciones
+                    </label>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar Formulario</button>
 
 
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
 
     <footer-componente></footer-componente>
 

@@ -194,29 +194,6 @@ class HeaderComponent extends HTMLElement {
             });
         });
 
-        //-----LECTOR PÁGINA-----//
-        const btnLeer = this._shadow.getElementById("btnLeer");
-        const btnDetener = this._shadow.getElementById("btnDetener");
-
-        btnLeer.addEventListener("click", () => {
-            this.leerPagina();
-        });
-
-        btnDetener.addEventListener("click", () => {
-            this.detenerLectura();
-        });
-    }
-
-    leerPagina() {
-        const texto = document.body.innerText;
-        const speech = new SpeechSynthesisUtterance(texto);
-        speech.lang = "es-ES";
-        speech.rate = 1;
-        window.speechSynthesis.speak(speech);
-    }
-
-    detenerLectura(){
-        window.speechSynthesis.cancel();
     }
 
     get template(){
@@ -226,6 +203,8 @@ class HeaderComponent extends HTMLElement {
 
                 <!-- DIV LOGO -->
                 <div id="div-logo">
+                    <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
+                    <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
                     <a href="../parte-html/Index.html">
                         <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
                     </a>
