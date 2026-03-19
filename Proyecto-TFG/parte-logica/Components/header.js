@@ -122,7 +122,7 @@ class HeaderComponent extends HTMLElement {
             }
 
             /* MODO MÓVIL */
-            @media (max-width: 768px) {
+            @media (max-width: 1000px) {
 
                 /* Ocultamos menú normal */
                 #menu-header {

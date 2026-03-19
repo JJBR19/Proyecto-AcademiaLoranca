@@ -1,40 +1,56 @@
-/* ANIMACIÓN SERVICIOS + METODOLOGÍA */
+/* THROTTLE FUNCTION PARA OPTIMIZAR SCROLL EVENTS */
+function throttle(func, delay) {
+    let lastCall = 0;
+    return function (...args) {
+        const now = new Date().getTime();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            func.apply(this, args);
+        }
+    };
+}
 
+/* ANIMACIÓN SERVICIOS + METODOLOGÍA */
 const elementosAnimados = document.querySelectorAll(".servicio-item, .metodologia-item");
 
-window.addEventListener("scroll", () => {
+const animarServicios = throttle(() => {
     elementosAnimados.forEach((elemento) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = elemento.getBoundingClientRect().top;
-        const visible = 120;
+        // Si ya está activo, no volvemos a calcular
+        if (!elemento.classList.contains("active")) {
+            const windowHeight = window.innerHeight;
+            const elementTop = elemento.getBoundingClientRect().top;
+            const visible = 120;
 
-        if (elementTop < windowHeight - visible) {
-            elemento.classList.add("active");
+            if (elementTop < windowHeight - visible) {
+                elemento.classList.add("active");
+            }
         }
     });
-});
+}, 100); // Ejecutar máximo cada 100ms
+
+window.addEventListener("scroll", animarServicios, { passive: true });
 
 
-/* ANIMACIÓN BENEFICIOS */
-
+/* ANIMACIÓN BENEFICIOS - USA CSS EN LUGAR DE JAVASCRIPT */
 const beneficios = document.querySelectorAll(".beneficios-lista li");
 
-window.addEventListener("scroll", () => {
+const animarBeneficios = throttle(() => {
     beneficios.forEach((item, index) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = item.getBoundingClientRect().top;
-        const visible = 100;
+        if (!item.classList.contains("active")) {
+            const windowHeight = window.innerHeight;
+            const elementTop = item.getBoundingClientRect().top;
+            const visible = 100;
 
-        if (elementTop < windowHeight - visible) {
-            // Añadimos la clase active
-            item.classList.add("active");
-            
-            // Movemos cada ítem un poco hacia abajo según su índice
-            item.style.transform = `translateX(0) translateY(${index * 15}px)`;
-            item.style.transitionDelay = `${index * 0.22}s`; // efecto escalera suave
+            if (elementTop < windowHeight - visible) {
+                item.classList.add("active");
+                // Usar CSS variable en lugar de inline styles
+                item.style.setProperty('--item-delay', `${index * 0.22}s`);
+            }
         }
     });
-});
+}, 100);
+
+window.addEventListener("scroll", animarBeneficios, { passive: true });
 /* ANIMACIÓN SOBRE NOSOTROS */
 
 const valores = document.querySelectorAll(".valor-card");

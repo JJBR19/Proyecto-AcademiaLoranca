@@ -235,7 +235,7 @@ class FooterComponent extends HTMLElement {
                     <p>📍 Fuenlabrada - Loranca, Madrid</p>
                     <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="../parte-html/grupos.html#POPUP1">(Isabel Grupo 1)</a></p>
                     <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="../parte-html/grupos.html#POPUP2">(Laura Grupo 2)</a></p>
-                    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
+                    <p>✉️ <a href="mailto:info@academialoranca.es">academialoranca22@gmail.com</a></p>
                 </div>
             </div>
 

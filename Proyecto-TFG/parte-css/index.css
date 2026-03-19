@@ -185,7 +185,9 @@ header>div {
     max-width: 420px;
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
     pointer-events: auto;
+    /* Animación solo cuando sea visible */
     animation: float 3s ease-in-out infinite;
+    will-change: transform;
 }
 
 .cta-box:hover{
@@ -320,7 +322,7 @@ header>div {
 
 
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */ /* Deshabilitado para mejorar rendimiento en scroll */
 }
 
 
