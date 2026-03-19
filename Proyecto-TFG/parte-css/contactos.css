@@ -1,23 +1,40 @@
-/* Contenedor que divide en dos columnas */
+/* ==============================
+   Colores accesibles para Daltonismo
+   ============================== */
+:root {
+    --color-principal: #3962e9;  /* Azul claro */
+    --color-secundario: #25d366; /* Verde accesible */
+    --color-terciario: #ff5722;  /* Naranja (para evitar rojos problemáticos) */
+    --color-fondo: #f8fafc;      /* Fondo claro */
+    --color-texto: #333;         /* Texto oscuro */
+    --color-texto-secundario: #4a5568; /* Texto gris claro */
+    --color-boton: #00b7ff;      /* Azul del botón */
+    --color-boton-hover: #001eff; /* Azul oscuro del hover */
+}
+
+/* ==============================
+   Contenedor principal Contacto
+   ============================== */
 .contacto-main-container {
     display: flex;
-    flex-wrap: wrap; /* permite bajar columnas */
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 80px auto;
     padding: 0 20px;
     gap: 60px;
 }
 
-/* Estilos para la columna de texto */
+/* Columna de texto */
 .contacto-info {
-    flex: 1 1 500px; /* Ocupa el mismo espacio que el formulario */
+    flex: 1 1 500px;
     max-width: 600px;
-    color: #333;
+    color: var(--color-texto);
     margin-top: 60px;
 }
 
+/* Título principal */
 .info-titulo {
     font-size: 2.5rem;
     font-weight: 800;
@@ -26,80 +43,104 @@
     color: #1a1a1a;
 }
 
+/* Subrayado animado */
 .subrayado-amarillo {
     background: linear-gradient(180deg, transparent 60%, #00ffe1 60%);
     display: inline;
 }
 
+/* Párrafos */
 .info-cuerpo p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #4a5568;
+    color: var(--color-texto-secundario);
 }
 
+/* Destacados con borde */
 .destacado {
     font-weight: 600;
-    color: #2d3748;
-    border-left: 4px solid #25d366;
+    color: var(--color-texto);
+    border-left: 4px solid var(--color-secundario);
     padding-left: 15px;
 }
 
+/* ===========================
+   Pills de información
+   =========================== */
 .info-detalles {
-    margin-top: 30px;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: flex-start;
 }
 
 .detalle-item {
-    max-height: fit-content;
-    background: linear-gradient(780deg,#c3eeff, #d4d9ff);
-    padding: 10px 10px;
-    border-radius: 100px;
-    font-size: 0.9rem;
+    display: inline-flex;
+    flex-direction: column; /* Para que los enlaces queden uno debajo de otro */
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px; /* Ajuste para mejor proporción */
+    border-radius: 50px; /* Pill más uniforme */
+    font-size: 0.95rem;
     font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    text-align: center;
+    white-space: normal; /* Permite que el texto largo se divida en varias líneas */
+    background: linear-gradient(135deg, #c3eeff, #d4d9ff);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    max-width: 350px; /* Evita que se estire demasiado en pantallas grandes */
+    word-wrap: break-word;
 }
-.boton-telefono{
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;   
+
+/* Hover elegante */
+.detalle-item:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Variantes de color */
+.detalle-item.azul { 
+    background: linear-gradient(135deg, #c3eeff, #d4d9ff);
+}
+.detalle-item.verde { 
+    background: linear-gradient(135deg, #c8ffd8, #b2f7ef);
+}
+.detalle-item.morado { 
+    background: linear-gradient(135deg, #e0d4ff, #cdb4ff);
+}
+
+/* Enlaces dentro del pill */
+.detalle-item a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Ajuste para que el formulario no se vea gigante */
-.formulario-responsivo {
-    flex: 1 1 500px;
-    max-width: 600px;
-    margin: 0; /* Quitamos el margin auto para que se alinee a la derecha */
+.detalle-item a:hover {
+    color: #0077cc; /* Azul suave al pasar el mouse */
+    transform: scale(1.05);
 }
 
-/* RESPONSIVE: En móviles se pone uno debajo de otro */
-@media (max-width: 900px) {
-    .contacto-main-container {
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    
-    .contacto-info {
-        text-align: center;
-    }
-    
-    .destacado {
-        border-left: none;
-        border-top: 2px solid #25d366;
-        padding-top: 10px;
-        padding-left: 0;
+/* Responsive: para móviles se ajusta el tamaño y el padding */
+@media (max-width: 480px) {
+    .detalle-item {
+        font-size: 0.85rem;
+        padding: 10px 14px;
+        max-width: 280px;
     }
 }
 
-/* =========================================
-   ESTILOS ESPECÍFICOS DEL FORMULARIO
-   ========================================= */
-.form-cont{
+/* ===========================
+   Contenedor del formulario
+   =========================== */
+.form-cont {
     display: flex;
-    flex-wrap: wrap;  /*  clave */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     max-width: 1300px;
@@ -108,11 +149,10 @@
     gap: 60px;
 }
 
-
-/* Contenedor principal del formulario */
 .formulario-responsivo {
+    flex: 1 1 500px;
     max-width: 600px;
-    margin: 60px auto;
+    margin: 0 auto;
     background: #ffffff;
     padding: 40px;
     border-radius: 26px;
@@ -120,58 +160,33 @@
     border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-/* Título del formulario */
+/* Título animado del formulario */
 .titulo-animado {
-    color: var(--dark);
+    color: var(--dark, #1a1a1a);
     font-size: 2rem;
     text-align: center;
     margin-bottom: 30px;
     font-weight: 800;
 }
 
-/* Barra de progreso (Coherente con el azul primario) */
-.contenedor-progreso {
-    width: 100%;
-    height: 8px;
-    background-color: #eaf1ff;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-
-.barra-relleno {
-    width: 30%; /* Esto se puede controlar con JS */
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    transition: width 0.4s ease;
-}
-
-/* Grupos de campos */
+/* Campos del formulario */
 .grupo-campo {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
-
 .fila-formulario {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
-
-/* Estilos de Label e Input */
 label {
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--dark);
+    color: var(--dark, #1a1a1a);
     font-size: 0.95rem;
 }
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-textarea {
+input, textarea {
     width: 100%;
     padding: 12px 16px;
     border: 2px solid #e2e8f0;
@@ -181,52 +196,24 @@ textarea {
     outline: none;
     background-color: #f8fafc;
 }
-
-input:focus,
-textarea:focus {
-    border-color: var(--primary);
-    background-color: #ffffff;
+input:focus, textarea:focus {
+    border-color: var(--primary, #3962e9);
+    background-color: #fff;
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
+textarea { resize: vertical; min-height: 100px; }
+.contador-texto { align-self: flex-end; font-size: 0.8rem; color: var(--muted, #718096); margin-top: 5px; }
 
-/* Estilo para el área de biografía */
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
+/* Checkbox */
+.grupo-campo-checkbox { margin: 20px 0; }
+.grupo-campo-checkbox label { display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 500; }
+input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; accent-color: var(--primary, #3962e9); }
 
-.contador-texto {
-    align-self: flex-end;
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 5px;
-}
-
-/* Checkbox estilizado */
-.grupo-campo-checkbox {
-    margin: 20px 0;
-}
-
-.grupo-campo-checkbox label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: var(--primary);
-}
-
-/* Botón de envío (Coherente con btn-primary de la academia) */
+/* Botón de envío */
 .boton-enviar {
     width: 100%;
-    background:linear-gradient(540deg, #00b7ff, #001eff); /* Verde como el botón de inscripción */
-    color: rgb(255, 255, 255);
+    background: linear-gradient(540deg, var(--color-boton), var(--color-secundario));
+    color: #fff;
     padding: 16px;
     border: none;
     border-radius: 50px;
@@ -237,73 +224,55 @@ input[type="checkbox"] {
     box-shadow: 0 10px 20px rgba(0, 108, 122, 0.3);
     margin-top: 10px;
 }
-
 .boton-enviar:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(0, 255, 217, 0.4);
     filter: brightness(1.1);
 }
 
-/* Responsive */
-@media (min-width: 481px) {
-    .fila-formulario {
-        grid-template-columns: 1fr 1fr;
-    }
+/* ===========================
+   Modo Daltonismo
+   =========================== */
+.color-blind-mode {
+    filter: grayscale(100%) contrast(120%) brightness(90%);
 }
 
-@media (max-width: 480px) {
-    .formulario-responsivo {
-        padding: 25px 20px;
-        margin: 30px 15px;
-    }
+/* Estilo del botón para cambiar al modo daltonismo */
+.boton-daltonismo {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff5722;  /* Naranja */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.boton-daltonismo:hover {
+    background-color: #e64a19;  /* Naranja oscuro */
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
 @media (max-width: 1024px) {
-
     .contacto-main-container,
-    .form-cont {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .info-detalles {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    .form-cont { flex-direction: column; align-items: center; text-align: center; }
+    .info-detalles { justify-content: center; }
 }
-
+@media (max-width: 900px) {
+    .contacto-info { text-align: center; }
+    .destacado { border-left: none; border-top: 2px solid #25d366; padding-left: 0; padding-top: 10px; }
+}
 @media (max-width: 480px) {
-
-    .contacto-info {
-        margin-top: 20px;
-    }
-
-    .info-titulo {
-        font-size: 1.8rem;
-    }
-
-    .info-cuerpo p {
-        font-size: 1rem;
-    }
-
-    .detalle-item {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-    }
-
-    .formulario-responsivo {
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .boton-enviar {
-        font-size: 1rem;
-        padding: 14px;
-    }
+    .detalle-item { font-size: 0.8rem; padding: 8px 12px; }
+    .contacto-info { margin-top: 20px; }
+    .info-titulo { font-size: 1.8rem; }
+    .info-cuerpo p { font-size: 1rem; }
+    .formulario-responsivo { padding: 20px; border-radius: 20px; margin: 30px 15px; }
+    .boton-enviar { font-size: 1rem; padding: 14px; }
 }
 
-html {
-    font-size: clamp(14px, 1vw, 18px);
-}
-
+html { font-size: clamp(14px, 1vw, 18px); }

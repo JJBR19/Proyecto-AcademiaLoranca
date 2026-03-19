@@ -32,6 +32,8 @@ class FooterComponent extends HTMLElement {
     display: flex;
 }
 
+
+
 /* ========================
    COLUMNA MARCA
 ======================== */
@@ -112,8 +114,9 @@ class FooterComponent extends HTMLElement {
 }
 
 .footer-col ul li a:hover {
-    color: #ffffff;
+    color: #97dff1;
     padding-left: 5px;
+    text-decoration: underline;
 }
 
 /* ========================
@@ -206,6 +209,8 @@ class FooterComponent extends HTMLElement {
 .footer-col ul li:hover {
     transform: translateX(6px);
 }
+
+
 </style>
 `+ this.template;
     }
@@ -231,12 +236,16 @@ class FooterComponent extends HTMLElement {
                 </p>
 
 
-                <div class="footer-contact"><br>
-                    <p>📍 Fuenlabrada - Loranca, Madrid</p>
-                    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="../parte-html/grupos.html#POPUP1">(Isabel Grupo 1)</a></p>
-                    <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="../parte-html/grupos.html#POPUP2">(Laura Grupo 2)</a></p>
-                    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
-                </div>
+               <div class="footer-contact"><br>
+    <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+28942+Fuenlabrada,+Madrid" target="_blank" rel="noopener">
+        C/ Alegría, 4 (CC, entrada por el supermercado, Nivel Centro 1ª planta, 28942 Fuenlabrada, Madrid)
+    </a></p>
+    
+    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#div-grupos">(Isabel Grupo 1)</a></p>
+    <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="./grupos.html#div-grupos">(Laura Grupo 2)</a></p>
+    
+    <p>✉️ <a href="mailto:info@academialoranca.es">info@academialoranca.es</a></p>
+</div>
             </div>
 
             <!-- COLUMNA 2 - ENLACES -->
@@ -270,12 +279,13 @@ class FooterComponent extends HTMLElement {
             </div>
 
              <!-- COLUMNA 4 - HORARIOS -->
-            <div class="footer-col">
+            <div class="footer-col" id="horarios">
                 <h4>Horarios</h4>
                 <ul>
-                    <li><strong>Lunes a Jueves:</strong> 15:00 - 20:00 (Grupo 1)</li>
-                    <li><strong>Lunes a Jueves:</strong> 16:00 - 21:00 (Grupo 2)</li>
-                    
+                
+                    <li><strong>Lunes a Jueves:</strong> 15:00 - 20:00 <a href="grupos.html#div-grupos">(Grupo 1)</a></li>
+                    <li><strong>Lunes a Jueves:</strong> 16:00 - 21:00 <a href="grupos.html#div-grupos">(Grupo 2)</a></li>
+                 </ul>   
             </div>
 
         </div>
@@ -289,7 +299,10 @@ class FooterComponent extends HTMLElement {
                 <a href="#">Aviso Legal</a>
             </div>
         </div>
+
+       
     </footer>
+    
     `;
 }
 }
