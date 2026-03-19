@@ -203,8 +203,7 @@ class HeaderComponent extends HTMLElement {
 
                 <!-- DIV LOGO -->
                 <div id="div-logo">
-                    <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
-                    <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
+                    
                     <a href="../parte-html/Index.html">
                         <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
                     </a>
