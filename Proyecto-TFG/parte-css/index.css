@@ -983,6 +983,7 @@ section h2 {
     .metodologia-item {
         gap: 30px;
         margin-bottom: 60px;
+        text-decoration: none;
     }
 
     .metodo-img {
