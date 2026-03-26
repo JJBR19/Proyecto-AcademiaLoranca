@@ -114,6 +114,13 @@ class LectorPaginaComponent extends HTMLElement {
                 }
         });
 
+         document.addEventListener("click", (e) => {
+            const path = e.composedPath(); 
+            if (!path.includes(this)) {
+                controles.classList.remove("activo");
+            }
+        });
+
         window.addEventListener("beforeunload", () => {
             window.speechSynthesis.cancel();
         });
