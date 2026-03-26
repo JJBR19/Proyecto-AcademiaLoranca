@@ -112,6 +112,19 @@ class WhatsappComponent extends HTMLElement {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 480px) {
+    .whatsapp-card {
+        display: none; /* Se activa con JS */
+        width: 300px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+        overflow: hidden;
+        animation: fadeIn 0.3s ease;
+    }
+}
 </style>
 `+ this.template;
 
