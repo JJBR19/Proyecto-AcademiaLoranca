@@ -9,8 +9,8 @@ class WhatsappComponent extends HTMLElement {
         /* Contenedor principal */
 .whatsapp-container {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
     font-family: Arial, sans-serif;
     
@@ -147,7 +147,7 @@ toggleWhatsapp() {
                 <p>En nuestra academia ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas y lograr
                     sus objetivos.</p>
                 <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
-                <a href="https://wa.me/617522488" target="_blank" class="send-btn">
+                <a href="https://wa.me/652081700" target="_blank" class="send-btn">
                     Abrir chat
                 </a>
             </div>
