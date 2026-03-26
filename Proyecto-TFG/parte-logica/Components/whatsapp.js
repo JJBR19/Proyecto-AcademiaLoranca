@@ -9,8 +9,8 @@ class WhatsappComponent extends HTMLElement {
         /* Contenedor principal */
 .whatsapp-container {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
     font-family: Arial, sans-serif;
     
@@ -112,6 +112,19 @@ class WhatsappComponent extends HTMLElement {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 480px) {
+    .whatsapp-card {
+        display: none; /* Se activa con JS */
+        width: 300px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+        overflow: hidden;
+        animation: fadeIn 0.3s ease;
+    }
+}
 </style>
 `+ this.template;
 
@@ -147,7 +160,7 @@ toggleWhatsapp() {
                 <p>En nuestra academia ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas y lograr
                     sus objetivos.</p>
                 <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
-                <a href="https://wa.me/617522488" target="_blank" class="send-btn">
+                <a href="https://wa.me/652081700" target="_blank" class="send-btn">
                     Abrir chat
                 </a>
             </div>
