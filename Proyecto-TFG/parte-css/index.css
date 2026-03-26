@@ -179,38 +179,27 @@ header>div {
 
 @media (max-width: 480px) {
 
+    .carrusel {
+        height: auto;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
     .carrusel-cta {
-        padding: 20px 15px;
+        position: static; /* 👈 IMPORTANTE */
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
     }
 
     .cta-box {
-        padding: 25px 20px;
-        border-radius: 16px;
-        text-align: center;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-
-    .cta-box h3 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-    }
-
-    .cta-box p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
-
-    .cta-btn {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-        border-radius: 10px;
-        text-align: center;
+        padding: 20px;
     }
 }
-
 
 .cta-box {
     background: rgba(255, 255, 255, 0.95);
