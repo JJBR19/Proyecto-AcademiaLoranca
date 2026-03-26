@@ -703,9 +703,17 @@ section h2 {
 }
 
 .asignaturas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 75px;
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/*ASIGNATURAS IMAGENES MOVIL Y TABLET*/
+
+@media (max-width: 1024px) {
+    .asignaturas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .asignatura-card {
@@ -751,7 +759,7 @@ section h2 {
 
 
 /* ================================
-   RESPONSIVE
+   RESPONSIVE ASIGANTURAS MOVIL
 ================================ */
 @media (max-width: 768px) {
     .asignatura-img {
@@ -761,13 +769,44 @@ section h2 {
 
 
 @media (max-width: 480px) {
-    .asignaturas-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    .asignaturas {
+        padding: 40px 15px;
     }
 
+    .asignaturas h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 25px;
+    }
 
-    .asignatura-img {
-        height: 100px;
+    .asignaturas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .asignatura-card {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        background: #fff;
+    }
+
+    .asignatura-img img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .asignatura-card h3 {
+        font-size: 1.2rem;
+        margin: 15px;
+    }
+
+    .asignatura-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0 15px 20px;
     }
 }
 
@@ -1430,15 +1469,12 @@ section::after {
 
 .beneficios-lista li {
     opacity: 0;
-    transform: translateX(60px) translateY(0); /* todos salen desde la derecha */
-    transition: all 1s ease; /* velocidad de aparición */
-    position: relative;
+    transition: opacity 0.8s ease; /* solo desvanecido */
 }
 
 /* cuando se activan */
 .beneficios-lista li.active {
     opacity: 1;
-    transform: translateX(0) translateY(0); /* posición final */
 }
 
 
