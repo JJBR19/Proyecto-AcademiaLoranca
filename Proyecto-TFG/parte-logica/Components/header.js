@@ -129,7 +129,7 @@ class HeaderComponent extends HTMLElement {
                 /* Ocultamos menú normal */
                 #menu-header {
                     position: absolute;
-                    top: 100%;
+                    top: 101px;
                     right: 0;
                     width: 30%;
                     background: linear-gradient(15deg, #6064af, #26cae3);
@@ -141,6 +141,32 @@ class HeaderComponent extends HTMLElement {
                 }
 
                 .link-encabezado {
+                    font-size: 1.2rem;
+                }
+
+                .menu-mobile-btn {
+                    display: block;
+                }
+
+                #menu-header.active {
+                    display: flex;
+                    animation: slideDown 0.3s ease;
+                }
+            }
+            @media (max-width: 480px) {
+            #menu-header {
+                    position: absolute;
+                    top: 102px;
+                    right: 0;
+                    width: 30%;
+                    background: linear-gradient(15deg, #6064af, #26cae3);
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    padding: 20px 0;
+                    display: none;
+                }
+                    .link-encabezado {
                     font-size: 1.2rem;
                 }
 
