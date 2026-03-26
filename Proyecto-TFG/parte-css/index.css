@@ -1534,152 +1534,40 @@ section::after {
 }
 
 
-/* ================================
-   CONTENEDOR CARRUSEL
-================================ */
-.carrusel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* ================================
-   IMÁGENES DEL CARRUSEL
-================================ */
-.carrusel img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-/* ================================
-   BOTONES (flechas)
-================================ */
-.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    z-index: 3;
-    border-radius: 8px;
-}
-
-.btn.right {
-    right: 10px;
-}
-
-/* ================================
-   CTA SOBRE EL CARRUSEL (DESKTOP)
-================================ */
-.carrusel-cta {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 500px;
-    z-index: 2;
-}
-
-.cta-box {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(6px);
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
-
-.cta-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.cta-box p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* ================================
-   EFECTO BOTÓN (UX PRO)
-================================ */
-.cta-btn {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-btn:active {
-    transform: scale(0.97);
-}
-
-/* ================================
-   RESPONSIVE TABLET
-================================ */
-@media (max-width: 768px) {
-
-    .carrusel img {
-        height: 300px;
-    }
-
-    .carrusel-cta {
-        width: 95%;
-    }
-}
-
-/* ================================
-   RESPONSIVE MÓVIL (CLAVE)
-================================ */
 @media (max-width: 480px) {
 
     .carrusel img {
         height: 220px;
     }
 
-    /* 👇 EL CAMBIO MÁS IMPORTANTE */
     .carrusel-cta {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin-top: 15px;
-        padding: 0 15px;
+        position: absolute; /* 👈 sigue encima */
+        bottom: 10px;       /* más pegado abajo */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;         /* más estrecho */
+        max-width: 320px;   /* tamaño controlado */
     }
 
     .cta-box {
-        padding: 20px;
-        border-radius: 14px;
+        padding: 12px 14px;  /* 👈 más pequeño */
+        border-radius: 12px;
     }
 
     .cta-box h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;     /* más compacto */
+        margin-bottom: 5px;
     }
 
     .cta-box p {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+        line-height: 1.3;
     }
 
     .cta-btn {
-        display: block;
-        width: 100%;
-        padding: 14px;
-    }
-
-    /* botones más discretos en móvil */
-    .btn {
-        padding: 8px 10px;
-        font-size: 14px;
+        font-size: 0.85rem;
+        padding: 8px;
     }
 }
 
