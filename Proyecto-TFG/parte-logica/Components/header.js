@@ -138,6 +138,7 @@ class HeaderComponent extends HTMLElement {
                     gap: 20px;
                     padding: 20px 0;
                     display: none;
+                    border:1px solid #8dedfc
                 }
 
                 .link-encabezado {
@@ -172,6 +173,7 @@ class HeaderComponent extends HTMLElement {
 
                 .menu-mobile-btn {
                     display: block;
+                    
                 }
 
                 #menu-header.active {
