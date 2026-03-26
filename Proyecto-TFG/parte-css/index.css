@@ -1533,6 +1533,7 @@ section::after {
     opacity: 1;
 }
 
+/*Carrusel*/
 
 @media (max-width: 480px) {
 
@@ -1570,4 +1571,20 @@ section::after {
         padding: 8px;
     }
 }
+
+.btn.right {
+    background-color: #ffffff;
+    color: #0059ff;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.btn.left {
+    background-color: #ffffff;
+    color: #0059ff;
+    transition: background-color 0.3s ease;
+}
+
+
 
