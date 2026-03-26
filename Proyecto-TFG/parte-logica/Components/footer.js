@@ -273,8 +273,8 @@ class FooterComponent extends HTMLElement {
         C/ Alegría, 4 (CC, entrada por el supermercado, Nivel Centro 1ª planta, 28942 Fuenlabrada, Madrid)
     </a></p>
     
-    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#div-grupos">(Isabel Grupo 1)</a></p>
-    <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="./grupos.html#div-grupos">(Laura Grupo 2)</a></p>
+    <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#grupo1">(Isabel Grupo 1)</a></p>
+    <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="./grupos.html#grupo2">(Laura Grupo 2)</a></p>
     
     <p>✉️ <a href="mailto:info@academialoranca.es">academialoranca22@gmail.com</a></p>
 </div>
@@ -315,8 +315,8 @@ class FooterComponent extends HTMLElement {
                 <h4>Horarios</h4>
                 <ul>
                 
-                    <li><strong>Lunes a Jueves:</strong> 15:00 - 20:00 <a href="grupos.html#div-grupos">(Grupo 1)</a></li>
-                    <li><strong>Lunes a Jueves:</strong> 16:00 - 21:00 <a href="grupos.html#div-grupos">(Grupo 2)</a></li>
+                    <li><strong>Lunes a Jueves:</strong> 15:00 - 20:00 <a href="grupos.html#grupo1">(Grupo 1)</a></li>
+                    <li><strong>Lunes a Jueves:</strong> 16:00 - 21:00 <a href="grupos.html#grupo2">(Grupo 2)</a></li>
                  </ul>   
             </div>
 
