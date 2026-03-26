@@ -195,7 +195,13 @@ class HeaderComponent extends HTMLElement {
                 menu.classList.remove("active");
             });
         });
-
+        
+        document.addEventListener("click", (e) => {
+            const path = e.composedPath(); 
+            if (!path.includes(this)) {
+                menu.classList.remove("active");
+            }
+        });
     }
 
     get template(){
