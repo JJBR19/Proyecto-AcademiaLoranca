@@ -198,6 +198,38 @@ class FooterComponent extends HTMLElement {
     }
 }
 
+@media (max-width: 480px) {
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .footer-legal a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+        display: block;
+    }
+}
+
+
+
 /* =====================================================
    FOOTER PRO
 ===================================================== */
