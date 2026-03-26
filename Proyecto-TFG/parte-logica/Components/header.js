@@ -205,13 +205,13 @@ class HeaderComponent extends HTMLElement {
 
                 <!-- DIV LOGO -->
                 <div id="div-logo">
-                    
                     <a href="../parte-html/Index.html">
                         <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
                     </a>
                     <a href="../parte-html/Index.html">
                         <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
                     </a>
+                    
                 </div>
 
                 <!-- BOTÓN MENÚ MÓVIL -->

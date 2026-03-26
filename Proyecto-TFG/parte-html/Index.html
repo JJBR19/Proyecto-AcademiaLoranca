@@ -12,6 +12,7 @@
     <script type="module" src="../parte-logica/Components/lector-pagina.js"></script>
     <script src="../parte-logica/carrusel.js" defer></script>
     <script src="../parte-logica/animaciones.js" defer></script>
+    <script src="accesibilidad-voz.js" defer></script>
 </head>
 
 <body>
@@ -22,6 +23,10 @@
     <header-componente></header-componente>
     <lector-pagina></lector-pagina>
     <whatsapp-componente></whatsapp-componente>
+
+    <button onclick="toggleVoz()" aria-label="Activar o desactivar lectura por voz">
+        🔊 Activar / Desactivar voz
+    </button>
     
 
     <!---------------------------------------------->
@@ -594,12 +599,9 @@
         </div>
     </div>
 </section>
+
+
 <footer-componente id="footer"></footer-componente>
-
-
-
-
-
 
 
 
