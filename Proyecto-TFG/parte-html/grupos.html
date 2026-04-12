@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../parte-css/grupos.css">
     <script src="../parte-logica/animaciones.js"></script>
     <script>
-        /* POPUP HANDLERS OPTIMIZADOS */
         function abrirPOPUP(id) {
             const popup = document.getElementById(id);
             popup.style.display = "flex";
@@ -38,7 +37,6 @@
             }
         }
 
-        // Event delegación para cerrar popups optimizado
         document.addEventListener("click", function (event) {
             if (event.target.classList.contains("POPUP")) {
                 cerrarPOPUP(event.target.id);
@@ -58,12 +56,12 @@
     <whatsapp-componente></whatsapp-componente>
     
 
-    <!-- MAIN CURSOS -->
+    <!-- CURSOS -->
     <main>
         <section class="clases">
             <h1 class="titulo-seccion">Nuestros Cursos</h1>
 
-            <!-- Clases de Refuerzo SBS -->
+            <!-- Tarjeta clases de refuerzo -->
             <div class="curso-sbs">
                 <div class="curso-texto">
                     <h2>📚 Clases de Refuerzo</h2>
@@ -78,7 +76,7 @@
                 </div>
             </div>
 
-            <!-- Preparación de Exámenes SBS -->
+            <!-- Tarjeta preparación de exámenes -->
             <div class="curso-sbs reverse">
                 <div class="curso-texto">
                     <h2>📝 Preparación de Exámenes</h2>
@@ -93,7 +91,7 @@
                 </div>
             </div>
 
-            <!-- Estudios Generales SBS -->
+            <!-- Tarjeta estudios generales -->
             <div class="curso-sbs">
                 <div class="curso-texto">
                     <h2>🎓 Estudios Generales</h2>
@@ -108,10 +106,11 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN DE GRUPOS -->
+            <!-- SECCIÓN GRUPOS -->
             <div id="div-grupos" class="div-grupos">
                 <h2>Grupos Disponibles</h2>
                 <div class="DivGrupos" id="grupo1">
+                    <!-- Tarjeta GRUPO 1 -->
                     <div class="zona-grupos">
                         <h3>👦 Grupo 1:</h3>
                         <img src="../imagenes/niños_grupos1.png" alt="Estudiantes Primaria + 1º ESO" loading="lazy">
@@ -121,6 +120,7 @@
                         </div>
                     </div>
                     
+                    <!-- Tarjeta GRUPO 2 -->
                     <div class="zona-grupos" id="grupo2">
                         <h3>👩‍🎓 Grupo 2:</h3>
                         <img src="../imagenes/adolescentes_grupos.png" alt="Estudiantes ESO y Bachillerato" loading="lazy">
@@ -136,58 +136,66 @@
     </main>
 
     <!-- POPUPS FUNCIONALES -->
-    <!-- POPUP FUNCIONAL -->
-    <div id="POPUP1" class="POPUP">
-        <div class="POPUP-contenido animar-popup">
-            <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
 
-            <!-- Video avatar -->
-            <div class="avatar-container">
-                <video class="avatar-video" muted playsinline>
-                    <source src="../imagenes/Saludo con la mano Isabel.mp4" type="video/mp4">
-                </video>
-            </div>
+        <!-- POPUP GRUPO 1 -->
+        <div id="POPUP1" class="POPUP">
+            <div class="POPUP-contenido animar-popup">
+                <span class="cerrar" onclick="cerrarPOPUP('POPUP1')">&times;</span>
 
-            <h2>👦 Grupo 1: Primaria + 1º ESO</h2>
-            <p><strong>Profesora:</strong> Isabel Rodriguez</p>
-            <p><strong>Horario:</strong> Lunes a Jueves (15:00-20:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
-            <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
-            <h3>Información adicional:</h3>
-            <ul>
-                <li>Día de prueba gratuito para conocer nuestra metodología.</li>
-                <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
-                <li>Evaluaciones periódicas y comunicación constante con padres.</li>
-                <li>Actividades complementarias para potenciar habilidades de estudio.</li>
-            </ul>
-            <div class="div-apuntarme">
-                <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+                <!-- AVATAR PROFESORA GRUPO 1 -->
+                <div class="avatar-container">
+                    <video class="avatar-video" muted playsinline>
+                        <source src="../imagenes/Saludo con la mano Isabel.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- INFORMACIÓN GRUPO 1 -->
+                <h2>👦 Grupo 1: Primaria + 1º ESO</h2>
+                <p><strong>Profesora:</strong> Isabel Rodriguez</p>
+                <p><strong>Horario:</strong> Lunes a Jueves (15:00-20:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
+                <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
+                <h3>Información adicional:</h3>
+                <ul>
+                    <li>Día de prueba gratuito para conocer nuestra metodología.</li>
+                    <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
+                    <li>Evaluaciones periódicas y comunicación constante con padres.</li>
+                    <li>Actividades complementarias para potenciar habilidades de estudio.</li>
+                </ul>
+                <div class="div-apuntarme">
+                    <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="POPUP2" class="POPUP">
-        <div class="POPUP-contenido">
-             <div class="avatar-container">
-                <video class="avatar-video" muted playsinline>
-                    <source src="../imagenes/Saludo Silencioso con la Mano.mp4" type="video/mp4">
-                </video>
-            </div>
-            <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
-            <h2>👩‍🎓 Grupo 2: 2º- 4º ESO + Bachillerato</h2>
-            <p><strong>Profesora:</strong> Laura Barroso</p>
-            <p><strong>Horario:</strong> Lunes a Jueves (16:00-21:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
-            <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
-            <h3>Información adicional:</h3>
-            <ul>
-                <li>Día de prueba gratuito para conocer nuestra metodología.</li>
-                <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
-                <li>Evaluaciones periódicas con informes de progreso.</li>
-                <li>Preparación específica para exámenes finales y EVAU.</li>
-            </ul>
-            <div class="div-apuntarme">
-                <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+
+        <!-- POPUP GRUPO 2 -->
+        <div id="POPUP2" class="POPUP">
+            <div class="POPUP-contenido">
+                <span class="cerrar" onclick="cerrarPOPUP('POPUP2')">&times;</span>
+                <!-- AVATAR PROFESORA GRUPO 2 -->
+                <div class="avatar-container">
+                    <video class="avatar-video" muted playsinline>
+                        <source src="../imagenes/Saludo Silencioso con la Mano.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- INFORMACIÓN GRUPO 2 -->
+                
+                <h2>👩‍🎓 Grupo 2: 2º- 4º ESO + Bachillerato</h2>
+                <p><strong>Profesora:</strong> Laura Barroso</p>
+                <p><strong>Horario:</strong> Lunes a Jueves (16:00-21:00), sesiones de 60 minutos adaptadas al nivel de cada alumno.</p>
+                <p><strong>Plazas:</strong> 8 alumnos por grupo para garantizar atención personalizada.</p>
+                <h3>Información adicional:</h3>
+                <ul>
+                    <li>Día de prueba gratuito para conocer nuestra metodología.</li>
+                    <li>Disponibilidad de contacto directo fuera del horario de clase.</li>
+                    <li>Evaluaciones periódicas con informes de progreso.</li>
+                    <li>Preparación específica para exámenes finales y EVAU.</li>
+                </ul>
+                <div class="div-apuntarme">
+                    <a href="contactos.html" class="boton-apuntarse">Apuntarme</a>
+                </div>
             </div>
         </div>
-    </div>
 
     <footer-componente></footer-componente>
 

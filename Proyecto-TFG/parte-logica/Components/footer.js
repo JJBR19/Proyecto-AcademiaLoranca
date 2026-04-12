@@ -326,9 +326,8 @@ class FooterComponent extends HTMLElement {
         <div class="footer-bottom">
             <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
             <div class="footer-legal">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Política de Cookies</a>
-                <a href="#">Aviso Legal</a>
+                <a href="../parte-html/privacidad.html">Política de Privacidad</a>
+                <a href="../parte-html/aviso-legal.html">Aviso Legal</a>
             </div>
         </div>
 
