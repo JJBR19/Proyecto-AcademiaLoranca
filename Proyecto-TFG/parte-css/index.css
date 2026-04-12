@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -54,10 +55,10 @@ header>div {
     font-size: 22px;
     font-weight: 700;
     font-style: italic;
-    color: #f2f3f0;
     letter-spacing: 1px;
     cursor: pointer;
     transition: transform 0.3s;
+    color: #f2f3f0; /* sobre fondo azul degradado */
 }
 
 #nombre_academia:hover{
@@ -81,9 +82,11 @@ header>div {
 }
 
 .link-encabezado:hover {
-    color: #dbdbdb;
-    transform: scale(1.2, 1.2);
+
     padding: 0px 12px;
+     color: #dbdbdb;
+    text-decoration: underline; /* refuerzo visual */
+    transform: scale(1.2);
 }
 
 /*------------------------------------------*/
@@ -175,9 +178,34 @@ header>div {
     pointer-events: none;
 }
 
+/*Responsive carrusel*/
+
+@media (max-width: 480px) {
+
+    .carrusel {
+        height: auto;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .carrusel-cta {
+        position: static; /* 👈 IMPORTANTE */
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .cta-box {
+        padding: 20px;
+    }
+}
 
 .cta-box {
-    background: rgba(255, 255, 255, 0.95);
+    
     backdrop-filter: blur(6px);
     padding: 22px 28px;
     border-radius: 20px;
@@ -188,6 +216,8 @@ header>div {
     /* Animación solo cuando sea visible */
     animation: float 3s ease-in-out infinite;
     will-change: transform;
+    background: rgba(255, 255, 255, 0.98); /* opacidad más alta */
+    border: 1px solid rgba(0,0,0,0.08);
 }
 
 .cta-box:hover{
@@ -435,15 +465,14 @@ body {
 
 .btn-primary {
     background: var(--accent);
-    background: linear-gradient(60deg, #2f3f95, #000c8c);
     background-color: #6e6f8d;
-    color: white;
     padding: 15px 36px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
     box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
+    color: white; background: linear-gradient(60deg, #2f3f95, #000c8c);
 }
 
 
@@ -682,6 +711,21 @@ section h2 {
     .servicio-item {
         margin-bottom: 50px;
     }
+    .servicio-img {
+        flex: 1 1 350px;
+        max-width: 350px;
+        max-height: 200px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .servicio-img img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -794,7 +838,7 @@ section h2 {
 
     .asignatura-img img {
         width: 100%;
-        height: 180px;
+        height: 150px;
         object-fit: cover;
     }
 
@@ -1061,6 +1105,22 @@ section h2 {
 
     .metodologia-item {
         margin-bottom: 50px;
+    }
+
+    .metodo-img {
+        flex: 1 1 350px;
+        max-width: 350px;
+        max-height: 200px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .metodo-img img {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -1355,7 +1415,10 @@ section::after {
 }
 
 .beneficios-lista li:hover {
+    /* refuerzo visual además del movimiento */
     transform: translateX(10px);
+    border-left: 4px solid #2563eb; /* azul visible */
+    background-color: #f0f6ff;      /* ligero cambio de fondo */
 }
 
 
@@ -1476,5 +1539,60 @@ section::after {
 .beneficios-lista li.active {
     opacity: 1;
 }
+
+/*Carrusel*/
+
+@media (max-width: 480px) {
+
+    .carrusel img {
+        height: 220px;
+    }
+
+    .carrusel-cta {
+        position: absolute; /* 👈 sigue encima */
+        bottom: 10px;       /* más pegado abajo */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;         /* más estrecho */
+        max-width: 320px;   /* tamaño controlado */
+    }
+
+    .cta-box {
+        padding: 12px 14px;  /* 👈 más pequeño */
+        border-radius: 12px;
+    }
+
+    .cta-box h3 {
+        font-size: 1rem;     /* más compacto */
+        margin-bottom: 5px;
+    }
+
+    .cta-box p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    .cta-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
+
+.btn.right {
+    background-color: #ffffff;
+    color: #0059ff;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.btn.left {
+    background-color: #ffffff;
+    color: #0059ff;
+    transition: background-color 0.3s ease;
+}
+
+
 
 

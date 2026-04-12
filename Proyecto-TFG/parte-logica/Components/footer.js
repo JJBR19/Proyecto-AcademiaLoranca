@@ -217,14 +217,14 @@ class FooterComponent extends HTMLElement {
     .footer-legal {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         width: 100%;
     }
 
     .footer-legal a {
         font-size: 0.9rem;
-        padding: 8px 0;
-        display: block;
+        padding: 3px 0;
+        
     }
 }
 

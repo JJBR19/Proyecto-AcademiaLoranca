@@ -70,10 +70,9 @@
 }
 
 .wa-close {
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro suave */
+    
     border: none;
     border-radius: 50%; /* Hace que sea un círculo */
-    color: white;
     cursor: pointer;
     
     /* Tamaño del botón */
@@ -93,11 +92,19 @@
     /* Transición suave al pasar el ratón */
     transition: background 0.3s ease;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Más opaco para mejor contraste */
+    color: white;
 }
 
 /* Efecto al pasar el ratón */
 .wa-close:hover {
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button,
+.send-btn {
+    background-color: #1ebc4b; /* verde ligeramente más oscuro */
+    color: white;
 }
 
 @keyframes fadeIn {

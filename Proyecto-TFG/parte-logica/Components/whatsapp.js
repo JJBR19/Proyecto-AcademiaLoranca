@@ -144,7 +144,16 @@ toggleWhatsapp() {
     } else {
         card.style.display = 'block';
     }
+
+    document.addEventListener("click", (e) => {
+            const path = e.composedPath(); 
+            if (!path.includes(this)) {
+                card.style.display = 'none';
+            }
+        });
 }
+
+
 
     get template(){
         return `
