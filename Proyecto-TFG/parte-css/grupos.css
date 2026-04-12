@@ -1,11 +1,14 @@
-/* ==============================
-   RESET Y BASE
-================================ */
+/* ----------------------------------CSS BASE---------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: clamp(14px, 1vw, 18px);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,21 +22,21 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top:0; left:0;
-    width:100%;
-    height:100%;
-    /* Gradient más eficiente que blur */
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(245,249,255,0.85));
-    z-index:-1;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255,255,255,0.9),
+        rgba(245,249,255,0.85)
+    );
+    z-index: -1;
 }
 
-/* ==============================
-   CONTENEDOR PRINCIPAL
-================================ */
+/* ----------------------------------CONTENEDOR PRINCIPAL---------------------------------- */
 .clases {
     max-width: 1200px;
-    margin: 100px auto 80px auto;
+    margin: 100px auto 80px;
     padding: 0 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .clases h1.titulo-seccion {
@@ -45,288 +48,9 @@ body::before {
     text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 }
 
-/* ==============================
-   ZONA DE CURSOS - TARJETAS GLASSMORPHISM
-================================ */
-.zona-clase {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    border-radius: 24px;
-    border: 1px solid rgba(255,255,255,0.25);
-    padding: 30px 35px;
-    margin-bottom: 50px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s forwards;
-    will-change: transform, box-shadow;
-}
 
-.zona-clase:nth-child(1) { animation-delay: 0.1s; }
-.zona-clase:nth-child(2) { animation-delay: 0.3s; }
-.zona-clase:nth-child(3) { animation-delay: 0.5s; }
-
-.zona-clase:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
-}
-
-.zona-clase h2 {
-    font-size: 2rem;
-    margin-bottom: 18px;
-    color: #1e40af;
-    font-weight: 700;
-}
-
-.zona-clase p {
-    font-size: 1rem;
-    color: #334155;
-    line-height: 1.75;
-    margin-bottom: 12px;
-}
-
-/* ==============================
-   SECCIÓN GRUPOS
-================================ */
-.div-grupos {
-    margin-top: 60px;
-    
-}
-
-.div-grupos h2 {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 60px;
-    color: #1e293b;
-    font-weight: 800;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
-
-.DivGrupos{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    
-}
-
-.zona-grupos {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    padding: 25px;
-    margin-bottom: 45px;
-    text-align: center;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s forwards;
-    flex: 1 1 450px;
-    max-width: 500px;
-    will-change: transform, box-shadow;
-}
-
-.zona-grupos:nth-child(1) { animation-delay: 0.2s; }
-.zona-grupos:nth-child(2) { animation-delay: 0.4s; }
-
-.zona-grupos:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-}
-
-.zona-grupos h3 {
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-    color: #2563eb;
-    font-weight: 600;
-}
-
-.zona-grupos p {
-    font-size: 0.95rem;
-    color: #475569;
-    margin-bottom: 8px;
-}
-
-.zona-grupos img {
-    width: 100%;
-    max-width: 340px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 15px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    will-change: transform;
-}
-
-
-.icono-curso {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-.div-apuntarme {
-    margin-top: 20px;
-}
-
-.boton-info {
-    display: inline-block;
-    background: linear-gradient(135deg, #2563eb, #2aa198); /* 🔁 azul + teal */
-    color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-    cursor: pointer;
-    will-change: transform, box-shadow;
-}
-
-.boton-info:hover {
-    transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
-}
-
-/* ==============================
-   POPUP MODAL
-================================ */
-.POPUP {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-     background: rgba(15, 23, 42, 0.85); /* 🔁 más neutro y elegante */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 20px;
-}
-
-
-
-.POPUP-contenido {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 40px 45px;
-    border-radius: 24px;
-    max-width: 560px;
-    width: 95%;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.18);
-    text-align: center;
-    position: relative;
-    animation: popupFade 0.45s ease forwards;
-    max-height: 90vh;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    will-change: opacity, transform;
-}
-.POPUP-contenido::-webkit-scrollbar {
-    display: none;                /* Chrome, Safari, Opera */
-}
-
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes popupFade {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.POPUP-contenido h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #1e40af;
-    font-weight: 700;
-}
-
-.POPUP-contenido p {
-    font-size: 1rem;
-    margin-bottom: 14px;
-    color: #334155;
-}
-
-.POPUP-contenido ul {
-    list-style: none;
-    padding-left: 40px;
-    margin: 18px 0;
-    list-style-type: disc;
-}
-
-.POPUP-contenido ul li {
-    margin-bottom: 10px;
-    position: relative;
-    margin-bottom: 10px;
-    color: #1d4ed8; /* 🔁 azul más accesible */
-    font-weight: 500;
-    font-size: 1rem;
-    padding-left: 0%;
-}
-
-
-
-.cerrar {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #334155;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.cerrar:hover {
-    transform: scale(1.3);
-}
-
-.boton-apuntarse {
-    display: inline-block;
-    background: linear-gradient(135deg, #2563eb, #2aa198);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1.05rem;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-}
-
-.boton-apuntarse:hover {
-    transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
-}
-
-/* ==============================
-   RESPONSIVE
-================================ */
-@media (max-width: 1024px) {
-    .zona-grupos img { max-width: 280px; height: 170px; }
-}
-
-@media (max-width: 768px) {
-    .clases { margin: 70px auto 40px auto; padding: 0 15px; }
-    .zona-clase, .zona-grupos, .POPUP-contenido { padding: 28px; }
-    .zona-grupos img { max-width: 100%; height: auto; }
-}
-
-@media (max-width: 480px) {
-    .clases h1.titulo-seccion { font-size: 2.2rem; }
-    .zona-clase h2, .zona-grupos h3, .POPUP-contenido h2 { font-size: 1.45rem; }
-    .zona-clase p, .zona-grupos p, .POPUP-contenido p, .POPUP-contenido ul li { font-size: 0.95rem; }
-    .boton-info, .boton-apuntarse { padding: 10px 22px; font-size: 0.95rem; }
-}
-
-/* Side-by-side cursos */
-.curso-sbs {
+/* ----------------------------------ZONA TARJETAS CURSOS---------------------------------- */
+.curso-imagen-derecha {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -336,13 +60,13 @@ body::before {
     padding: 30px 35px;
     margin-bottom: 50px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: 0.35s ease;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.6s forwards;
 }
 
-.curso-sbs.reverse {
+.curso-imagen-derecha.reverse {
     flex-direction: row-reverse;
 }
 
@@ -359,9 +83,7 @@ body::before {
 }
 
 .curso-texto p {
-    font-size: 1rem;
     color: #334155;
-    line-height: 1.75;
     margin-bottom: 12px;
 }
 
@@ -373,108 +95,181 @@ body::before {
 .curso-imagen img {
     max-width: 80%;
     border-radius: 20px;
-    box-shadow: 0 12px 35px rgba(205, 205, 205, 0.18);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: 0.4s ease;
 }
 
 .curso-imagen img:hover {
     transform: scale(1.05);
-    box-shadow: 0 18px 50px rgba(37, 99, 235, 0.2);
 }
 
-/* Fade-in animation */
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
+
+/* ----------------------------------GRUPOS---------------------------------- */
+.div-grupos {
+    margin-top: 60px;
+    margin-bottom: 45px;
 }
 
-/* Responsive*/
-@media (max-width: 1024px) {
-
-    .curso-sbs,
-    .curso-sbs.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .curso-imagen img {
-        width: 100%;
-        height: auto;
-        max-width: 400px;
-    }
+.div-grupos h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+    font-weight: 800;
 }
 
-/* ==============================
-   VIDEO DE FONDO PROFESIONAL
-================================ */
+.DivGrupos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
-.clases {
+.zona-grupos {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    flex: 1 1 450px;
+    max-width: 500px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    transition: 0.35s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+.zona-grupos:hover {
+    transform: translateY(-8px);
+}
+
+.zona-grupos h3 {
+    color: #2563eb;
+}
+
+.zona-grupos p {
+    color: #475569;
+}
+
+.zona-grupos img {
+    width: 100%;
+    max-width: 340px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* ----------------------------------BOTONES---------------------------------- */
+.boton-info,
+.boton-apuntarse {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #2aa198);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    margin-top: 13px;
+}
+
+.boton-info:hover,
+.boton-apuntarse:hover {
+    transform: translateY(-3px) scale(1.08);
+    cursor: pointer;
+}
+
+/* ----------------------------------POPUP---------------------------------- */
+.POPUP {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.contenido-POPUP {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 45px;
+    border-radius: 24px;
+    max-width: 560px;
+    width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
-/* Video */
-.video-fondo {
+.contenido-POPUP h2 {
+    color: #1e40af;
+}
+
+.contenido-POPUP ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.contenido-POPUP ul li {
+    color: #1d4ed8;
+}
+
+.cerrar {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 18px;
+    right: 22px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ----------------------------------AVATAR---------------------------------- */
+.contenedor-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #2aa198;
+}
+
+.video-avatar {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+}
+
+/* ----------------------------------VIDEO FONDO---------------------------------- */
+.video-fondo {
+    position: absolute;
+    inset: 0;
     object-fit: cover;
     z-index: -2;
     filter: brightness(0.55);
 }
 
-/* Overlay elegante encima del video */
-.clases::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        rgba(255,255,255,0.85),
-        rgba(245,249,255,0.9)
-    );
-    z-index: -1;
-}
 
-/* Contenido encima */
-.contenido-clases {
-    position: relative;
-    z-index: 2;
-}
+/* --------------------------------------- Animaciones ---------------------------------------*/
 
-/* En móviles mejor ocultar video y usar imagen estática */
-@media (max-width: 768px) {
-    .video-fondo {
-        display: none;
-    }
-
-    .clases {
-        background: url('../imagenes/fondo_cursos.jpg') no-repeat center center;
-        background-size: cover;
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* ==============================
-   AVATAR ANIMADO EN POPUP
-================================ */
-.avatar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    object-fit: cover;
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.avatar-saludo {
-    width: 130px;
-    height: 150px;
-    border-radius: 0%;
-    border: 4px solid #2aa198; /* 🔁 antes cyan */
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-    animation: saludo 3s ;
-    object-fit: cover;
-}
-
-/* Animación tipo saludo */
 @keyframes saludo {
     0%   { transform: rotate(0deg) translateY(0); }
     25%  { transform: rotate(10deg) translateY(-5px); }
@@ -483,48 +278,8 @@ body::before {
     100% { transform: rotate(0deg) translateY(0); }
 }
 
-/* Estilo moderno para popup (opcional) */
-.POPUP-contenido.animar-popup {
-    background: linear-gradient(145deg, #ffffffee, #e6f4f1ee);
-    border-radius: 28px;
-    padding: 50px 35px;
-    max-width: 600px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-    animation: popupFade 0.9s ease forwards;
-    background-size: 1000px;
-}
 
-/* Responsive avatar */
-@media (max-width: 480px) {
-    .avatar-saludo {
-        width: 100px;
-        height: 100px;
-    }
-    .POPUP-contenido.animar-popup {
-        padding: 60px 20px;
-    }
-}
-
-/* CONTENEDOR CIRCULAR */
-.avatar-container {
-   
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;               /* 🔥 CLAVE para cortar sobrante */
-    border: 4px solid #2aa198;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-    margin: 0 auto 20px auto;       /* centrado */
-}
-
-/* VIDEO DENTRO DEL CÍRCULO */
-.avatar-video {
-    width: 100%;
-    height: 100%;
-   object-fit: contain;
-}
-
-
+/* --------------------------------------- Diseño Responsive ---------------------------------------*/
 
 @media (max-width: 768px) {
 
@@ -533,7 +288,7 @@ body::before {
         padding-top: 40px;
     }
 
-    .POPUP-contenido {
+    .contenido-POPUP {
         width: 100%;
         max-height: 85vh;
         border-radius: 20px;
@@ -567,4 +322,138 @@ html {
 
 #grupo1, #grupo2 {
     scroll-margin-top: 25vh;
+}
+
+/* ==============================
+   RESPONSIVO BASE
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejor que clamp si buscas estabilidad */
+html {
+    font-size: 16px;
+}
+
+/* evita que se tape con header al hacer scroll */
+#grupo1,
+#grupo2 {
+    scroll-margin-top: 25vh;
+}
+
+
+/* ==============================
+   MÓVILES PEQUEÑOS (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+
+    .clases {
+        margin: 40px auto;
+    }
+
+    .zona-clase,
+    .zona-grupos {
+        padding: 20px;
+    }
+
+    .clases h1.titulo-seccion {
+        font-size: 2.2rem;
+    }
+
+    .zona-clase h2,
+    .zona-grupos h3,
+    .contenido-POPUP h2 {
+        font-size: 1.45rem;
+    }
+
+    .zona-clase p,
+    .zona-grupos p,
+    .contenido-POPUP p,
+    .contenido-POPUP ul li {
+        font-size: 0.95rem;
+    }
+
+    .boton-info,
+    .boton-apuntarse {
+        padding: 10px 22px;
+        font-size: 0.95rem;
+    }
+
+    .avatar-saludo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contenido-POPUP.animar-popup {
+        padding: 60px 20px;
+    }
+}
+
+
+/* ==============================
+   TABLET Y MÓVILES GRANDES (≤ 768px)
+================================ */
+@media (max-width: 768px) {
+
+    .POPUP {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    .contenido-POPUP {
+        width: 100%;
+        max-height: 85vh;
+        border-radius: 20px;
+        padding: 28px;
+    }
+
+    .clases {
+        margin: 70px auto 40px auto;
+        padding: 0 15px;
+    }
+
+    .zona-clase,
+    .zona-grupos {
+        padding: 28px;
+    }
+
+    .zona-grupos img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .video-fondo {
+        display: none;
+    }
+
+    .clases {
+        background: url('../imagenes/fondo_cursos.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+
+/* ==============================
+   TABLET GRANDE + ORDENADORES (≤ 1024px)
+================================ */
+@media (max-width: 1024px) {
+
+    .zona-grupos img {
+        max-width: 280px;
+        height: 170px;
+    }
+
+    .curso-imagen-derecha,
+    .curso-imagen-derecha.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .curso-imagen img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
 }
