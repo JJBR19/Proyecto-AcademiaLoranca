@@ -560,3 +560,11 @@ html {
         height: 100%;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#grupo1, #grupo2 {
+    scroll-margin-top: 25vh;
+}
