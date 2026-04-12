@@ -1593,6 +1593,199 @@ section::after {
     transition: background-color 0.3s ease;
 }
 
+/* ===== AVISO LEGAL ACCESIBLE (DALTONISMO) ===== */
 
+main.container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+main.container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #1a1a1a; /* negro suave para máximo contraste */
+    border-bottom: 3px solid #005fcc; /* azul accesible */
+    padding-bottom: 10px;
+}
+
+/* ===== SUBTÍTULOS ===== */
+main.container h2 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #003366; /* azul oscuro (mejor contraste que azul claro) */
+    position: relative;
+    padding-left: 14px;
+    font-weight: 600;
+}
+
+/* Línea lateral (no depende solo del color) */
+main.container h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: 70%;
+    width: 5px;
+    background-color: #005fcc;
+    border-radius: 2px;
+}
+
+/* ===== PÁRRAFOS ===== */
+main.container p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #222; /* contraste alto */
+}
+
+/* ===== LISTAS ===== */
+main.container ul {
+    margin: 15px 0 20px 22px;
+}
+
+main.container li {
+    margin-bottom: 8px;
+}
+
+/* ===== NEGRITAS ===== */
+main.container strong {
+    color: #000; /* evitar colores ambiguos */
+    font-weight: 600;
+}
+
+/* ===== ENLACES ===== */
+main.container a {
+    color: #005fcc; /* azul accesible */
+    text-decoration: underline; /* importante para daltonismo */
+    font-weight: 500;
+}
+
+main.container a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* ===== FOCUS (ACCESIBILIDAD TECLADO) ===== */
+main.container a:focus {
+    outline: 3px solid #ffbf47; /* amarillo accesible */
+    outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main.container {
+        padding: 25px !important;
+    }
+
+    main.container h1 {
+        font-size: 1.8rem;
+    }
+
+    main.container h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ===== POLÍTICA DE PRIVACIDAD ACCESIBLE ===== */
+
+main.container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+main.container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    border-bottom: 3px solid #005fcc;
+    padding-bottom: 10px;
+}
+
+/* ===== SUBTÍTULOS ===== */
+main.container h2 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #003366;
+    position: relative;
+    padding-left: 14px;
+    font-weight: 600;
+}
+
+/* Línea decorativa accesible */
+main.container h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: 70%;
+    width: 5px;
+    background-color: #005fcc;
+    border-radius: 2px;
+}
+
+/* ===== PÁRRAFOS ===== */
+main.container p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #222;
+}
+
+/* ===== LISTAS ===== */
+main.container ul {
+    margin: 15px 0 20px 22px;
+}
+
+main.container li {
+    margin-bottom: 8px;
+}
+
+/* ===== NEGRITAS ===== */
+main.container strong {
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== ENLACES ===== */
+main.container a {
+    color: #005fcc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+main.container a:hover {
+    color: #003366;
+}
+
+/* ===== FOCUS ACCESIBLE ===== */
+main.container a:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 2px;
+}
+
+/* ===== MEJORA PARA LISTAS DE DERECHOS ===== */
+main.container ul li {
+    padding-left: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main.container {
+        padding: 25px !important;
+    }
+
+    main.container h1 {
+        font-size: 1.8rem;
+    }
+
+    main.container h2 {
+        font-size: 1.1rem;
+    }
+}
 
 
