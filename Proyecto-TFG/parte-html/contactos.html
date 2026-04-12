@@ -48,7 +48,7 @@
             </div>
 
             <div class="info-detalles">
-                <div class="detalle-item azul">
+                <div class="detalle-item">
                     📍 <a
                         href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+28942+Fuenlabrada,+Madrid"
                         target="_blank" rel="noopener">
@@ -69,26 +69,32 @@
 
             <!--FORMULARIO-->
 
-            <form id="formulario-interactivo" class="formulario-responsivo" action="https://formspree.io/f/xwvwjjjo" method="POST">
+            <form id="formulario-interactivo" class="formulario-responsivo" action="https://formspree.io/f/xwvwdbln" method="POST">
 
                 <h2 class="titulo-animado">Formulario de Contacto</h2>
 
                 <div class="grupo-campo">
                     <label for="nombre-completo">Nombre completo:</label>
                     <input type="text" id="nombre-completo" name="Nombre Completo" minlength="3" maxlength="50" required
-                        placeholder="Escribe tu nombre">
+                        placeholder="Escribe tu nombre" autocomplete="off">
                 </div>
 
                 <div class="grupo-campo">
                     <label for="correo-electronico">Correo electrónico:</label>
-                    <input type="email" id="correo-electronico" name="Correo" required placeholder="ejemplo@correo.com">
+                    <input type="email" id="correo-electronico" name="Correo" required placeholder="ejemplo@correo.com" autocomplete="off">
                 </div>
 
                 <div class="fila-formulario">
 
                     <div class="grupo-campo">
-                        <label for="edad-usuario">Edad (18-99):</label>
-                        <input type="number" id="edad-usuario" name="Edad" min="18" max="99" required>
+                        <label for="curso-usuario">Curso Escolar:</label>
+                        <select name="Curso" id="curso-usuario" required autocomplete="off">
+                            <option value="Escoge" disabled selected>Escoge un curso</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="1ºESO">1ºESO</option>
+                            <option value="2ºESO - 4ºESO">2ºESO - 4ºESO</option>
+                            <option value="Bachillerato">Bachillerato</option>
+                        </select>
                     </div>
 
                 </div>
@@ -98,20 +104,20 @@
                     <div class="grupo-campo">
                         <label for="telefono-contacto">Teléfono (9 dígitos):</label>
                         <input type="tel" id="telefono-contacto" name="Telefono" pattern="[0-9]{9}" required
-                            placeholder="600123456">
+                            placeholder="600123456" autocomplete="off">
                     </div>
 
                 </div>
 
                 <div class="grupo-campo">
                     <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
-                    <textarea id="biografia-personal" name="Mensaje" maxlength="200" rows="4" required></textarea>
+                    <textarea id="biografia-personal" name="Mensaje" maxlength="200" rows="4" required autocomplete="off"></textarea>
                     <small class="contador-texto">0 / 200</small>
                 </div>
 
                 <div class="grupo-campo-checkbox">
                     <label>
-                        <input type="checkbox" id="aceptar-condiciones" name="Condiciones" required>
+                        <input type="checkbox" id="aceptar-condiciones" name="Condiciones" required autocomplete="off">
                         Acepto los términos y condiciones
                     </label>
                 </div>
