@@ -404,6 +404,16 @@ body::before {
         max-height: 85vh;
         border-radius: 20px;
     }
+
+    .curso-imagen img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .curso-imagen{
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 480px) {
