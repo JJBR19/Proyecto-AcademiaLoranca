@@ -3,14 +3,13 @@ class LectorPaginaComponent extends HTMLElement {
     constructor(){
         super();
         this._shadow = this.attachShadow({mode: 'open'});
-
         this.parrafos = [];
         this.indiceActual = 0;
         this.reproduciendo = false;
         this.utterance = null;
     }
 
-    connectedCallback(){    
+    connectedCallback(){
 
         this._shadow.innerHTML = `
             <style>
@@ -22,13 +21,13 @@ class LectorPaginaComponent extends HTMLElement {
                     font-family: Arial, sans-serif;
                 }
 
-                .lector-container{
+                .contenedor-lector{
                     display:flex;
                     align-items:center;
                     gap:10px;
                 }
 
-                .toggle-btn{
+                .boton-audio{
                     width:50px;
                     height:50px;
                     border-radius:50%;
@@ -80,41 +79,40 @@ class LectorPaginaComponent extends HTMLElement {
 
             </style>
 
-            <div class="lector-container">
-                <button class="toggle-btn" id="toggle">🔊</button>
+            <div class="contenedor-lector">
+                <button class="boton-audio" id="toggle">🔊</button>
 
                 <div class="controles" id="controles">
-                    <button id="prev">⏮</button>
+                    <button id="anterior">⏮</button>
                     <button id="play">▶</button>
-                    <button id="next">⏭</button>
+                    <button id="siguiente">⏭</button>
                 </div>
             </div>
         `;
-
         this.obtenerParrafos();
 
-        const prev = this._shadow.getElementById("prev");
+        const anterior = this._shadow.getElementById("anterior");
         const play = this._shadow.getElementById("play");
-        const next = this._shadow.getElementById("next");
+        const siguiente = this._shadow.getElementById("siguiente");
 
-        prev.addEventListener("click", () => this.anterior());
-        next.addEventListener("click", () => this.siguiente());
+        anterior.addEventListener("click", () => this.anterior());
+        siguiente.addEventListener("click", () => this.siguiente());
         play.addEventListener("click", () => this.toggleLectura());
 
         const toggle = this._shadow.getElementById("toggle");
-            const controles = this._shadow.getElementById("controles");
+        const controles = this._shadow.getElementById("controles");
 
-            toggle.addEventListener("click", () => {
-                this.abierto = !this.abierto;
+        toggle.addEventListener("click", () => {
+            this.abierto = !this.abierto;
 
-                if(this.abierto){
-                    controles.classList.add("activo");
-                } else {
-                    controles.classList.remove("activo");
-                }
+            if(this.abierto){
+                controles.classList.add("activo");
+            } else {
+                controles.classList.remove("activo");
+            }
         });
 
-         document.addEventListener("click", (e) => {
+        document.addEventListener("click", (e) => {
             const path = e.composedPath(); 
             if (!path.includes(this)) {
                 controles.classList.remove("activo");
@@ -135,6 +133,7 @@ class LectorPaginaComponent extends HTMLElement {
         window.speechSynthesis.cancel();
     }
 
+    /* Seleciona el texto al leer, solo funciona si tiene etiqueta main */
     obtenerParrafos(contenedor = null){
         let root;
 
@@ -156,23 +155,19 @@ class LectorPaginaComponent extends HTMLElement {
     if(this.parrafos.length === 0) return;
 
         window.speechSynthesis.cancel();
-
+        
         this.utterance = new SpeechSynthesisUtterance(this.parrafos[this.indiceActual]);
         this.utterance.lang = "es-ES";
 
         this.utterance.onend = () => {
 
             if(this.reproduciendo && this.indiceActual < this.parrafos.length - 1){
-
                 this.indiceActual++;
                 this.leerActual();
-
             } else {
-
                 const playBtn = this._shadow.getElementById("play");
                 playBtn.textContent = "▶";
                 this.reproduciendo = false;
-
             }
 
         };
@@ -185,41 +180,39 @@ class LectorPaginaComponent extends HTMLElement {
         this.leerActual();
     }
 
+    /* --------------------------------------------Botones de lectura-------------------------------------------- */
+
+    /* Pausar-Continuar */
     toggleLectura(){
 
         const playBtn = this._shadow.getElementById("play");
 
+        /* Cambiar icono segun estado */
         if(!this.reproduciendo){
-
             this.leerActual();
             playBtn.textContent = "⏸";
             this.reproduciendo = true;
-
         }else{
-
             window.speechSynthesis.pause();
             playBtn.textContent = "▶";
             this.reproduciendo = false;
-
         }
     }
 
+    /* Boton siguiente apartado*/
     siguiente(){
-
         if(this.indiceActual < this.parrafos.length - 1){
             this.indiceActual++;
             this.leerActual();
         }
-
     }
 
+    /* Boton anteior apartado */
     anterior(){
-
         if(this.indiceActual > 0){
             this.indiceActual--;
             this.leerActual();
         }
-
     }
 
 }

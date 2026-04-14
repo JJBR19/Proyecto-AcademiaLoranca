@@ -1,18 +1,16 @@
-/* Contenedor principal */
+/* ------------------------------------Contenedor principal------------------------------------ */
 .whatsapp-container {
     position: fixed;
     bottom: 50px;
     right: 50px;
     z-index: 1000;
     font-family: Arial, sans-serif;
-    
-    /* ESTO ES LO QUE SOLUCIONA EL PROBLEMA: */
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinea tarjeta y botón a la derecha del contenedor */
+    align-items: flex-end;
 }
 
-/* Botón flotante redondo */
+/* ------------------------------------Botón flotante redondo------------------------------------ */
 .whatsapp-button {
     background-color: #25d366;
     border: none;
@@ -33,9 +31,9 @@
     transform: scale(1.1);
 }
 
-/* Tarjeta desplegable (oculta por defecto) */
+/* ------------------------------------Tarjeta desplegable------------------------------------ */
 .whatsapp-card {
-    display: none; /* Se activa con JS */
+    display: none;
     width: 400px;
     background: white;
     border-radius: 10px;
@@ -70,40 +68,31 @@
 }
 
 .wa-close {
-    
     border: none;
-    border-radius: 50%; /* Hace que sea un círculo */
+    border-radius: 50%;
     cursor: pointer;
-    
-    /* Tamaño del botón */
     width: 28px;
     height: 28px;
-    
-    /* Centrado de la 'X' */
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Tipografía */
     font-size: 18px;
     line-height: 1;
     font-family: Arial, sans-serif;
-    
-    /* Transición suave al pasar el ratón */
     transition: background 0.3s ease;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Más opaco para mejor contraste */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
 }
 
-/* Efecto al pasar el ratón */
+/* ------------------------------------Efecto al pasar el ratón------------------------------------ */
 .wa-close:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .whatsapp-button,
 .send-btn {
-    background-color: #1ebc4b; /* verde ligeramente más oscuro */
+    background-color: #1ebc4b;
     color: white;
 }
 
