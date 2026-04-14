@@ -132,7 +132,7 @@ class HeaderComponent extends HTMLElement {
                     top: 101px;
                     right: 0;
                     width: 30%;
-                    background: linear-gradient(15deg, #6064af, #26cae3);
+                    background: linear-gradient(15deg, #332dac, #00bfff);
                     flex-direction: column;
                     align-items: center;
                     gap: 20px;
