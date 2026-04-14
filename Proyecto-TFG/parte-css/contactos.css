@@ -12,6 +12,17 @@
     --color-boton-hover: #023e8a; /* Hover botones */
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main{
+    flex: 1;
+}
+
 /* ==============================
    CONTENEDOR PRINCIPAL CONTACTO
    ============================== */
@@ -137,7 +148,7 @@
     align-items: flex-start;
     max-width: 1300px;
     margin: 80px auto;
-    padding: 0 20px;
+    padding: 0 40px;
     gap: 60px;
 }
 
