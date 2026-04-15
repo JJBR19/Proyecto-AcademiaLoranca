@@ -732,7 +732,16 @@ section h2 {
     }
 }
 
+@media (min-width: 320px) and (max-width: 480px){
+    .servicio-text{
+        min-width: 200px;
+    }
+    .servicio-img{
+        min-width: 250px;
+        height: 170px;
+    }
 
+}
 
 /* ==============================
    ASIGNATURAS
@@ -1126,6 +1135,16 @@ section h2 {
         width: 100%;
         height: 100%;
     }
+}
+@media (min-width: 320px) and (max-width: 480px){
+    .metodo-text{
+        min-width: 200px;
+    }
+    .metodo-img{
+        min-width: 250px;
+        height: 170px;
+    }
+
 }
 
 
