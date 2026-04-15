@@ -7,7 +7,7 @@ class WhatsappComponent extends HTMLElement {
     connectedCallback(){
         this._shadow.innerHTML = `<style>
         
-        /* Contenedor */
+        /* -----------------------------------------Contenedor----------------------------------------- */
         .whatsapp-container {
             position: fixed;
             bottom: 20px;
@@ -19,7 +19,7 @@ class WhatsappComponent extends HTMLElement {
             align-items: flex-end;
         }
 
-        /* Botón flotante */
+        /* -----------------------------------------Botón flotante----------------------------------------- */
         .boton-whatsapp {
             background-color: #25d366;
             border: none;
@@ -31,7 +31,6 @@ class WhatsappComponent extends HTMLElement {
             transition: transform 0.3s;
         }
 
-        /* Icono whatsapp */
         .boton-whatsapp img {
             width: 35px;
             margin-top: 5px;
@@ -41,7 +40,7 @@ class WhatsappComponent extends HTMLElement {
             transform: scale(1.1);
         }
 
-        /* Tarjeta desplegable */
+        /* -----------------------------------------Tarjeta desplegable----------------------------------------- */
         .div-whatsapp {
             display: none; /* Oculta hasta pulsarse */
             width: 400px;

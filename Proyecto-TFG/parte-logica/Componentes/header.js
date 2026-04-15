@@ -8,9 +8,7 @@ class HeaderComponent extends HTMLElement {
     connectedCallback(){
         this._shadow.innerHTML = `
         <style>
-            /*PARTE HEADER*/
-
-            /*-------------- ESTILOS HEADER -------------*/
+            /* ----------------------------ESTILOS HEADER---------------------------- */
             header {
                 width: 100%;
                 background: #3962e9;
@@ -32,9 +30,7 @@ class HeaderComponent extends HTMLElement {
                 align-items: center;
             }
 
-            /*------------------------------------------*/
-
-            /*------------------ LOGO ------------------*/
+            /* ----------------------------LOGO---------------------------- */
             #logo {
                 height: 90px;
                 cursor: pointer;
@@ -45,7 +41,6 @@ class HeaderComponent extends HTMLElement {
                 transform: scale(1.05);
             }
 
-            /* Div logo + nombre */
             #div-logo {
                 display: flex;
                 align-items: center;
@@ -75,8 +70,6 @@ class HeaderComponent extends HTMLElement {
                 text-decoration: none;
             }
 
-            /*------------------------------------------*/
-
             /*------------------ MENÚ ------------------*/
             #menu-header {
                 display: flex;
@@ -98,7 +91,6 @@ class HeaderComponent extends HTMLElement {
                 padding: 0px 12px;
             }
 
-            /* subrayado elegante */
             .link-encabezado::after {
                 content: "";
                 position: absolute;
@@ -114,9 +106,10 @@ class HeaderComponent extends HTMLElement {
                 width: 100%;
             }
 
-            /* ================================ MENÚ MÓVIL ================================ */
+            /* ----------------------------MENÚ MÓVIL/TABLET---------------------------- */
 
-            .menu-mobile-btn {
+            /* No visible cuando el tamaño de la pantalla es mayor a 1000px*/
+            .boton-menu-movil {
                 display: none;
                 font-size: 2rem;
                 color: white;
@@ -132,7 +125,7 @@ class HeaderComponent extends HTMLElement {
                     top: 101px;
                     right: 0;
                     width: 30%;
-                    background: linear-gradient(15deg, #6064af, #26cae3);
+                    background: linear-gradient(15deg, #332dac, #00bfff);
                     flex-direction: column;
                     align-items: center;
                     gap: 20px;
@@ -145,7 +138,7 @@ class HeaderComponent extends HTMLElement {
                     font-size: 1.2rem;
                 }
 
-                .menu-mobile-btn {
+                .boton-menu-movil {
                     display: block;
                 }
 
@@ -155,7 +148,7 @@ class HeaderComponent extends HTMLElement {
                 }
             }
             @media (max-width: 480px) {
-            #menu-header {
+                #menu-header {
                     position: absolute;
                     top: 102px;
                     right: 0;
@@ -167,11 +160,12 @@ class HeaderComponent extends HTMLElement {
                     padding: 20px 0;
                     display: none;
                 }
-                    .link-encabezado {
+
+                .link-encabezado {
                     font-size: 1.2rem;
                 }
 
-                .menu-mobile-btn {
+                .boton-menu-movil {
                     display: block;
                     
                 }
@@ -202,11 +196,10 @@ class HeaderComponent extends HTMLElement {
         </style>
         ` + this.template;
 
-        // Manejo del desplazamiento al hacer clic en "Horarios"
+        // Modificación del enlace de contactos para que vaya mejor a la posición de contactos
         const horariosLink = this._shadow.querySelector('.link-encabezado[href="#horarios"]');
-
         horariosLink.addEventListener('click', (event) => {
-            event.preventDefault();  // Prevenir el comportamiento por defecto del enlace
+            event.preventDefault();  // Previene el comportamiento por defecto del enlace
             
             // Buscar el componente footer-componente
             const footer = document.querySelector('footer-componente');
@@ -217,31 +210,29 @@ class HeaderComponent extends HTMLElement {
                 // Acceder a la sección de 'horarios' dentro del shadow DOM
                 const horariosSection = shadowRoot.querySelector('#horarios');
                 
-                // Si encontramos la sección de horarios, hacer scroll hacia ella
+                // Hacer scroll hacia ella
                 if (horariosSection) {
                     horariosSection.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         });
 
-        //--------MENÚ MOVIL---------//
+        // ----------------------------MENÚ MOVIL---------------------------- //
         const botonMenu = this._shadow.getElementById("menuToggle");
         const menu = this._shadow.getElementById("menu-header");
 
-        // Abrir/Cerrar menú
+        // Abrir-Cerrar menú
         botonMenu.addEventListener("click", () => {
             menu.classList.toggle("active");
         });
 
         // Cerrar menú al pulsar un link
         const links = this._shadow.querySelectorAll(".link-encabezado");
-
         links.forEach(link => {
             link.addEventListener("click", () => {
                 menu.classList.remove("active");
             });
         });
-        
         document.addEventListener("click", (e) => {
             const path = e.composedPath(); 
             if (!path.includes(this)) {
@@ -254,10 +245,7 @@ class HeaderComponent extends HTMLElement {
         return `
         <header>
             <div>
-
-                <!-- DIV LOGO -->
                 <div id="div-logo">
-                    
                     <a href="../parte-html/Index.html">
                         <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
                     </a>
@@ -266,8 +254,8 @@ class HeaderComponent extends HTMLElement {
                     </a>
                 </div>
 
-                <!-- BOTÓN MENÚ MÓVIL -->
-                <div class="menu-mobile-btn" id="menuToggle">
+                <!-- BOTÓN MENÚ MÓVIL (Aparece solamente en movil o reducir el tamaño de la pantalla) -->
+                <div class="boton-menu-movil" id="menuToggle">
                     ☰
                 </div>
 

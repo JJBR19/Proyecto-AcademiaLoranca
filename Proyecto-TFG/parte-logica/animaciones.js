@@ -1,8 +1,8 @@
-/* THROTTLE FUNCTION PARA OPTIMIZAR SCROLL EVENTS */
+/* Función para optimizar la animación */
 function throttle(func, delay) {
     let lastCall = 0;
     return function (...args) {
-        const now = new Date().getTime();
+        const now = Date.now();
         if (now - lastCall >= delay) {
             lastCall = now;
             func.apply(this, args);
@@ -10,64 +10,21 @@ function throttle(func, delay) {
     };
 }
 
-/* ANIMACIÓN SERVICIOS + METODOLOGÍA */
-const elementosAnimados = document.querySelectorAll(".servicio-item, .metodologia-item");
-
-const animarServicios = throttle(() => {
-    elementosAnimados.forEach((elemento) => {
-        // Si ya está activo, no volvemos a calcular
-        if (!elemento.classList.contains("active")) {
-            const windowHeight = window.innerHeight;
-            const elementTop = elemento.getBoundingClientRect().top;
-            const visible = 120;
-
-            if (elementTop < windowHeight - visible) {
-                elemento.classList.add("active");
-            }
-        }
-    });
-}, 100); // Ejecutar máximo cada 100ms
-
-window.addEventListener("scroll", animarServicios, { passive: true });
-
-
-/* ANIMACIÓN BENEFICIOS - USA CSS EN LUGAR DE JAVASCRIPT */
+/* ----------------------------------ANIMACIÓN BENEFICIOS---------------------------------- */
 const beneficios = document.querySelectorAll(".beneficios-lista li");
 
+/* Los elementos van apareciendo según desciendes en la página */
 const animarBeneficios = throttle(() => {
     beneficios.forEach((item, index) => {
         if (!item.classList.contains("active")) {
-            const windowHeight = window.innerHeight;
             const elementTop = item.getBoundingClientRect().top;
-            const visible = 100;
+            const windowHeight = window.innerHeight;
 
-            if (elementTop < windowHeight - visible) {
+            if (elementTop < windowHeight - 100) {
                 item.classList.add("active");
-                // Usar CSS variable en lugar de inline styles
                 item.style.setProperty('--item-delay', `${index * 0.22}s`);
             }
         }
     });
 }, 100);
-
 window.addEventListener("scroll", animarBeneficios, { passive: true });
-/* ANIMACIÓN SOBRE NOSOTROS */
-
-const valores = document.querySelectorAll(".valor-card");
-
-const observerValores = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-
-            valores.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add("active");
-                }, index * 340); // velocidad entre tarjetas
-            });
-
-            observerValores.disconnect(); // se ejecuta solo una vez
-        }
-    });
-}, { threshold: 0.3 });
-
-observerValores.observe(document.querySelector(".valores-grid"));
