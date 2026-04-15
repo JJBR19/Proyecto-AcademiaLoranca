@@ -10,7 +10,7 @@ class WhatsappComponent extends HTMLElement {
         /* -----------------------------------------Contenedor----------------------------------------- */
         .whatsapp-container {
             position: fixed;
-            bottom: 20px;
+            bottom: 15px;
             right: 20px;
             z-index: 1000;
             font-family: Arial, sans-serif;

@@ -17,8 +17,8 @@ class LectorPaginaComponent extends HTMLElement {
             <style>
                 :host{
                     position: fixed;
-                    bottom: clamp(10px, 2vw, 20px);
-                    left: clamp(10px, 2vw, 20px);
+                    bottom: 5px;
+                    left: 20px;
                     z-index: 9999;
                     font-family: Arial, sans-serif;
 
