@@ -1,265 +1,214 @@
 class HeaderComponent extends HTMLElement {
 
-    constructor(){
+    constructor() {
         super();
-        this._shadow = this.attachShadow({mode: 'open'});
+        this._shadow = this.attachShadow({ mode: 'open' });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this._shadow.innerHTML = `
         <style>
-            /* ----------------------------ESTILOS HEADER---------------------------- */
-            header {
-                width: 100%;
-                background: #3962e9;
-                background: linear-gradient(440deg, #2a17cf, #00d5ff);
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                position: sticky;
-                top: 0;
-                z-index: 100;
-                box-sizing: border-box;
-                backdrop-filter: blur(12px);
+
+        :host{
+            display:block;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* ================= HEADER ================= */
+        header{
+            width:100%;
+            background: linear-gradient(440deg, #2a17cf, #00d5ff);
+            box-shadow: 0 2px 14px rgba(0,0,0,.18);
+        }
+
+        header > div{
+            max-width:1200px;
+            margin:auto;
+            padding:12px 16px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:relative;
+        }
+
+        /* ================= LOGO ================= */
+        #div-logo{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        #logo{
+            height:78px;
+            transition:.25s ease;
+        }
+
+        #logo:hover{
+            transform: scale(1.05);
+        }
+
+        #nombre_academia{
+            font-family: Georgia, serif;
+            font-size:18px;
+            font-weight:700;
+            font-style:italic;
+            color:white;
+            line-height:1.1;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        /* ================= MENU (DESKTOP DEFAULT) ================= */
+        #menu-header{
+            display:flex;
+            gap:22px;
+            align-items:center;
+
+            position:relative;
+        }
+
+        .link-encabezado{
+            color:white;
+            font-weight:600;
+            position:relative;
+            transition:.2s ease;
+        }
+
+        .link-encabezado:hover{
+            opacity:.85;
+        }
+
+        .link-encabezado::after{
+            content:"";
+            position:absolute;
+            bottom:-4px;
+            left:0;
+            width:0%;
+            height:2px;
+            background:white;
+            transition:.25s ease;
+        }
+
+        .link-encabezado:hover::after{
+            width:100%;
+        }
+
+        /* ================= BURGER ================= */
+        .boton-menu-movil{
+            display:none;
+            font-size:30px;
+            color:white;
+            cursor:pointer;
+            user-select:none;
+            padding:6px 10px;
+            line-height:1;
+        }
+
+        .boton-menu-movil:hover{
+            background: rgba(255,255,255,.12);
+            border-radius:8px;
+        }
+
+        /* ================= MOBILE DROPDOWN ================= */
+        @media (max-width: 900px){
+
+            .boton-menu-movil{
+                display:block;
             }
 
-            header > div {
-                max-width: 1200px;
-                margin: auto;
-                padding: 10px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            /* menú pasa a dropdown */
+            #menu-header{
+                position:absolute;
+                top:100%;
+                right:0;
+
+                width:240px;
+                background:linear-gradient(440deg, #1f00cf, #4207b1);
+                backdrop-filter: blur(16px);
+
+                flex-direction:column;
+                align-items:center;
+
+                gap:10px;
+                padding:10px 0;
+
+                border-radius: 0 0 14px 14px;
+                box-shadow: 0 16px 32px rgba(0,0,0,.25);
+                border: 1px solid rgba(255,255,255,.18);
+
+                opacity:0;
+                transform: translateY(-10px);
+                pointer-events:none;
+                transition: all .2s ease;
+
+                margin:0;
             }
 
-            /* ----------------------------LOGO---------------------------- */
-            #logo {
-                height: 90px;
-                cursor: pointer;
-                transition: transform 0.3s;
+            #menu-header.active{
+                opacity:1;
+                transform: translateY(0);
+                pointer-events:auto;
             }
 
-            #logo:hover {
-                transform: scale(1.05);
+            .link-encabezado{
+                width:100%;
+                text-align:center;
+                padding:10px 0;
+                border-radius:8px;
             }
 
-            #div-logo {
-                display: flex;
-                align-items: center;
-                gap: 30px;
-                flex-direction: row;
+            .link-encabezado:hover{
+                background: rgba(255, 255, 255, 0.14);
             }
 
-            /* Nombre academia */
-            #nombre_academia {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 22px;
-                font-weight: 700;
-                font-style: italic;
-                color: #f2f3f0;
-                letter-spacing: 1px;
-                cursor: pointer;
-                transition: transform 0.3s;
-                text-decoration: none;
+            #logo{
+                height:64px;
             }
 
-            #nombre_academia:hover {
-                transform: scale(1.05);
-                text-decoration: none;
+            #nombre_academia{
+                font-size:15px;
+            }
+        }
+
+        @media (max-width: 480px){
+
+            #menu-header{
+                width:50vw;
             }
 
-            a{
-                text-decoration: none;
+            #logo{
+                height:52px;
             }
 
-            /*------------------ MENÚ ------------------*/
-            #menu-header {
-                display: flex;
-                gap: 25px;
+            #nombre_academia{
+                font-size:13px;
             }
+        }
 
-            .link-encabezado {
-                text-decoration: none;
-                color: #ffffff;
-                font-weight: 500;
-                transition: 0.3s ease;
-                cursor: pointer;
-                position: relative;
-            }
-
-            .link-encabezado:hover {
-                color: #dbdbdb;
-                transform: scale(1.2, 1.2);
-                padding: 0px 12px;
-            }
-
-            .link-encabezado::after {
-                content: "";
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                width: 0%;
-                height: 2px;
-                background: white;
-                transition: width 0.3s ease;
-            }
-
-            .link-encabezado:hover::after {
-                width: 100%;
-            }
-
-            /* ----------------------------MENÚ MÓVIL/TABLET---------------------------- */
-
-            /* No visible cuando el tamaño de la pantalla es mayor a 1000px*/
-            .boton-menu-movil {
-                display: none;
-                font-size: 2rem;
-                color: white;
-                cursor: pointer;
-            }
-
-            /* MODO MÓVIL */
-            @media (max-width: 1000px) {
-
-                /* Ocultamos menú normal */
-                #menu-header {
-                    position: absolute;
-                    top: 101px;
-                    right: 0;
-                    width: 30%;
-                    background: linear-gradient(15deg, #332dac, #00bfff);
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                    padding: 20px 0;
-                    display: none;
-                    border:1px solid #8dedfc
-                }
-
-                .link-encabezado {
-                    font-size: 1.2rem;
-                }
-
-                .boton-menu-movil {
-                    display: block;
-                }
-
-                #menu-header.active {
-                    display: flex;
-                    animation: slideDown 0.3s ease;
-                }
-            }
-            @media (max-width: 480px) {
-                #menu-header {
-                    position: absolute;
-                    top: 102px;
-                    right: 0;
-                    width: 30%;
-                    background: linear-gradient(15deg, #6064af, #26cae3);
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                    padding: 20px 0;
-                    display: none;
-                }
-
-                .link-encabezado {
-                    font-size: 1.2rem;
-                }
-
-                .boton-menu-movil {
-                    display: block;
-                    
-                }
-
-                #menu-header.active {
-                    display: flex;
-                    animation: slideDown 0.3s ease;
-                }
-            }
-
-            @media (min-width: 320px) and (max-width: 359px) {
-                #logo{
-                    height: 60px;
-                }
-                #nombre_academia {
-                    font-size: 15px;
-                }
-            }
-
-            @media (min-width: 359px) and (max-width: 480px) {
-                #logo{
-                    height: 80px;
-                }
-                #nombre_academia {
-                    font-size: 20px;
-                }
-            }
         </style>
-        ` + this.template;
 
-        // Modificación del enlace de contactos para que vaya mejor a la posición de contactos
-        const horariosLink = this._shadow.querySelector('.link-encabezado[href="#horarios"]');
-        horariosLink.addEventListener('click', (event) => {
-            event.preventDefault();  // Previene el comportamiento por defecto del enlace
-            
-            // Buscar el componente footer-componente
-            const footer = document.querySelector('footer-componente');
-            
-            if (footer) {
-                const shadowRoot = footer.shadowRoot;
-
-                // Acceder a la sección de 'horarios' dentro del shadow DOM
-                const horariosSection = shadowRoot.querySelector('#horarios');
-                
-                // Hacer scroll hacia ella
-                if (horariosSection) {
-                    horariosSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-
-        // ----------------------------MENÚ MOVIL---------------------------- //
-        const botonMenu = this._shadow.getElementById("menuToggle");
-        const menu = this._shadow.getElementById("menu-header");
-
-        // Abrir-Cerrar menú
-        botonMenu.addEventListener("click", () => {
-            menu.classList.toggle("active");
-        });
-
-        // Cerrar menú al pulsar un link
-        const links = this._shadow.querySelectorAll(".link-encabezado");
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("active");
-            });
-        });
-        document.addEventListener("click", (e) => {
-            const path = e.composedPath(); 
-            if (!path.includes(this)) {
-                menu.classList.remove("active");
-            }
-        });
-    }
-
-    get template(){
-        return `
         <header>
             <div>
+
                 <div id="div-logo">
-                    <a href="../parte-html/Index.html">
-                        <img src="../imagenes/logo.png" id="logo" alt="Logo Academia Loranca">
+                    <a href="./Index.html">
+                        <img id="logo" src="../imagenes/logo.png" alt="Logo">
                     </a>
-                    <a href="../parte-html/Index.html">
-                        <div id="nombre_academia">ACADEMIA <br>LORANCA</div>
+
+                    <a href="./Index.html">
+                        <div id="nombre_academia">
+                            ACADEMIA <br> LORANCA
+                        </div>
                     </a>
                 </div>
 
-                <!-- BOTÓN MENÚ MÓVIL (Aparece solamente en movil o reducir el tamaño de la pantalla) -->
-                <div class="boton-menu-movil" id="menuToggle">
-                    ☰
-                </div>
+                <div class="boton-menu-movil" id="menuToggle">☰</div>
 
-                <!-- ZONA LINKS -->
                 <menu id="menu-header">
                     <a class="link-encabezado" href="./Index.html">Inicio</a>
                     <a class="link-encabezado" href="./grupos.html">Cursos</a>
@@ -271,7 +220,39 @@ class HeaderComponent extends HTMLElement {
             </div>
         </header>
         `;
+
+        const btn = this._shadow.getElementById("menuToggle");
+        const menu = this._shadow.getElementById("menu-header");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("active");
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.composedPath().includes(this)) {
+                menu.classList.remove("active");
+            }
+        });
+
+        const horariosLink = this._shadow.querySelector('.link-encabezado[href="#horarios"]');
+
+        horariosLink?.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const footer = document.querySelector("footer-componente");
+
+            if (footer) {
+                const target = footer.shadowRoot?.querySelector("#horarios");
+                target?.scrollIntoView({ behavior: "smooth" });
+            }
+        });
     }
 }
 
-export let etiquetaHeader = window.customElements.define('header-componente', HeaderComponent);
+customElements.define("header-componente", HeaderComponent);
