@@ -76,12 +76,12 @@
                 <div class="grupo-campo">
                     <label for="nombre-completo">Nombre completo:</label>
                     <input type="text" id="nombre-completo" name="Nombre Completo" minlength="3" maxlength="50" required
-                        placeholder="Escribe tu nombre" autocomplete="off">
+                        placeholder="Escribe tu nombre" autocomplete="off" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+">
                 </div>
 
                 <div class="grupo-campo">
                     <label for="correo-electronico">Correo electrónico:</label>
-                    <input type="email" id="correo-electronico" name="Correo" required placeholder="ejemplo@correo.com" autocomplete="off">
+                    <input type="email" id="correo-electronico" name="Correo" required placeholder="ejemplo@correo.com" autocomplete="off" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
                 </div>
 
                 <div class="fila-formulario">
@@ -89,7 +89,7 @@
                     <div class="grupo-campo">
                         <label for="curso-usuario">Curso Escolar:</label>
                         <select name="Curso" id="curso-usuario" required autocomplete="off">
-                            <option value="Escoge" disabled selected>Escoge un curso</option>
+                            <option value="" disabled selected>Escoge un curso</option>
                             <option value="Primaria">Primaria</option>
                             <option value="1ºESO">1ºESO</option>
                             <option value="2ºESO - 4ºESO">2ºESO - 4ºESO</option>
@@ -104,7 +104,7 @@
                     <div class="grupo-campo">
                         <label for="telefono-contacto">Teléfono (9 dígitos):</label>
                         <input type="tel" id="telefono-contacto" name="Telefono" pattern="[0-9]{9}" required
-                            placeholder="600123456" autocomplete="off">
+                            placeholder="600123456" autocomplete="off" pattern="[0-9]+">
                     </div>
 
                 </div>
