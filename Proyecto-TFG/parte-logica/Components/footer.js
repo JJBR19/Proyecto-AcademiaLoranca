@@ -1,10 +1,10 @@
 class FooterComponent extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
-        this._shadow = this.attachShadow ({mode: 'open'});
+        this._shadow = this.attachShadow({ mode: 'open' });
     }
 
-    connectedCallback(){
+    connectedCallback() {
         this._shadow.innerHTML = `<style>
 
             /* --------------------------------------------------FOOTER-------------------------------------------------- */
@@ -23,8 +23,8 @@ class FooterComponent extends HTMLElement {
                 display: grid;
                 grid-template-columns: 1.3fr 1fr 1fr 1fr;
                 gap: 30px;
-                border: 2px solid black
-                display: flex;
+                
+                
             }
 
             .columnas-footer ul li {
@@ -78,9 +78,9 @@ class FooterComponent extends HTMLElement {
             /* --------------------------------------------------COLUMNAS-------------------------------------------------- */
 
             .columnas-footer {
-                margin: 0
-                border: 2px solid black;
-                padding: 0px;
+                margin: 0;
+                
+                
             }
 
             .columnas-footer h4 {
@@ -151,10 +151,12 @@ class FooterComponent extends HTMLElement {
             }
 
             .footer-legal a {
-                color: #ffffff;
-                text-decoration: none;
-                margin: 0 10px;
-                font-size: 0.85rem;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                    display: inline-block;
+                    width: fit-content;
+                    margin:7px;
             }
 
             .footer-legal a:hover {
@@ -201,10 +203,11 @@ class FooterComponent extends HTMLElement {
                 }
 
                 .footer-legal {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 5px;
+                        width: 100%;
                 }
 
                 .footer-legal a {
@@ -219,7 +222,7 @@ class FooterComponent extends HTMLElement {
     }
 
     get template() {
-    return `
+        return `
         <! --------------------------------------------------Pie de página-------------------------------------------------- >
         <footer class="footer">
 

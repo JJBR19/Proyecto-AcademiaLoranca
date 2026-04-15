@@ -2,11 +2,13 @@ class LectorPaginaComponent extends HTMLElement {
 
     constructor(){
         super();
-        this._shadow = this.attachShadow({mode: 'open'});
+        this._shadow = this.attachShadow({ mode: 'open' });
+
         this.parrafos = [];
         this.indiceActual = 0;
         this.reproduciendo = false;
         this.utterance = null;
+        this.abierto = false;
     }
 
     connectedCallback(){
@@ -15,66 +17,157 @@ class LectorPaginaComponent extends HTMLElement {
             <style>
                 :host{
                     position: fixed;
-                    bottom: 20px;
-                    left: 20px;
+                    bottom: clamp(10px, 2vw, 20px);
+                    left: clamp(10px, 2vw, 20px);
                     z-index: 9999;
                     font-family: Arial, sans-serif;
+
+                    /* 🔥 CLAVE: cerrado = NO bloquea nada */
+                    pointer-events: none;
+                }
+
+                /* 🔥 SOLO cuando está activo bloquea interacción */
+                :host(.abierto){
+                    pointer-events: auto;
                 }
 
                 .contenedor-lector{
                     display:flex;
                     align-items:center;
-                    gap:10px;
+                    gap: clamp(6px, 2vw, 12px);
                 }
 
+                /* =========================
+                   BOTÓN AUDIO
+                ========================= */
                 .boton-audio{
-                    width:50px;
-                    height:50px;
-                    border-radius:50%;
-                    border:none;
-                    background:#3962e9;
-                    color:white;
-                    font-size:22px;
-                    cursor:pointer;
-                    box-shadow:0 6px 18px rgba(0, 0, 0, 0.25);
+                    width: clamp(30px, 5vw, 60px);
+                    height: clamp(30px, 5vw, 60px);
+
+                    border-radius: 50%;
+                    border: none;
+
+                    background: #3962e9;
+                    color: white;
+
+                    font-size: clamp(14px, 2.5vw, 24px);
+
+                    cursor: pointer;
+
+                    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+                    -webkit-tap-highlight-color: transparent;
+
+                    pointer-events: auto; /* siempre clicable */
                 }
 
+                .boton-audio:active{
+                    transform: scale(0.92);
+                }
+
+                @media (hover: hover){
+                    .boton-audio:hover{
+                        transform: scale(1.05);
+                        box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+                    }
+                }
+
+                /* =========================
+                   CONTROLES
+                ========================= */
                 .controles{
                     display:flex;
                     align-items:center;
-                    gap:10px;
-                    background:#3962e9;
-                    padding:8px 12px;
-                    border-radius:12px;
-                    box-shadow:0 6px 18px rgba(0, 0, 0, 0.25);
+                    gap: clamp(6px, 2vw, 12px);
 
-                    opacity:0;
-                    transform:translateX(-10px);
-                    pointer-events:none;
-                    transition:0.3s;
+                    background:#3962e9;
+                    padding: clamp(6px, 2vw, 10px) clamp(8px, 2.5vw, 14px);
+
+                    border-radius: clamp(10px, 2vw, 14px);
+
+                    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+
+                    opacity: 0;
+                    transform: translateX(-10px) scale(0.95);
+
+                    pointer-events: none;
+                    visibility: hidden;
+
+                    transition: all 0.25s ease;
+
+                    max-width: 90vw;
                 }
 
                 .controles.activo{
-                    opacity:1;
-                    transform:translateX(0);
-                    pointer-events:auto;
+                    opacity: 1;
+                    transform: translateX(0) scale(1);
+                    pointer-events: auto;
+                    visibility: visible;
                 }
 
-                button{
-                    font-size:18px;
-                    border:none;
-                    background:#3962e9;     
-                    color:white;
-                    width:40px;
-                    height:40px;
-                    border-radius:50%;
-                    cursor:pointer;
+                .controles button{
+                    width: clamp(28px, 6vw, 44px);
+                    height: clamp(28px, 6vw, 44px);
+
+                    font-size: clamp(14px, 2.5vw, 18px);
+
+                    border: none;
+                    background: #3962e9;
+                    color: white;
+
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    transition: transform 0.15s ease;
+
+                    -webkit-tap-highlight-color: transparent;
+                }
+
+                .controles button:active{
+                    transform: scale(0.9);
                 }
 
                 #play{
-                    width:50px;
-                    height:50px;
-                    font-size:22px;
+                    width: clamp(34px, 7vw, 52px);
+                    height: clamp(34px, 7vw, 52px);
+                    font-size: clamp(16px, 3vw, 22px);
+                }
+
+                @media (max-width: 360px){
+                    .controles{
+                        gap: 6px;
+                        padding: 6px 8px;
+                    }
+                }
+
+                @media (min-width: 2000px){
+                    .boton-audio{
+                        width: 70px;
+                        height: 70px;
+                        font-size: 26px;
+                    }
+
+                    .controles button{
+                        width: 52px;
+                        height: 52px;
+                        font-size: 20px;
+                    }
+
+                    #play{
+                        width: 62px;
+                        height: 62px;
+                        font-size: 24px;
+                    }
                 }
 
             </style>
@@ -89,60 +182,52 @@ class LectorPaginaComponent extends HTMLElement {
                 </div>
             </div>
         `;
+
         this.obtenerParrafos();
 
         const anterior = this._shadow.getElementById("anterior");
         const play = this._shadow.getElementById("play");
         const siguiente = this._shadow.getElementById("siguiente");
+        const toggle = this._shadow.getElementById("toggle");
+        const controles = this._shadow.getElementById("controles");
 
         anterior.addEventListener("click", () => this.anterior());
         siguiente.addEventListener("click", () => this.siguiente());
         play.addEventListener("click", () => this.toggleLectura());
 
-        const toggle = this._shadow.getElementById("toggle");
-        const controles = this._shadow.getElementById("controles");
-
         toggle.addEventListener("click", () => {
+
             this.abierto = !this.abierto;
 
-            if(this.abierto){
-                controles.classList.add("activo");
-            } else {
-                controles.classList.remove("activo");
-            }
+            controles.classList.toggle("activo", this.abierto);
+
+            /* 🔥 CLAVE FINAL: desbloquea el footer correctamente */
+            this.classList.toggle("abierto", this.abierto);
         });
 
         document.addEventListener("click", (e) => {
-            const path = e.composedPath(); 
-            if (!path.includes(this)) {
+            if (!e.composedPath().includes(this)) {
                 controles.classList.remove("activo");
+                this.abierto = false;
+                this.classList.remove("abierto");
             }
         });
 
         window.addEventListener("beforeunload", () => {
             window.speechSynthesis.cancel();
         });
+
         window.addEventListener("pagehide", () => {
             window.speechSynthesis.cancel();
         });
-
     }
 
-    /*Desconectarse al cambiar de página*/ 
     disconnectedCallback(){
         window.speechSynthesis.cancel();
     }
 
-    /* Seleciona el texto al leer, solo funciona si tiene etiqueta main */
     obtenerParrafos(contenedor = null){
-        let root;
-
-        if(contenedor){
-            root = contenedor;
-        } else {
-            root = document.querySelector("main");
-        }
-
+        const root = contenedor || document.querySelector("main");
         if(!root) return;
 
         const elementos = root.querySelectorAll("p, h1, h2, h3, li");
@@ -151,16 +236,14 @@ class LectorPaginaComponent extends HTMLElement {
     }
 
     leerActual(){
-
-    if(this.parrafos.length === 0) return;
+        if(this.parrafos.length === 0) return;
 
         window.speechSynthesis.cancel();
-        
+
         this.utterance = new SpeechSynthesisUtterance(this.parrafos[this.indiceActual]);
         this.utterance.lang = "es-ES";
 
         this.utterance.onend = () => {
-
             if(this.reproduciendo && this.indiceActual < this.parrafos.length - 1){
                 this.indiceActual++;
                 this.leerActual();
@@ -169,37 +252,25 @@ class LectorPaginaComponent extends HTMLElement {
                 playBtn.textContent = "▶";
                 this.reproduciendo = false;
             }
-
         };
 
         window.speechSynthesis.speak(this.utterance);
     }
 
-    leerContenedor(contenedor){
-        this.obtenerParrafos(contenedor);
-        this.leerActual();
-    }
-
-    /* --------------------------------------------Botones de lectura-------------------------------------------- */
-
-    /* Pausar-Continuar */
     toggleLectura(){
-
         const playBtn = this._shadow.getElementById("play");
 
-        /* Cambiar icono segun estado */
         if(!this.reproduciendo){
             this.leerActual();
             playBtn.textContent = "⏸";
             this.reproduciendo = true;
-        }else{
+        } else {
             window.speechSynthesis.pause();
             playBtn.textContent = "▶";
             this.reproduciendo = false;
         }
     }
 
-    /* Boton siguiente apartado*/
     siguiente(){
         if(this.indiceActual < this.parrafos.length - 1){
             this.indiceActual++;
@@ -207,14 +278,12 @@ class LectorPaginaComponent extends HTMLElement {
         }
     }
 
-    /* Boton anteior apartado */
     anterior(){
         if(this.indiceActual > 0){
             this.indiceActual--;
             this.leerActual();
         }
     }
-
 }
 
 customElements.define("lector-pagina", LectorPaginaComponent);
