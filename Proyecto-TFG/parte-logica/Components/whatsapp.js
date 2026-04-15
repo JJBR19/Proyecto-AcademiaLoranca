@@ -107,16 +107,96 @@ class WhatsappComponent extends HTMLElement {
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 360px) {
+            .boton-whatsapp{
+                width: 30px;
+                height: 30px;
+            }
+            
+            .boton-whatsapp img {
+                width: 15px;
+                margin-top: 5px;
+            }
+
             .div-whatsapp {
-                display: none; /* Se activa con JS */
-                width: 300px;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                margin-bottom: 15px;
-                overflow: hidden;
-                animation: fadeIn 0.3s ease;
+                width: 200px;
+                height: 580px;
+            }
+        }
+
+        @media (min-width: 361px) and (max-width: 480px) {
+            .boton-whatsapp{
+                width: 35px;
+                height: 35px;
+            }
+            
+            .boton-whatsapp img {
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            .div-whatsapp {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .boton-whatsapp{
+                width: 40px;
+                height: 40px;
+            }
+            
+            .boton-whatsapp img {
+                width: 25px;
+                margin-top: 5px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .boton-whatsapp{
+                width: 46px;
+                height: 46px;
+            }
+            
+            .boton-whatsapp img {
+                width: 30px;
+                margin-top: 5px;
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            .boton-whatsapp{
+                width: 52px;
+                height: 52px;
+            }
+            
+            .boton-whatsapp img {
+                width: 35px;
+                margin-top: 5px;
+            }
+        }
+
+        @media (min-width: 1440px) and (max-width: 2560px) {
+            .boton-whatsapp{
+                width: 58px;
+                height: 58px;
+            }
+            
+            .boton-whatsapp img {
+                width: 40px;
+                margin-top: 5px;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .boton-whatsapp{
+                width: 70px;
+                height: 70px;
+            }
+            
+            .boton-whatsapp img {
+                width: 45px;
+                margin-top: 5px;
             }
         }
         </style>

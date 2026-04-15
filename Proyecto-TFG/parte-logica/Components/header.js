@@ -181,6 +181,24 @@ class HeaderComponent extends HTMLElement {
                     animation: slideDown 0.3s ease;
                 }
             }
+
+            @media (min-width: 320px) and (max-width: 359px) {
+                #logo{
+                    height: 60px;
+                }
+                #nombre_academia {
+                    font-size: 15px;
+                }
+            }
+
+            @media (min-width: 359px) and (max-width: 480px) {
+                #logo{
+                    height: 80px;
+                }
+                #nombre_academia {
+                    font-size: 20px;
+                }
+            }
         </style>
         ` + this.template;
 
