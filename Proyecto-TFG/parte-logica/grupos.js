@@ -28,7 +28,7 @@ function cerrarPOPUP(id) {
     }
 }
 
-// Cerrar al hacer click fuera
+// Cerrar popup al hacer click fuera
 document.addEventListener("click", function (event) {
     if (event.target.classList.contains("POPUP")) {
         cerrarPOPUP(event.target.id);
