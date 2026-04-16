@@ -1210,9 +1210,6 @@ img {
             min-width: 250px;
             height: 170px;
         }
-    }
-  
-    @media (min-width: 320px) and (max-width: 480px){
         .metodo-text{
             min-width: 200px;
         }
@@ -1221,152 +1218,6 @@ img {
             height: 170px;
         }
     }
-
-    @media (max-width: 480px) {
-
-        /* CARRUSEL */
-            .carrusel {
-                height: auto;
-            }
-            .carrusel img {
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-            }
-            .carrusel-cta {
-                position: absolute;
-                bottom: 10px; 
-                left: 50%;
-                transform: translateX(-50%);
-                width: 75%;   
-                max-width: 320px;
-            }
-            .cta-box {
-                padding: 12px 14px; 
-                border-radius: 12px;
-            }.cta-box h3 {
-                font-size: 1rem;
-                margin-bottom: 5px;
-            }
-            .cta-box p {
-                font-size: 0.8rem;
-                margin-bottom: 8px;
-                line-height: 1.3;
-            }
-            .slides img {
-                height: 320px;
-            }
-            .cta-btn {
-                font-size: 0.85rem;
-                padding: 8px;
-            }
-            
-        /* SERVICIOS */
-            .servicio-text h3 {
-                font-size: 1.5rem;
-            }
-            .servicio-text p,
-            .servicio-text ul li {
-                font-size: 0.95rem;
-            }
-            .servicio-item {
-                margin-bottom: 50px;
-            }
-            .servicio-img {
-                flex: 1 1 350px;
-                max-width: 350px;
-                max-height: 200px;
-                height: 400px;
-                overflow: hidden;
-                border-radius: 20px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-                transition: transform 0.3s ease;
-            }
-            .servicio-img img {
-                width: 100%;
-                height: 100%;
-            }
-
-        /* ASIGNATURAS */
-            .asignaturas {
-            padding: 40px 15px;
-            }
-            .asignaturas h2 {
-                font-size: 1.8rem;
-                text-align: center;
-                margin-bottom: 25px;
-            }
-            .asignaturas-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .asignatura-card {
-                border-radius: 16px;
-                overflow: hidden;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-                background: #fff;
-            }
-            .asignatura-img img {
-                width: 100%;
-                height: 150px;
-                object-fit: cover;
-            }
-            .asignatura-card h3 {
-                font-size: 1.2rem;
-                margin: 15px;
-            }
-            .asignatura-card p {
-                font-size: 0.95rem;
-                line-height: 1.5;
-                margin: 0 15px 20px;
-            }
-        /* NIVELES */    
-            .nivel-img {
-                height: 160px;
-            }
-        
-        /* METODOLOGÍA */
-            .metodo-text h3 {
-                font-size: 1.5rem;
-            }
-            .metodo-text p,
-            .metodo-text ul li {
-                font-size: 0.95rem;
-            }
-            .metodologia-item {
-                margin-bottom: 50px;
-            }
-            .metodo-img {
-                flex: 1 1 350px;
-                max-width: 350px;
-                max-height: 200px;
-                height: 400px;
-                overflow: hidden;
-                border-radius: 20px;
-                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-                transition: transform 0.3s ease;
-            }
-            .metodo-img img {
-                width: 100%;
-                height: 100%;
-            }
-        
-        /* INSCRIPCIÓN */
-            .container {
-                padding: 70px 15px;
-            }
-
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-
-            .hero-content h2 {
-                font-size: 1.2rem;
-            }
-    }
-
 
     @media (max-width: 768px) {
 
@@ -1429,7 +1280,7 @@ img {
 
         /* ASIGNATURAS */
             .asignatura-img {
-            height: 110px;
+                height: 110px;
             }
         
         /* NIVELES */
@@ -1484,6 +1335,7 @@ img {
                 display: none;
             }
 
+
             /* Links más grandes */
             .link-encabezado {
                 font-size: 1.2rem;
@@ -1501,7 +1353,6 @@ img {
             }
     }
 
-
     @media (max-width: 1024px) {
 
         /* SERVICIOS */
@@ -1515,7 +1366,7 @@ img {
 
         /* ASIGNATURAS */
             .asignaturas-grid {
-            grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
             
         /* METODOLOGÍA */
@@ -1530,6 +1381,129 @@ img {
             }
     }
 
+    @media (max-width: 480px) {
+
+        /* ===== CONTAINER GENERAL ===== */
+        .container {
+            padding: 70px 15px;
+        }
+
+        /* ===== HERO ===== */
+        .hero-content h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero-content h2 {
+            font-size: 1.2rem;
+        }
+
+        /* ===== CARRUSEL ===== */
+        .carrusel img {
+            height: 220px;
+        }
+
+        .slides img {
+            height: 240px;
+        }
+
+        /* CTA carrusel */
+        .carrusel-cta {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            max-width: 320px;
+        }
+
+        .cta-box {
+            padding: 12px 14px;
+            border-radius: 12px;
+        }
+
+        .cta-box h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .cta-box p {
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .cta-btn {
+            font-size: 0.85rem;
+            padding: 8px;
+        }
+
+        /* ===== SERVICIOS ===== */
+        .servicio-text h3 {
+            font-size: 1.5rem;
+        }
+
+        .servicio-text p,
+        .servicio-text ul li {
+            font-size: 0.95rem;
+        }
+
+        .servicio-item {
+            margin-bottom: 50px;
+        }
+
+        .servicio-img {
+            max-width: 350px;
+            max-height: 200px;
+            height: 200px;
+        }
+
+        /* ===== ASIGNATURAS ===== */
+        .asignaturas {
+            padding: 40px 15px;
+        }
+
+        .asignaturas h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .asignaturas-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .asignatura-img img {
+            height: 150px;
+        }
+
+        .asignatura-card h3 {
+            font-size: 1.2rem;
+        }
+
+        .asignatura-card p {
+            font-size: 0.95rem;
+        }
+
+        /* ===== METODOLOGÍA ===== */
+        .metodo-text h3 {
+            font-size: 1.5rem;
+        }
+
+        .metodo-text p,
+        .metodo-text ul li {
+            font-size: 0.95rem;
+        }
+
+        .metodologia-item {
+            margin-bottom: 50px;
+        }
+
+        .metodo-img {
+            max-width: 350px;
+            max-height: 200px;
+            height: 200px;
+        }
+    }
 
 /* --------------------------------------ANIMACIONES-------------------------------------- */
 
@@ -1566,312 +1540,3 @@ img {
             transform: translateY(0);
         }
     }
-/* =====================================================
-   RESPONSIVE GENERAL (TODO EL SITIO)
-===================================================== */
-
-/* =========================
-   PANTALLAS GRANDES (+1600px)
-========================= */
-@media (min-width: 1600px) {
-    .carrusel .btn {
-        font-size: 2rem;
-        padding: 14px 18px;
-    }
-
-    .carrusel .left {
-        left: 30px;
-    }
-
-    .carrusel .right {
-        right: 30px;
-    }
-}
-
-
-/* =========================
-   TABLETS Y PORTÁTILES (<=1024px)
-========================= */
-@media (max-width: 1024px) {
-
-    .servicio-item {
-        gap: 30px;
-        margin-bottom: 60px;
-    }
-
-    .servicio-img {
-        height: 250px;
-    }
-
-    .asignaturas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .metodologia-item {
-        gap: 30px;
-        margin-bottom: 60px;
-    }
-
-    .metodo-img {
-        height: 250px;
-    }
-}
-
-
-/* =========================
-   TABLETS (<=768px)
-========================= */
-@media (max-width: 768px) {
-
-    /* ===== HEADER MENÚ MÓVIL ===== */
-    #menu-header {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #3962e9;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        display: none;
-    }
-
-    #menu-header.active {
-        display: flex;
-        animation: slideDown 0.3s ease;
-    }
-
-    .menu-mobile-btn {
-        display: block;
-    }
-
-    .link-encabezado {
-        font-size: 1.2rem;
-    }
-
-    /* ===== HERO ===== */
-    .hero-content h1 {
-        font-size: 2.6rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.4rem;
-    }
-
-    section h2 {
-        font-size: 2.1rem;
-    }
-
-    /* ===== SERVICIOS ===== */
-    .servicio-item,
-    .servicio-item.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .servicio-img {
-        width: 100%;
-        max-width: 100%;
-        height: 220px;
-    }
-
-    .servicio-text {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    /* ===== ASIGNATURAS ===== */
-    .asignatura-img {
-        height: 110px;
-    }
-
-    /* ===== NIVELES ===== */
-    .nivel-img {
-        height: 180px;
-    }
-
-    /* ===== METODOLOGÍA ===== */
-    .metodologia-item,
-    .metodologia-item.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .metodo-img {
-        width: 100%;
-        max-width: 100%;
-        height: 220px;
-    }
-
-    .metodo-text {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    /* ===== MAIN CONTENEDOR LEGAL ===== */
-    main.container {
-        padding: 25px !important;
-    }
-
-    main.container h1 {
-        font-size: 1.8rem;
-    }
-
-    main.container h2 {
-        font-size: 1.1rem;
-    }
-}
-
-
-/* =========================
-   MÓVILES (<=480px)
-========================= */
-@media (max-width: 480px) {
-
-    /* ===== CONTAINER GENERAL ===== */
-    .container {
-        padding: 70px 15px;
-    }
-
-    /* ===== HERO ===== */
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.2rem;
-    }
-
-    /* ===== CARRUSEL ===== */
-    .carrusel img {
-        height: 220px;
-    }
-
-    .slides img {
-        height: 240px;
-    }
-
-    /* CTA carrusel */
-    .carrusel-cta {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
-        max-width: 320px;
-    }
-
-    .cta-box {
-        padding: 12px 14px;
-        border-radius: 12px;
-    }
-
-    .cta-box h3 {
-        font-size: 1rem;
-        margin-bottom: 5px;
-    }
-
-    .cta-box p {
-        font-size: 0.8rem;
-        margin-bottom: 8px;
-        line-height: 1.3;
-    }
-
-    .cta-btn {
-        font-size: 0.85rem;
-        padding: 8px;
-    }
-
-    /* ===== SERVICIOS ===== */
-    .servicio-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .servicio-text p,
-    .servicio-text ul li {
-        font-size: 0.95rem;
-    }
-
-    .servicio-item {
-        margin-bottom: 50px;
-    }
-
-    .servicio-img {
-        max-width: 350px;
-        max-height: 200px;
-        height: 200px;
-    }
-
-    /* ===== ASIGNATURAS ===== */
-    .asignaturas {
-        padding: 40px 15px;
-    }
-
-    .asignaturas h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-    }
-
-    .asignaturas-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .asignatura-img img {
-        height: 150px;
-    }
-
-    .asignatura-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .asignatura-card p {
-        font-size: 0.95rem;
-    }
-
-    /* ===== METODOLOGÍA ===== */
-    .metodo-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .metodo-text p,
-    .metodo-text ul li {
-        font-size: 0.95rem;
-    }
-
-    .metodologia-item {
-        margin-bottom: 50px;
-    }
-
-    .metodo-img {
-        max-width: 350px;
-        max-height: 200px;
-        height: 200px;
-    }
-}
-
-
-/* =========================
-   MÓVILES MUY PEQUEÑOS (320px–480px)
-========================= */
-@media (min-width: 320px) and (max-width: 480px) {
-
-    .servicio-text {
-        min-width: 200px;
-    }
-
-    .servicio-img {
-        min-width: 250px;
-        height: 170px;
-    }
-
-    .metodo-text {
-        min-width: 200px;
-    }
-
-    .metodo-img {
-        min-width: 250px;
-        height: 170px;
-    }
-}

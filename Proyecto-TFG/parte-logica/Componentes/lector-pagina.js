@@ -198,10 +198,7 @@ class LectorPaginaComponent extends HTMLElement {
         toggle.addEventListener("click", () => {
 
             this.abierto = !this.abierto;
-
             controles.classList.toggle("activo", this.abierto);
-
-            /* 🔥 CLAVE FINAL: desbloquea el footer correctamente */
             this.classList.toggle("abierto", this.abierto);
         });
 
@@ -276,13 +273,21 @@ class LectorPaginaComponent extends HTMLElement {
             this.leerActual();
             this.toggleLectura();
         }
+        else{
+            this.indiceActual++;
+            this.leerActual();
+        }
     }
 
     anterior(){
-        if(this.indiceActual > 0){
+        if(this.indiceActual > 0 && !this.reproduciendo){
             this.indiceActual--;
             this.leerActual();
             this.toggleLectura();
+        }
+        else{
+            this.indiceActual--;
+            this.leerActual();
         }
     }
 }
