@@ -1217,6 +1217,24 @@ img {
             min-width: 250px;
             height: 170px;
         }
+        .hero-academia{
+            min-height: 100vh;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 768px){
+        .servicio-img{
+            width: 400px;;
+            max-height: 250px;
+        }
+
+        .metodo-img{
+            width: 400px;;
+            max-height: 250px;
+        }
+        .hero-academia{
+            min-height: 100vh;
+        }
     }
 
     @media (max-width: 768px) {
@@ -1259,15 +1277,16 @@ img {
                 flex-direction: column;
                 text-align: center;
             }
-            .servicio-img {
-                width: 100%;
-                max-width: 100%;
-                height: 220px;
-            }
+
             .servicio-text {
                 width: 100%;
                 margin-top: 20px;
             }
+
+            .servicio-text ul{
+                text-align: left;
+            }
+
             main.container {
             padding: 25px;
             }
@@ -1295,15 +1314,13 @@ img {
                 text-align: center;
             }
 
-            .metodo-img {
-                width: 100%;
-                max-width: 100%;
-                height: 220px;
-            }
-
             .metodo-text {
                 width: 100%;
                 margin-top: 20px;
+            }
+
+            .metodo-text ul{
+                text-align: left;
             }
         /* INSCRIPCIÓN */
             .hero-content h1 {
@@ -1353,7 +1370,11 @@ img {
             }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 3024px) {
+
+        .hero-academia{
+            min-height: 80vh;
+        }
 
         /* SERVICIOS */
             .servicio-item {
@@ -1379,6 +1400,12 @@ img {
             .metodo-img {
                 height: 250px;
             }
+    }
+
+    @media (min-width: 3024px) and (max-width: 8000px){
+        .hero-academia{
+            min-height: 40vh;
+        }
     }
 
     @media (max-width: 480px) {
