@@ -259,7 +259,6 @@ class LectorPaginaComponent extends HTMLElement {
 
     toggleLectura(){
         const playBtn = this._shadow.getElementById("play");
-
         if(!this.reproduciendo){
             this.leerActual();
             playBtn.textContent = "⏸";
@@ -272,9 +271,10 @@ class LectorPaginaComponent extends HTMLElement {
     }
 
     siguiente(){
-        if(this.indiceActual < this.parrafos.length - 1){
+        if(this.indiceActual < this.parrafos.length - 1 && !this.reproduciendo){
             this.indiceActual++;
             this.leerActual();
+            this.toggleLectura();
         }
     }
 
@@ -282,6 +282,7 @@ class LectorPaginaComponent extends HTMLElement {
         if(this.indiceActual > 0){
             this.indiceActual--;
             this.leerActual();
+            this.toggleLectura();
         }
     }
 }
