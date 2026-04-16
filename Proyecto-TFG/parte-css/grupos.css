@@ -369,8 +369,7 @@ body::before {
     }
 
     .curso-imagen img {
-        width: 100%;
-        max-width: 400px;
+        width: 400px;
         height: auto;
     }
 
@@ -378,6 +377,9 @@ body::before {
          max-width: 280px;
         width: 100%;
         height: auto;
+    }
+    .curso-texto p{
+        margin-bottom: 30px;
     }
 }
 
@@ -424,5 +426,25 @@ body::before {
 
     .clases h1.titulo-seccion {
         font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .contenedor-avatar {
+        width: 150px;
+    }
+
+    .pop1 {
+        font-size: 1.3em;
+        margin-bottom: 14px;
+    }
+
+    .pop2{
+        font-size: 1.2em;
+        margin-bottom: 14px;
+    }
+
+    .curso-texto h2 {
+        font-size: 1.6rem;
     }
 }
