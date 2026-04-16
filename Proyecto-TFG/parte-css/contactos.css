@@ -293,6 +293,7 @@ input[type="checkbox"] {
     .info-detalles {
         justify-content: center;
     }
+
 }
 
 @media (max-width: 900px) {
@@ -330,6 +331,10 @@ input[type="checkbox"] {
     .boton-enviar {
         font-size: 1rem;
         padding: 14px;
+    }
+
+    .titulo-animado{
+        font-size: 1.6em;
     }
 }
 

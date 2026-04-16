@@ -144,7 +144,6 @@ class HeaderComponent extends HTMLElement {
                 opacity:0;
                 transform: translateY(-10px);
                 pointer-events:none;
-              
 
                 margin:0;
             }
