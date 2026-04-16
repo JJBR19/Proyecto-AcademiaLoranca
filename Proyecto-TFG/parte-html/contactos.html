@@ -11,6 +11,7 @@
     <script type="module" src="../parte-logica/Componentes/footer.js" defer></script>
     <script type="module" src="../parte-logica/Componentes/whatsapp.js" defer></script>
     <script type="module" src="../parte-logica/Componentes/lector-pagina.js"></script>
+    <script src="../parte-logica/contador.js" defer></script>
 </head>
 
 <body>
@@ -112,7 +113,7 @@
                 <div class="grupo-campo">
                     <label for="biografia-personal">Breve Mensaje (máx 200 caracteres):</label>
                     <textarea id="biografia-personal" name="Mensaje" maxlength="200" rows="4" required autocomplete="off"></textarea>
-                    <small class="contador-texto">0 / 200</small>
+                    <small class="contador-texto"><span id="contador">0</span> / 200 </small>
                 </div>
 
                 <div class="grupo-campo-checkbox">
