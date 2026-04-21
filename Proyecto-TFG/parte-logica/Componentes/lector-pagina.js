@@ -22,11 +22,9 @@ class LectorPaginaComponent extends HTMLElement {
                     z-index: 9999;
                     font-family: Arial, sans-serif;
 
-                    /* 🔥 CLAVE: cerrado = NO bloquea nada */
                     pointer-events: none;
                 }
 
-                /* 🔥 SOLO cuando está activo bloquea interacción */
                 :host(.abierto){
                     pointer-events: auto;
                 }
@@ -37,9 +35,7 @@ class LectorPaginaComponent extends HTMLElement {
                     gap: clamp(6px, 2vw, 12px);
                 }
 
-                /* =========================
-                   BOTÓN AUDIO
-                ========================= */
+              
                 .boton-audio{
                     width: clamp(30px, 5vw, 60px);
                     height: clamp(30px, 5vw, 60px);
@@ -78,9 +74,6 @@ class LectorPaginaComponent extends HTMLElement {
                     }
                 }
 
-                /* =========================
-                   CONTROLES
-                ========================= */
                 .controles{
                     display:flex;
                     align-items:center;

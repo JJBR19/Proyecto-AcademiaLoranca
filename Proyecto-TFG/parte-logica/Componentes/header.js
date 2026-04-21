@@ -16,7 +16,6 @@ class HeaderComponent extends HTMLElement {
             z-index: 1000;
         }
 
-        /* ================= HEADER ================= */
         header{
             width:100%;
             background: linear-gradient(440deg, #2a17cf, #00d5ff);
@@ -34,7 +33,6 @@ class HeaderComponent extends HTMLElement {
             position:relative;
         }
 
-        /* ================= LOGO ================= */
         #div-logo{
             display:flex;
             align-items:center;
@@ -63,7 +61,6 @@ class HeaderComponent extends HTMLElement {
             text-decoration:none;
         }
 
-        /* ================= MENU (DESKTOP DEFAULT) ================= */
         #menu-header{
             display:flex;
             gap:22px;
@@ -98,7 +95,6 @@ class HeaderComponent extends HTMLElement {
             width:100%;
         }
 
-        /* ================= BURGER ================= */
         .boton-menu-movil{
             display:none;
             font-size:30px;
@@ -114,14 +110,12 @@ class HeaderComponent extends HTMLElement {
             border-radius:8px;
         }
 
-        /* ================= MOBILE DROPDOWN ================= */
         @media (max-width: 900px){
 
             .boton-menu-movil{
                 display:block;
             }
 
-            /* menú pasa a dropdown */
             #menu-header{
                 position:absolute;
                 top:100%;
