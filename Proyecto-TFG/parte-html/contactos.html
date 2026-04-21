@@ -11,6 +11,7 @@
     <script type="module" src="../parte-logica/Componentes/footer.js" defer></script>
     <script type="module" src="../parte-logica/Componentes/whatsapp.js" defer></script>
     <script type="module" src="../parte-logica/Componentes/lector-pagina.js"></script>
+    <script src="../parte-logica/contador.js" defer></script>
 </head>
 
 <body>
@@ -50,9 +51,10 @@
             <div class="info-detalles">
                 <div class="detalle-item">
                     📍 <a
-                        href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+28942+Fuenlabrada,+Madrid">
-                        C/ Alegría, 4 (CC, entrada por el supermercado, Nivel Centro 1ª planta, 28942 Fuenlabrada,
-                        Madrid)
+                        href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+local+37+28942+Fuenlabrada,+Madrid"
+                        target="_blank" rel="noopener">
+                        C/ de la Alegría, 4, local 37 28942 Fuenlabrada,
+                        Madrid
                     </a>
                 </div>
                 <div class="detalle-item">
@@ -105,7 +107,7 @@
                 <div class="grupo-campo">
                     <label for="mensaje-adicional">Breve Mensaje (máx 200 caracteres):</label>
                     <textarea id="mensaje-adicional" name="Mensaje" maxlength="200" rows="4" autocomplete="off"></textarea>
-                    <small class="contador-texto">0 / 200</small>
+                    <small class="contador-texto"><span id="contador">0</span> / 200 </small>
                 </div>
 
                 <div class="grupo-campo-checkbox">

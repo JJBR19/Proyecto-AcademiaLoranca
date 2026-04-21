@@ -7,7 +7,6 @@ class FooterComponent extends HTMLElement {
     connectedCallback() {
         this._shadow.innerHTML = `<style>
 
-            /* --------------------------------------------------ESTILO FOOTER-------------------------------------------------- */
 
             .footer {
                 background: linear-gradient(135deg, #1e3a8a, #2563eb);
@@ -35,7 +34,6 @@ class FooterComponent extends HTMLElement {
                 transform: translateX(6px);
             }
 
-            /* ---------COLUMNA ACADEMIA--------- */
 
             #columna-academia p {
                 margin:  0;
@@ -59,7 +57,6 @@ class FooterComponent extends HTMLElement {
                 font-weight: 700;
             }
 
-            /* ---------CONTACTO--------- */
 
             .footer-contactos p {
                 margin-bottom: 8px;
@@ -75,7 +72,6 @@ class FooterComponent extends HTMLElement {
                 text-decoration: underline;
             }
 
-            /* ---------COLUMNAS--------- */
 
             .columnas-footer {
                 margin: 0;
@@ -112,7 +108,6 @@ class FooterComponent extends HTMLElement {
                 text-decoration: underline;
             }
 
-            /* ---------ZONA SOLICITAR INFO--------- */
 
             #columna-info p {
                 font-size: 0.9rem;
@@ -136,7 +131,6 @@ class FooterComponent extends HTMLElement {
                 transform: translateY(-3px);
             }
 
-            /* ---------ZONA LEGAL--------- */
 
             .zona-privacidad {
                 border-top: 1px solid rgba(91, 255, 244, 0.476);
@@ -163,7 +157,6 @@ class FooterComponent extends HTMLElement {
                 text-decoration: underline;
             }
 
-            /* --------------------------------------------------Diseño responsivo-------------------------------------------------- */
 
             @media (max-width: 992px) {
                 .contenedor-footer {
@@ -223,10 +216,8 @@ class FooterComponent extends HTMLElement {
 
     get template() {
     return `
-        <! --------------------------------------------------FOOTER-------------------------------------------------- >
         <footer class="footer">
 
-            <! --------------------------------------------------COLUMNA 1 - ACADEMIA-------------------------------------------------- >
             <div class="contenedor-footer">
                 
                 <div class="columnas-footer" id="columna-academia">
@@ -243,17 +234,16 @@ class FooterComponent extends HTMLElement {
 
                 <div class="footer-contactos"><br>
 
-                <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+28942+Fuenlabrada,+Madrid" target="_blank" rel="noopener">
-                    C/ Alegría, 4 (CC, entrada por el supermercado, Nivel Centro 1ª planta, 28942 Fuenlabrada, Madrid)
+                <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+local+37,+28942+Fuenlabrada,+Madrid" target="_blank" rel="noopener">
+                    C/ Alegría, 4, local 37, 28942 Fuenlabrada, Madrid)
                 </a></p>
                 
                 <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#grupo1">(Isabel Grupo 1)</a></p>
                 <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="./grupos.html#grupo2">(Laura Grupo 2)</a></p>
                 
-                <p>✉️ <a href="mailto:info@academialoranca.es">academialoranca22@gmail.com</a></p>
+                <p>✉️ <a href="mailto:academialoranca22@gmail.com">academialoranca22@gmail.com</a></p>
             </div>
 
-            <! --------------------------------------------------COLUMNA 2 - ENLACES-------------------------------------------------- >
             </div>
                 <div class="columnas-footer">
                     <h4>Navegación</h4>
@@ -266,7 +256,6 @@ class FooterComponent extends HTMLElement {
                     </ul>
                 </div>
 
-                <! --------------------------------------------------COLUMNA 3 - NIVELES-------------------------------------------------- >
                 <div class="columnas-footer">
                     <h4>Niveles educativos</h4>
                     <ul>
@@ -277,14 +266,12 @@ class FooterComponent extends HTMLElement {
                     </ul>
                 </div>
 
-                <! --------------------------------------------------COLUMNA 4 - INFORMACIÓN-------------------------------------------------- >
                 <div class="columnas-footer" id="columna-info">
                     <h4>¿Te interesa?</h4>
                     <p>Reserva una clase de prueba gratuita y descubre nuestra metodología.</p>
                     <a href="./contactos.html" class="boton-footer">Solicitar información</a>
                 </div>
 
-                <! --------------------------------------------------COLUMNA 5 - HORARIOS-------------------------------------------------- >
                 <div class="columnas-footer" id="horarios">
                     <h4>Horarios</h4>
                     <ul>
@@ -295,7 +282,6 @@ class FooterComponent extends HTMLElement {
 
             </div>
 
-            <!-- BARRA INFERIOR -->
             <div class="zona-privacidad">
                 <p>© 2026 Academia Loranca | Todos los derechos reservados</p>
                 <div class="footer-legal">

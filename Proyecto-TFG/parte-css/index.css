@@ -1,13 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     transition: all 0.25s ease;
 }
 
-/*PARTE HEADER*/
-
-/*-------------- ESTILOS HEADER -------------*/
 header {
     width: 100%;
     background: #3962e9;
@@ -28,9 +24,6 @@ header>div {
     align-items: center;
 }
 
-/*------------------------------------------*/
-
-/*------------------ LOGO ------------------*/
 #logo {
     height: 90px;
     cursor: pointer;
@@ -42,7 +35,6 @@ header>div {
     transform: scale(1.05);
 }
 
-/* Div logo + nombre */
 #div-logo {
     display: flex;
     align-items: center;
@@ -50,7 +42,6 @@ header>div {
     flex-direction: row;
 }
 
-/* Nombre academia */
 #nombre_academia {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 22px;
@@ -66,9 +57,6 @@ header>div {
     transform: scale(1.05);
 }
 
-/*------------------------------------------*/
-
-/*------------------ MENÚ ------------------*/
 #menu-header {
     display: flex;
     gap: 25px;
@@ -86,12 +74,9 @@ header>div {
 
     padding: 0px 12px;
      color: #dbdbdb;
-    text-decoration: underline; /* refuerzo visual */
+    text-decoration: underline;
     transform: scale(1.2);
 }
-
-
-/*--------------------------CARRUSEL CSS-------------------------*/
 
 .carrusel {
     position: relative;
@@ -104,7 +89,6 @@ header>div {
 }
 
 
-/* SLIDES */
 .slides {
     display: flex;
     transition: transform 0.6s ease;
@@ -118,12 +102,6 @@ header>div {
     object-fit: cover;
 }
 
-
-
-
-/*-------------RESPONSIVE DE FLECHAS CARRUSEL------------------*/
-
-/* BOTONES FLECHAS - RESPONSIVO COMPLETO */
 .carrusel .btn {
     position: absolute;
     top: 50%;
@@ -144,7 +122,6 @@ header>div {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover solo en dispositivos con ratón */
 @media (hover: hover) {
     .carrusel .btn:hover {
         background: white;
@@ -152,7 +129,6 @@ header>div {
     }
 }
 
-/* Posición fluida con unidades relativas */
 .carrusel .left {
     left: clamp(6px, 2vw, 20px);
 }
@@ -160,7 +136,7 @@ header>div {
 .carrusel .right {
     right: clamp(6px, 2vw, 20px);
 }
-/* ===== MÓVILES PEQUEÑOS ===== */
+
 @media (max-width: 480px) {
     .carrusel .btn {
         font-size: 1rem;
@@ -168,7 +144,6 @@ header>div {
     }
 }
 
-/* ===== PANTALLAS MUY GRANDES ===== */
 @media (min-width: 1600px) {
     .carrusel .btn {
         font-size: 2rem;
@@ -184,9 +159,6 @@ header>div {
     }
 }
 
-/*----------------------------------------------------------*/
-
-/* CTA OVERLAY */
 .carrusel-cta {
     position: absolute;
     bottom: 25px;
@@ -207,10 +179,9 @@ header>div {
     max-width: 420px;
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
     pointer-events: auto;
-    /* Animación solo cuando sea visible */
     animation: float 3s ease-in-out infinite;
     will-change: transform;
-    background: rgba(255, 255, 255, 0.98); /* opacidad más alta */
+    background: rgba(255, 255, 255, 0.98); 
     border: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -218,7 +189,6 @@ header>div {
     animation-play-state: paused;
 }
 
-/* TEXTO */
 .cta-box h3 {
     color: #2563eb;
     font-size: 1.3rem;
@@ -231,7 +201,6 @@ header>div {
     margin-bottom: 14px;
 }
 
-/* BOTÓN */
 .cta-btn {
     display: inline-block;
     background: linear-gradient(15deg, #000acc, #03dafb);
@@ -250,9 +219,6 @@ header>div {
     transform: translateY(-3px) scale(1.05);
 }
 
-/*---------------CSS PARTE INFORMACION GENERAL--------------*/
-
-/* RESET + BASE*/
 * {
     margin: 0;
     padding: 0;
@@ -266,14 +232,10 @@ body {
     line-height: 1.7;
 }
 
-/* VARIABLES */
 :root {
     --primary: #3b82f6;
-    /* azul vivo */
     --secondary: #6366f1;
-    /* violeta */
     --accent: #22c55e;
-    /* verde */
     --pink: #ec4899;
     --orange: #f97316;
     --yellow: #facc15;
@@ -283,14 +245,12 @@ body {
     --bg-soft: #f0f6ff;
 }
 
-/* CONTAINER */
 .container {
     max-width: 1200px;
     margin: auto;
     padding: 90px 20px;
 }
 
-/* HERO */
 .hero-academia {
     position: relative;
     min-height: 95vh;
@@ -328,7 +288,6 @@ body {
     font-weight: 800;
 }
 
-
 .hero-content h2 {
     font-size: 1.7rem;
     margin: 20px 0;
@@ -342,7 +301,6 @@ body {
     color: #eef2ff;
 }
 
-/* BUTTONS */
 .hero-buttons,
 .inscripcion-cta {
     display: flex;
@@ -387,8 +345,6 @@ body {
     background: #00d9ff;
 }
 
-
-/* TITULOS */
 section h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -396,8 +352,6 @@ section h2 {
     color: var(--dark);
 }
 
-
-/* SOBRE NOSOTROS */
 .sobre-nosotros {
     background: #f8faff;
     padding: 60px 20px 40px 20px;
@@ -431,8 +385,6 @@ section h2 {
     text-align: center;
 }
 
-
-/* VALORES GRID */
 .valores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -464,9 +416,6 @@ section h2 {
     color: #334155;
     line-height: 1.6;
 }
-
-
-/* SERVICIOS */
 
 .servicios {
     padding: 70px 20px 20px 20px;
@@ -512,7 +461,6 @@ section h2 {
     display: block;
 }
 
-
 .servicio-text {
     flex: 2 1 500px;
     min-width: 300px;
@@ -520,7 +468,7 @@ section h2 {
 
 .servicio-text h3 {
     font-size: 1.8rem;
-    color: #2563eb; /* Azul llamativo */
+    color: #2563eb; 
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -529,7 +477,7 @@ section h2 {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #334155; /* Gris oscuro */
+    color: #334155; 
 }
 
 .servicio-text ul {
@@ -541,11 +489,10 @@ section h2 {
 .servicio-text ul li {
     margin-bottom: 10px;
     font-weight: 500;
-    color: #2563eb; /* Azul para listas */
+    color: #2563eb; 
     position: relative;
 }
 
-/* ASIGNATURAS */
 .asignaturas {
     background: #ffffff;
     padding: 10px 20px 20px 20px;
@@ -606,8 +553,6 @@ section h2 {
     line-height: 1.5;
 }
 
-/* NIVELES PRO */
-
 .niveles {
     position: relative;
     min-height: 200px;
@@ -640,7 +585,6 @@ section h2 {
     gap: 48px;
 }
 
-/* CARD */
 .nivel-card {
     background: white;
     border-radius: 26px;
@@ -655,7 +599,6 @@ section h2 {
     transform: translateY(-10px) scale(1.02);
 }
 
-/* CONTENEDOR IMAGEN */
 .nivel-img {
     width: 100%;
     height: 200px;
@@ -663,14 +606,12 @@ section h2 {
     background: #eaf1ff;
 }
 
-/* IMAGEN */
 .nivel-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* CONTENIDO */
 .nivel-content {
     padding: 26px;
     text-align: center;
@@ -688,8 +629,6 @@ section h2 {
     color: var(--muted);
 }
 
-/* METODOLOGÍA */
-
 .metodologia {
     padding: 40px 20px 40px 20px;
     background-color: #ffffff;
@@ -699,7 +638,7 @@ section h2 {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 60px;
-    color: #1e3a8a; /* Azul oscuro */
+    color: #1e3a8a; 
     font-weight: 700;
 }
 
@@ -742,7 +681,7 @@ section h2 {
 
 .metodo-text h3 {
     font-size: 1.8rem;
-    color: #2563eb; /* Azul llamativo */
+    color: #2563eb; 
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -751,7 +690,7 @@ section h2 {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #334155; /* Gris oscuro */
+    color: #334155; 
 }
 
 .metodo-text ul {
@@ -763,13 +702,10 @@ section h2 {
 .metodo-text ul li {
     margin-bottom: 10px;
     font-weight: 500;
-    color: #2563eb; /* Azul para listas */
+    color: #2563eb; 
     position: relative;
 }
 
-/* ================================
-   BENEFICIOS
-================================ */
 .beneficios {
     background: var(--bg-soft);
     background-color: #e8f3f3;
@@ -791,7 +727,6 @@ section h2 {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* INSCRIPCIÓN */
 .inscripcion {
     background:
         linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(148, 149, 195, 0.9)),
@@ -806,20 +741,12 @@ section h2 {
     margin: 0 auto 45px;
 }
 
-/* ================================
-   MENÚ MÓVIL
-================================ */
-
 .menu-mobile-btn {
     display: none;
     font-size: 2rem;
     color: white;
     cursor: pointer;
 }
-
-/* =====================================================
-   BOTONES 
-===================================================== */
 
 .btn-primary,
 .btn-secondary,
@@ -840,16 +767,11 @@ section h2 {
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* efecto click */
 .btn-primary:active,
 .btn-secondary:active,
 .cta-btn:active {
     transform: scale(0.96);
 }
-
-/* =====================================================
-   TARJETAS PREMIUM
-===================================================== */
 
 .valor-card,
 .asignatura-card,
@@ -864,7 +786,6 @@ section h2 {
     box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* zoom imagen suave */
 .servicio-img img,
 .metodo-img img,
 .asignatura-img img,
@@ -872,15 +793,10 @@ section h2 {
     transition: transform 0.5s ease;
 }
 
-/* =====================================================
-   HEADER MÁS PROFESIONAL
-===================================================== */
-
 .link-encabezado {
     position: relative;
 }
 
-/* subrayado elegante */
 .link-encabezado::after {
     content: "";
     position: absolute;
@@ -896,10 +812,6 @@ section h2 {
     width: 100%;
 }
 
-/* =====================================================
-   EFECTO SCROLL SUAVE
-===================================================== */
-
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -911,15 +823,10 @@ section h2 {
     transform: translateY(0);
 }
 
-/* =====================================================
-   SECCIONES MÁS PREMIUM
-===================================================== */
-
 section {
     position: relative;
 }
 
-/* sombra suave entre bloques */
 section::after {
     content: "";
     position: absolute;
@@ -930,26 +837,15 @@ section::after {
     background: rgba(0,0,0,0.04);
 }
 
-/* =====================================================
-   BENEFICIOS MÁS VISUALES
-===================================================== */
-
 .beneficios-lista li {
     transition: transform 0.3s ease;
 }
 
 .beneficios-lista li:hover {
-    /* refuerzo visual además del movimiento */
     transform: translateX(10px);
-    border-left: 4px solid #2563eb; /* azul visible */
-    background-color: #f0f6ff;      /* ligero cambio de fondo */
+    border-left: 4px solid #2563eb; 
+    background-color: #f0f6ff;      
 }
-
-
-
-/* =====================================================
-   HERO MÁS VIVO
-===================================================== */
 
 .hero-content h1,
 .hero-content h2,
@@ -961,10 +857,6 @@ section::after {
 .hero-content h1 { animation-delay: 0.2s; }
 .hero-content h2 { animation-delay: 0.4s; }
 .hero-content p  { animation-delay: 0.6s; }
-
-/* =====================================================
-   SCROLLBAR PERSONALIZADA
-===================================================== */
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -978,11 +870,6 @@ section::after {
     background: linear-gradient(#3b82f6,#6366f1);
     border-radius: 20px;
 }
-
-
-/* =====================================
-   MAPA GOOGLE
-===================================== */
 
 .ubicacion {
     padding: 50px 0;
@@ -1001,16 +888,11 @@ section::after {
     border-radius: 10px;
 }
 
-/* ================================
-   ANIMACIÓN BENEFICIOS
-================================ */
-
 .beneficios-lista li {
     opacity: 0;
-    transition: opacity 0.8s ease; /* solo desvanecido */
+    transition: opacity 0.8s ease; 
 }
 
-/* cuando se activan */
 .beneficios-lista li.active {
     opacity: 1;
 }
@@ -1029,35 +911,30 @@ section::after {
     transition: background-color 0.3s ease;
 }
 
-/* ===== AVISO LEGAL ACCESIBLE (DALTONISMO) ===== */
-
 main.container {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== TÍTULO PRINCIPAL ===== */
 main.container h1 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: #1a1a1a; /* negro suave para máximo contraste */
-    border-bottom: 3px solid #005fcc; /* azul accesible */
+    color: #1a1a1a; 
+    border-bottom: 3px solid #005fcc; 
     padding-bottom: 10px;
 }
 
-/* ===== SUBTÍTULOS ===== */
 main.container h2 {
     font-size: 1.3rem;
     margin-top: 30px;
     margin-bottom: 10px;
-    color: #003366; /* azul oscuro (mejor contraste que azul claro) */
+    color: #003366; 
     position: relative;
     padding-left: 14px;
     font-weight: 600;
 }
 
-/* Línea lateral (no depende solo del color) */
 main.container h2::before {
     content: "";
     position: absolute;
@@ -1069,14 +946,12 @@ main.container h2::before {
     border-radius: 2px;
 }
 
-/* ===== PÁRRAFOS ===== */
 main.container p {
     margin-bottom: 15px;
     font-size: 1rem;
-    color: #222; /* contraste alto */
+    color: #222; 
 }
 
-/* ===== LISTAS ===== */
 main.container ul {
     margin: 15px 0 20px 22px;
 }
@@ -1085,16 +960,14 @@ main.container li {
     margin-bottom: 8px;
 }
 
-/* ===== NEGRITAS ===== */
 main.container strong {
-    color: #000; /* evitar colores ambiguos */
+    color: #000; 
     font-weight: 600;
 }
 
-/* ===== ENLACES ===== */
 main.container a {
-    color: #005fcc; /* azul accesible */
-    text-decoration: underline; /* importante para daltonismo */
+    color: #005fcc; 
+    text-decoration: underline; 
     font-weight: 500;
 }
 
@@ -1103,13 +976,10 @@ main.container a:hover {
     text-decoration: underline;
 }
 
-/* ===== FOCUS (ACCESIBILIDAD TECLADO) ===== */
 main.container a:focus {
-    outline: 3px solid #ffbf47; /* amarillo accesible */
+    outline: 3px solid #ffbf47; 
     outline-offset: 2px;
 }
-
-/* ===== POLÍTICA DE PRIVACIDAD ACCESIBLE ===== */
 
 main.container {
     background: #ffffff;
@@ -1117,7 +987,6 @@ main.container {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== TÍTULO PRINCIPAL ===== */
 main.container h1 {
     font-size: 2.2rem;
     margin-bottom: 25px;
@@ -1126,7 +995,6 @@ main.container h1 {
     padding-bottom: 10px;
 }
 
-/* ===== SUBTÍTULOS ===== */
 main.container h2 {
     font-size: 1.3rem;
     margin-top: 30px;
@@ -1137,7 +1005,6 @@ main.container h2 {
     font-weight: 600;
 }
 
-/* Línea decorativa accesible */
 main.container h2::before {
     content: "";
     position: absolute;
@@ -1149,14 +1016,12 @@ main.container h2::before {
     border-radius: 2px;
 }
 
-/* ===== PÁRRAFOS ===== */
 main.container p {
     margin-bottom: 15px;
     font-size: 1rem;
     color: #222;
 }
 
-/* ===== LISTAS ===== */
 main.container ul {
     margin: 15px 0 20px 22px;
 }
@@ -1165,13 +1030,11 @@ main.container li {
     margin-bottom: 8px;
 }
 
-/* ===== NEGRITAS ===== */
 main.container strong {
     color: #000;
     font-weight: 600;
 }
 
-/* ===== ENLACES ===== */
 main.container a {
     color: #005fcc;
     text-decoration: underline;
@@ -1182,13 +1045,11 @@ main.container a:hover {
     color: #003366;
 }
 
-/* ===== FOCUS ACCESIBLE ===== */
 main.container a:focus {
     outline: 3px solid #ffbf47;
     outline-offset: 2px;
 }
 
-/* ===== MEJORA PARA LISTAS DE DERECHOS ===== */
 main.container ul li {
     padding-left: 4px;
 }
@@ -1196,11 +1057,8 @@ main.container ul li {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* recorta sin deformar */
+  object-fit: cover;  /
 }
-
-
-/* --------------------------------------Diseño responsivo-------------------------------------- */
 
     @media (min-width: 320px) and (max-width: 480px){
         .servicio-text{
@@ -1217,11 +1075,28 @@ img {
             min-width: 250px;
             height: 170px;
         }
+        .hero-academia{
+            min-height: 100vh;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 768px){
+        .servicio-img{
+            width: 400px;;
+            max-height: 250px;
+        }
+
+        .metodo-img{
+            width: 400px;;
+            max-height: 250px;
+        }
+        .hero-academia{
+            min-height: 100vh;
+        }
     }
 
     @media (max-width: 768px) {
 
-        /* TITULOS */
             main.container {
                 padding: 25px;
             }
@@ -1234,14 +1109,13 @@ img {
                 font-size: 1.1rem;
             }
 
-        /* CARRUSEL */
             .cta-box {
-                padding: 20px 15px; /* menos espacio interno */
+                padding: 20px 15px;
                 border-radius: 16px;
                 margin: 20px 10px;
             }
             .cta-box h3 {
-                font-size: 1.3rem; /* título más pequeño */
+                font-size: 1.3rem; 
                 margin-bottom: 10px;
             }
             .cta-box p {
@@ -1253,21 +1127,21 @@ img {
                 padding: 10px 18px;
             }  
 
-        /* SERVICIOS */
             .servicio-item,
             .servicio-item.reverse {
                 flex-direction: column;
                 text-align: center;
             }
-            .servicio-img {
-                width: 100%;
-                max-width: 100%;
-                height: 220px;
-            }
+
             .servicio-text {
                 width: 100%;
                 margin-top: 20px;
             }
+
+            .servicio-text ul{
+                text-align: left;
+            }
+
             main.container {
             padding: 25px;
             }
@@ -1278,34 +1152,29 @@ img {
                 font-size: 1.1rem;
             }
 
-        /* ASIGNATURAS */
             .asignatura-img {
                 height: 110px;
             }
         
-        /* NIVELES */
             .nivel-img {
                 height: 180px;
             }
         
-        /* METODOLOGÍA */
             .metodologia-item,
             .metodologia-item.reverse {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .metodo-img {
-                width: 100%;
-                max-width: 100%;
-                height: 220px;
-            }
-
             .metodo-text {
                 width: 100%;
                 margin-top: 20px;
             }
-        /* INSCRIPCIÓN */
+
+            .metodo-text ul{
+
+                text-align: left;
+            }
             .hero-content h1 {
                 font-size: 2.6rem;
             }
@@ -1320,8 +1189,6 @@ img {
                 font-size: 2.1rem;
             }
 
-        /* MENÚ MOVIL-TABLET */
-            /* Ocultamos menú normal */
             #menu-header {
                 position: absolute;
                 top: 100%;
@@ -1336,40 +1203,39 @@ img {
             }
 
 
-            /* Links más grandes */
             .link-encabezado {
                 font-size: 1.2rem;
             }
 
-            /* Mostramos botón */
             .menu-mobile-btn {
                 display: block;
             }
 
-            /* Menú activo */
             #menu-header.active {
                 display: flex;
                 animation: slideDown 0.3s ease;
             }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 3024px) {
 
-        /* SERVICIOS */
+        .hero-academia{
+            min-height: 80vh;
+        }
+
             .servicio-item {
                 gap: 30px;
                 margin-bottom: 60px;
             }
+
             .servicio-img {
                 height: 250px;
             }
 
-        /* ASIGNATURAS */
             .asignaturas-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-        /* METODOLOGÍA */
             .metodologia-item {
                 gap: 30px;
                 margin-bottom: 60px;
@@ -1381,14 +1247,18 @@ img {
             }
     }
 
+    @media (min-width: 3024px) and (max-width: 8000px){
+        .hero-academia{
+            min-height: 40vh;
+        }
+    }
+
     @media (max-width: 480px) {
 
-        /* ===== CONTAINER GENERAL ===== */
         .container {
             padding: 70px 15px;
         }
 
-        /* ===== HERO ===== */
         .hero-content h1 {
             font-size: 2.2rem;
         }
@@ -1397,7 +1267,6 @@ img {
             font-size: 1.2rem;
         }
 
-        /* ===== CARRUSEL ===== */
         .carrusel img {
             height: 220px;
         }
@@ -1406,7 +1275,6 @@ img {
             height: 240px;
         }
 
-        /* CTA carrusel */
         .carrusel-cta {
             position: absolute;
             bottom: 10px;
@@ -1437,7 +1305,6 @@ img {
             padding: 8px;
         }
 
-        /* ===== SERVICIOS ===== */
         .servicio-text h3 {
             font-size: 1.5rem;
         }
@@ -1457,7 +1324,6 @@ img {
             height: 200px;
         }
 
-        /* ===== ASIGNATURAS ===== */
         .asignaturas {
             padding: 40px 15px;
         }
@@ -1484,7 +1350,6 @@ img {
             font-size: 0.95rem;
         }
 
-        /* ===== METODOLOGÍA ===== */
         .metodo-text h3 {
             font-size: 1.5rem;
         }
@@ -1505,8 +1370,6 @@ img {
         }
     }
 
-/* --------------------------------------ANIMACIONES-------------------------------------- */
-
     @keyframes float {
         0%,100% {
             transform: translateY(0);
@@ -1516,7 +1379,6 @@ img {
         }
     }
 
-    /* ANIMACIÓN MENÚ MOVIL-TABLET */
     @keyframes slideDown {
         from {
             opacity: 0;
@@ -1529,7 +1391,6 @@ img {
         }
     }
 
-    /* ANIMACIÓN INSCRIPCIÓN */
     @keyframes fadeUp {
         from {
             opacity: 0;
