@@ -250,7 +250,7 @@ class FooterComponent extends HTMLElement {
                 <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#grupo1">(Isabel Grupo 1)</a></p>
                 <p>📞 <a href="tel:+34665927240">+34 665 92 72 40</a> <a href="./grupos.html#grupo2">(Laura Grupo 2)</a></p>
                 
-                <p>✉️ <a href="mailto:info@academialoranca.es">academialoranca22@gmail.com</a></p>
+                <p>✉️ <a href="mailto:academialoranca22@gmail.com">academialoranca22@gmail.com</a></p>
             </div>
 
             <! --------------------------------------------------COLUMNA 2 - ENLACES-------------------------------------------------- >

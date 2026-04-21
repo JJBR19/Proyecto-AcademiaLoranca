@@ -1,4 +1,3 @@
-// Abrir popup
 function abrirPOPUP(id) {
     const popup = document.getElementById(id);
     popup.style.display = "flex";
@@ -17,7 +16,6 @@ function abrirPOPUP(id) {
     }
 }
 
-// Cerrar popup
 function cerrarPOPUP(id) {
     const popup = document.getElementById(id);
     popup.style.display = "none";
@@ -28,7 +26,6 @@ function cerrarPOPUP(id) {
     }
 }
 
-// Cerrar popup al hacer click fuera
 document.addEventListener("click", function (event) {
     if (event.target.classList.contains("POPUP")) {
         cerrarPOPUP(event.target.id);

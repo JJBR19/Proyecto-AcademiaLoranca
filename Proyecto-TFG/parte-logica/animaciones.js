@@ -1,4 +1,3 @@
-/* Función para optimizar la animación */
 function throttle(func, delay) {
     let lastCall = 0;
     return function (...args) {
@@ -10,10 +9,8 @@ function throttle(func, delay) {
     };
 }
 
-/* ----------------------------------ANIMACIÓN BENEFICIOS---------------------------------- */
 const beneficios = document.querySelectorAll(".beneficios-lista li");
 
-/* Los elementos van apareciendo según desciendes en la página */
 const animarBeneficios = throttle(() => {
     beneficios.forEach((item, index) => {
         if (!item.classList.contains("active")) {
