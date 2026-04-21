@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -59,10 +58,11 @@ header>div {
     letter-spacing: 1px;
     cursor: pointer;
     transition: transform 0.3s;
-    color: #f2f3f0; /* sobre fondo azul degradado */
+    color: #f2f3f0;
+    /* sobre fondo azul degradado */
 }
 
-#nombre_academia:hover{
+#nombre_academia:hover {
     transform: scale(1.05);
 }
 
@@ -85,8 +85,9 @@ header>div {
 .link-encabezado:hover {
 
     padding: 0px 12px;
-     color: #dbdbdb;
-    text-decoration: underline; /* refuerzo visual */
+    color: #dbdbdb;
+    text-decoration: underline;
+    /* refuerzo visual */
     transform: scale(1.2);
 }
 
@@ -128,18 +129,18 @@ header>div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
+
     background: rgba(255, 255, 255, 0.85);
     border: none;
-    
+
     /* Tamaño completamente fluido */
     font-size: clamp(1rem, 2.5vw, 1.8rem);
     padding: clamp(6px, 1.5vw, 12px) clamp(8px, 2vw, 16px);
-    
+
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-    
+
     transition: transform 0.3s ease, background 0.3s ease;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -160,6 +161,7 @@ header>div {
 .carrusel .right {
     right: clamp(6px, 2vw, 20px);
 }
+
 /* ===== MÓVILES PEQUEÑOS ===== */
 @media (max-width: 480px) {
     .carrusel .btn {
@@ -210,11 +212,12 @@ header>div {
     /* Animación solo cuando sea visible */
     animation: float 3s ease-in-out infinite;
     will-change: transform;
-    background: rgba(255, 255, 255, 0.98); /* opacidad más alta */
-    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.98);
+    /* opacidad más alta */
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.cta-box:hover{
+.cta-box:hover {
     animation-play-state: paused;
 }
 
@@ -361,7 +364,8 @@ body {
     font-weight: 600;
     transition: 0.3s;
     box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
-    color: white; background: linear-gradient(60deg, #2f3f95, #000c8c);
+    color: white;
+    background: linear-gradient(60deg, #2f3f95, #000c8c);
 }
 
 
@@ -420,7 +424,7 @@ section h2 {
     line-height: 1.8;
 }
 
-.sobre-nosotros .experiencia{
+.sobre-nosotros .experiencia {
     font-size: 1.1rem;
     color: #2c3e50;
     margin-top: 10px;
@@ -501,7 +505,7 @@ section h2 {
     height: 280px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -520,7 +524,8 @@ section h2 {
 
 .servicio-text h3 {
     font-size: 1.8rem;
-    color: #2563eb; /* Azul llamativo */
+    color: #2563eb;
+    /* Azul llamativo */
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -529,7 +534,8 @@ section h2 {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #334155; /* Gris oscuro */
+    color: #334155;
+    /* Gris oscuro */
 }
 
 .servicio-text ul {
@@ -541,7 +547,8 @@ section h2 {
 .servicio-text ul li {
     margin-bottom: 10px;
     font-weight: 500;
-    color: #2563eb; /* Azul para listas */
+    color: #2563eb;
+    /* Azul para listas */
     position: relative;
 }
 
@@ -560,7 +567,7 @@ section h2 {
 }
 
 .asignaturas-grid {
-   display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
@@ -612,10 +619,10 @@ section h2 {
     position: relative;
     min-height: 200px;
     color: #ffffff;
-    background-size: cover; 
+    background-size: cover;
 }
 
-.nivelesTitulo{
+.nivelesTitulo {
     color: #010057;
 }
 
@@ -699,7 +706,8 @@ section h2 {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 60px;
-    color: #1e3a8a; /* Azul oscuro */
+    color: #1e3a8a;
+    /* Azul oscuro */
     font-weight: 700;
 }
 
@@ -723,7 +731,7 @@ section h2 {
     height: 280px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -742,7 +750,8 @@ section h2 {
 
 .metodo-text h3 {
     font-size: 1.8rem;
-    color: #2563eb; /* Azul llamativo */
+    color: #2563eb;
+    /* Azul llamativo */
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -751,7 +760,8 @@ section h2 {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #334155; /* Gris oscuro */
+    color: #334155;
+    /* Gris oscuro */
 }
 
 .metodo-text ul {
@@ -763,7 +773,8 @@ section h2 {
 .metodo-text ul li {
     margin-bottom: 10px;
     font-weight: 500;
-    color: #2563eb; /* Azul para listas */
+    color: #2563eb;
+    /* Azul para listas */
     position: relative;
 }
 
@@ -832,12 +843,12 @@ section h2 {
 .btn-primary:hover,
 .cta-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
 .btn-secondary:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* efecto click */
@@ -861,7 +872,7 @@ section h2 {
 .asignatura-card:hover,
 .nivel-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* zoom imagen suave */
@@ -927,7 +938,7 @@ section::after {
     left: 10%;
     width: 80%;
     height: 1px;
-    background: rgba(0,0,0,0.04);
+    background: rgba(0, 0, 0, 0.04);
 }
 
 /* =====================================================
@@ -941,8 +952,10 @@ section::after {
 .beneficios-lista li:hover {
     /* refuerzo visual además del movimiento */
     transform: translateX(10px);
-    border-left: 4px solid #2563eb; /* azul visible */
-    background-color: #f0f6ff;      /* ligero cambio de fondo */
+    border-left: 4px solid #2563eb;
+    /* azul visible */
+    background-color: #f0f6ff;
+    /* ligero cambio de fondo */
 }
 
 
@@ -958,9 +971,17 @@ section::after {
     opacity: 0;
 }
 
-.hero-content h1 { animation-delay: 0.2s; }
-.hero-content h2 { animation-delay: 0.4s; }
-.hero-content p  { animation-delay: 0.6s; }
+.hero-content h1 {
+    animation-delay: 0.2s;
+}
+
+.hero-content h2 {
+    animation-delay: 0.4s;
+}
+
+.hero-content p {
+    animation-delay: 0.6s;
+}
 
 /* =====================================================
    SCROLLBAR PERSONALIZADA
@@ -975,7 +996,7 @@ section::after {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#3b82f6,#6366f1);
+    background: linear-gradient(#3b82f6, #6366f1);
     border-radius: 20px;
 }
 
@@ -1007,7 +1028,8 @@ section::after {
 
 .beneficios-lista li {
     opacity: 0;
-    transition: opacity 0.8s ease; /* solo desvanecido */
+    transition: opacity 0.8s ease;
+    /* solo desvanecido */
 }
 
 /* cuando se activan */
@@ -1041,8 +1063,10 @@ main.container {
 main.container h1 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: #1a1a1a; /* negro suave para máximo contraste */
-    border-bottom: 3px solid #005fcc; /* azul accesible */
+    color: #1a1a1a;
+    /* negro suave para máximo contraste */
+    border-bottom: 3px solid #005fcc;
+    /* azul accesible */
     padding-bottom: 10px;
 }
 
@@ -1051,7 +1075,8 @@ main.container h2 {
     font-size: 1.3rem;
     margin-top: 30px;
     margin-bottom: 10px;
-    color: #003366; /* azul oscuro (mejor contraste que azul claro) */
+    color: #003366;
+    /* azul oscuro (mejor contraste que azul claro) */
     position: relative;
     padding-left: 14px;
     font-weight: 600;
@@ -1073,7 +1098,8 @@ main.container h2::before {
 main.container p {
     margin-bottom: 15px;
     font-size: 1rem;
-    color: #222; /* contraste alto */
+    color: #222;
+    /* contraste alto */
 }
 
 /* ===== LISTAS ===== */
@@ -1087,14 +1113,17 @@ main.container li {
 
 /* ===== NEGRITAS ===== */
 main.container strong {
-    color: #000; /* evitar colores ambiguos */
+    color: #000;
+    /* evitar colores ambiguos */
     font-weight: 600;
 }
 
 /* ===== ENLACES ===== */
 main.container a {
-    color: #005fcc; /* azul accesible */
-    text-decoration: underline; /* importante para daltonismo */
+    color: #005fcc;
+    /* azul accesible */
+    text-decoration: underline;
+    /* importante para daltonismo */
     font-weight: 500;
 }
 
@@ -1105,7 +1134,8 @@ main.container a:hover {
 
 /* ===== FOCUS (ACCESIBILIDAD TECLADO) ===== */
 main.container a:focus {
-    outline: 3px solid #ffbf47; /* amarillo accesible */
+    outline: 3px solid #ffbf47;
+    /* amarillo accesible */
     outline-offset: 2px;
 }
 
@@ -1194,376 +1224,397 @@ main.container ul li {
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* recorta sin deformar */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* recorta sin deformar */
 }
 
 
 /* --------------------------------------Diseño responsivo-------------------------------------- */
 
-    @media (min-width: 320px) and (max-width: 480px){
-        .servicio-text{
-            min-width: 200px;
-        }
-        .servicio-img{
-            min-width: 250px;
-            height: 170px;
-        }
-        .metodo-text{
-            min-width: 200px;
-        }
-        .metodo-img{
-            min-width: 250px;
-            height: 170px;
-        }
-        .hero-academia{
-            min-height: 100vh;
-        }
+@media (min-width: 320px) and (max-width: 480px) {
+    .servicio-text {
+        min-width: 200px;
     }
 
-    @media (min-width: 480px) and (max-width: 768px){
-        .servicio-img{
-            width: 400px;;
-            max-height: 250px;
-        }
-
-        .metodo-img{
-            width: 400px;;
-            max-height: 250px;
-        }
-        .hero-academia{
-            min-height: 100vh;
-        }
+    .servicio-img {
+        min-width: 250px;
+        height: 170px;
     }
 
-    @media (max-width: 768px) {
-
-        /* TITULOS */
-            main.container {
-                padding: 25px;
-            }
-
-            main.container h1 {
-                font-size: 1.8rem;
-            }
-
-            main.container h2 {
-                font-size: 1.1rem;
-            }
-
-        /* CARRUSEL */
-            .cta-box {
-                padding: 20px 15px; /* menos espacio interno */
-                border-radius: 16px;
-                margin: 20px 10px;
-            }
-            .cta-box h3 {
-                font-size: 1.3rem; /* título más pequeño */
-                margin-bottom: 10px;
-            }
-            .cta-box p {
-                font-size: 0.95rem;
-                line-height: 1.5;
-            }
-            .cta-btn {
-                font-size: 0.9rem;
-                padding: 10px 18px;
-            }  
-
-        /* SERVICIOS */
-            .servicio-item,
-            .servicio-item.reverse {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .servicio-text {
-                width: 100%;
-                margin-top: 20px;
-            }
-
-            .servicio-text ul{
-                text-align: left;
-            }
-
-            main.container {
-            padding: 25px;
-            }
-            main.container h1 {
-                font-size: 1.8rem;
-            }
-            main.container h2 {
-                font-size: 1.1rem;
-            }
-
-        /* ASIGNATURAS */
-            .asignatura-img {
-                height: 110px;
-            }
-        
-        /* NIVELES */
-            .nivel-img {
-                height: 180px;
-            }
-        
-        /* METODOLOGÍA */
-            .metodologia-item,
-            .metodologia-item.reverse {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .metodo-text {
-                width: 100%;
-                margin-top: 20px;
-            }
-
-            .metodo-text ul{
-                text-align: left;
-            }
-        /* INSCRIPCIÓN */
-            .hero-content h1 {
-                font-size: 2.6rem;
-            }
-
-
-            .hero-content h2 {
-                font-size: 1.4rem;
-            }
-
-
-            section h2 {
-                font-size: 2.1rem;
-            }
-
-        /* MENÚ MOVIL-TABLET */
-            /* Ocultamos menú normal */
-            #menu-header {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #3962e9;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                padding: 20px 0;
-                display: none;
-            }
-
-
-            /* Links más grandes */
-            .link-encabezado {
-                font-size: 1.2rem;
-            }
-
-            /* Mostramos botón */
-            .menu-mobile-btn {
-                display: block;
-            }
-
-            /* Menú activo */
-            #menu-header.active {
-                display: flex;
-                animation: slideDown 0.3s ease;
-            }
+    .metodo-text {
+        min-width: 200px;
     }
 
-    @media (max-width: 3024px) {
-
-        .hero-academia{
-            min-height: 80vh;
-        }
-
-        /* SERVICIOS */
-            .servicio-item {
-                gap: 30px;
-                margin-bottom: 60px;
-            }
-            .servicio-img {
-                height: 250px;
-            }
-
-        /* ASIGNATURAS */
-            .asignaturas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-        /* METODOLOGÍA */
-            .metodologia-item {
-                gap: 30px;
-                margin-bottom: 60px;
-                text-decoration: none;
-            }
-
-            .metodo-img {
-                height: 250px;
-            }
+    .metodo-img {
+        min-width: 250px;
+        height: 170px;
     }
 
-    @media (min-width: 3024px) and (max-width: 8000px){
-        .hero-academia{
-            min-height: 40vh;
-        }
+    .hero-academia {
+        min-height: 100vh;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .servicio-img {
+        width: 400px;
+        ;
+        max-height: 250px;
     }
 
-    @media (max-width: 480px) {
-
-        /* ===== CONTAINER GENERAL ===== */
-        .container {
-            padding: 70px 15px;
-        }
-
-        /* ===== HERO ===== */
-        .hero-content h1 {
-            font-size: 2.2rem;
-        }
-
-        .hero-content h2 {
-            font-size: 1.2rem;
-        }
-
-        /* ===== CARRUSEL ===== */
-        .carrusel img {
-            height: 220px;
-        }
-
-        .slides img {
-            height: 240px;
-        }
-
-        /* CTA carrusel */
-        .carrusel-cta {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 85%;
-            max-width: 320px;
-        }
-
-        .cta-box {
-            padding: 12px 14px;
-            border-radius: 12px;
-        }
-
-        .cta-box h3 {
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .cta-box p {
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-
-        .cta-btn {
-            font-size: 0.85rem;
-            padding: 8px;
-        }
-
-        /* ===== SERVICIOS ===== */
-        .servicio-text h3 {
-            font-size: 1.5rem;
-        }
-
-        .servicio-text p,
-        .servicio-text ul li {
-            font-size: 0.95rem;
-        }
-
-        .servicio-item {
-            margin-bottom: 50px;
-        }
-
-        .servicio-img {
-            max-width: 350px;
-            max-height: 200px;
-            height: 200px;
-        }
-
-        /* ===== ASIGNATURAS ===== */
-        .asignaturas {
-            padding: 40px 15px;
-        }
-
-        .asignaturas h2 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-        }
-
-        .asignaturas-grid {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .asignatura-img img {
-            height: 150px;
-        }
-
-        .asignatura-card h3 {
-            font-size: 1.2rem;
-        }
-
-        .asignatura-card p {
-            font-size: 0.95rem;
-        }
-
-        /* ===== METODOLOGÍA ===== */
-        .metodo-text h3 {
-            font-size: 1.5rem;
-        }
-
-        .metodo-text p,
-        .metodo-text ul li {
-            font-size: 0.95rem;
-        }
-
-        .metodologia-item {
-            margin-bottom: 50px;
-        }
-
-        .metodo-img {
-            max-width: 350px;
-            max-height: 200px;
-            height: 200px;
-        }
+    .metodo-img {
+        width: 400px;
+        ;
+        max-height: 250px;
     }
+
+    .hero-academia {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* TITULOS */
+    main.container {
+        padding: 25px;
+    }
+
+    main.container h1 {
+        font-size: 1.8rem;
+    }
+
+    main.container h2 {
+        font-size: 1.1rem;
+    }
+
+    /* CARRUSEL */
+    .cta-box {
+        padding: 20px 15px;
+        /* menos espacio interno */
+        border-radius: 16px;
+        margin: 20px 10px;
+    }
+
+    .cta-box h3 {
+        font-size: 1.3rem;
+        /* título más pequeño */
+        margin-bottom: 10px;
+    }
+
+    .cta-box p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+
+    /* SERVICIOS */
+    .servicio-item,
+    .servicio-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .servicio-text ul {
+        text-align: left;
+    }
+
+    main.container {
+        padding: 25px;
+    }
+
+    main.container h1 {
+        font-size: 1.8rem;
+    }
+
+    main.container h2 {
+        font-size: 1.1rem;
+    }
+
+    /* ASIGNATURAS */
+    .asignatura-img {
+        height: 110px;
+    }
+
+    /* NIVELES */
+    .nivel-img {
+        height: 180px;
+    }
+
+    /* METODOLOGÍA */
+    .metodologia-item,
+    .metodologia-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .metodo-text {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .metodo-text ul {
+        text-align: left;
+    }
+
+    /* INSCRIPCIÓN */
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+
+    .hero-content h2 {
+        font-size: 1.4rem;
+    }
+
+
+    section h2 {
+        font-size: 2.1rem;
+    }
+
+    /* MENÚ MOVIL-TABLET */
+    /* Ocultamos menú normal */
+    #menu-header {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #3962e9;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+
+    /* Links más grandes */
+    .link-encabezado {
+        font-size: 1.2rem;
+    }
+
+    /* Mostramos botón */
+    .menu-mobile-btn {
+        display: block;
+    }
+
+    /* Menú activo */
+    #menu-header.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+}
+
+@media (max-width: 3024px) {
+
+    .hero-academia {
+        min-height: 80vh;
+    }
+
+    /* SERVICIOS */
+    .servicio-item {
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .servicio-img {
+        height: 250px;
+    }
+
+    /* ASIGNATURAS */
+    .asignaturas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* METODOLOGÍA */
+    .metodologia-item {
+        gap: 30px;
+        margin-bottom: 60px;
+        text-decoration: none;
+    }
+
+    .metodo-img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 3024px) and (max-width: 8000px) {
+    .hero-academia {
+        min-height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* ===== CONTAINER GENERAL ===== */
+    .container {
+        padding: 70px 15px;
+    }
+
+    /* ===== HERO ===== */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    /* ===== CARRUSEL ===== */
+    .carrusel img {
+        height: 220px;
+    }
+
+    .slides img {
+        height: 240px;
+    }
+
+    /* CTA carrusel */
+    .carrusel-cta {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .cta-box {
+        padding: 12px 14px;
+        border-radius: 12px;
+    }
+
+    .cta-box h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .cta-box p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    .cta-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    /* ===== SERVICIOS ===== */
+    .servicio-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .servicio-text p,
+    .servicio-text ul li {
+        font-size: 0.95rem;
+    }
+
+    .servicio-item {
+        margin-bottom: 50px;
+    }
+
+    .servicio-img {
+        max-width: 350px;
+        max-height: 200px;
+        height: 200px;
+    }
+
+    /* ===== ASIGNATURAS ===== */
+    .asignaturas {
+        padding: 40px 15px;
+    }
+
+    .asignaturas h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .asignaturas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .asignatura-img img {
+        height: 150px;
+    }
+
+    .asignatura-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .asignatura-card p {
+        font-size: 0.95rem;
+    }
+
+    /* ===== METODOLOGÍA ===== */
+    .metodo-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .metodo-text p,
+    .metodo-text ul li {
+        font-size: 0.95rem;
+    }
+
+    .metodologia-item {
+        margin-bottom: 50px;
+    }
+
+    .metodo-img {
+        max-width: 350px;
+        max-height: 200px;
+        height: 200px;
+    }
+}
 
 /* --------------------------------------ANIMACIONES-------------------------------------- */
 
-    @keyframes float {
-        0%,100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-6px);
-        }
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
 
-    /* ANIMACIÓN MENÚ MOVIL-TABLET */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
+    50% {
+        transform: translateY(-6px);
+    }
+}
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* ANIMACIÓN MENÚ MOVIL-TABLET */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 
-    /* ANIMACIÓN INSCRIPCIÓN */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* ANIMACIÓN INSCRIPCIÓN */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
