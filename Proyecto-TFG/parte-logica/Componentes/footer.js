@@ -235,7 +235,7 @@ class FooterComponent extends HTMLElement {
                 <div class="footer-contactos"><br>
 
                 <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+local+37,+28942+Fuenlabrada,+Madrid" target="_blank" rel="noopener">
-                    C/ Alegría, 4 (CC, entrada por el supermercado, Nivel Centro 1ª planta, 28942 Fuenlabrada, Madrid)
+                    C/ Alegría, 4, local 37, 28942 Fuenlabrada, Madrid)
                 </a></p>
                 
                 <p>📞 <a href="tel:+34652081700">+34 652 08 17 00</a> <a href="./grupos.html#grupo1">(Isabel Grupo 1)</a></p>
