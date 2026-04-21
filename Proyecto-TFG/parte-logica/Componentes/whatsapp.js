@@ -7,7 +7,6 @@ class WhatsappComponent extends HTMLElement {
     connectedCallback(){
         this._shadow.innerHTML = `<style>
         
-        /* -----------------------------------------Contenedor----------------------------------------- */
         .whatsapp-container {
             position: fixed;
             bottom: 15px;
@@ -19,7 +18,6 @@ class WhatsappComponent extends HTMLElement {
             align-items: flex-end;
         }
 
-        /* -----------------------------------------Botón flotante----------------------------------------- */
         .boton-whatsapp {
             background-color: #25d366;
             border: none;
@@ -40,9 +38,8 @@ class WhatsappComponent extends HTMLElement {
             transform: scale(1.1);
         }
 
-        /* -----------------------------------------Tarjeta desplegable----------------------------------------- */
         .div-whatsapp {
-            display: none; /* Oculta hasta pulsarse */
+            display: none; 
             width: 400px;
             background: white;
             border-radius: 10px;
@@ -76,7 +73,6 @@ class WhatsappComponent extends HTMLElement {
             margin-top: 10px;
         }
 
-        /* Boton X para salir */
         .boton-cerrar {
             background-color: rgba(0, 0, 0, 0.2);
             border: none;
@@ -95,12 +91,10 @@ class WhatsappComponent extends HTMLElement {
             padding: 0;
         }
 
-        /* Efecto al pasar el ratón */
         .boton-cerrar:hover {
             background-color: rgba(0, 0, 0, 0.4);
         }
 
-        /* Animación al aparecer la tarjeta */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -204,7 +198,6 @@ class WhatsappComponent extends HTMLElement {
         const btn = this._shadow.querySelector('.boton-whatsapp');
         const closeBtn = this._shadow.querySelector('.boton-cerrar');
 
-        // Asignamos el evento
         btn.addEventListener('click', () => this.toggleWhatsapp());
         closeBtn.addEventListener('click', () => this.toggleWhatsapp());
     }
@@ -212,7 +205,6 @@ class WhatsappComponent extends HTMLElement {
     toggleWhatsapp() {
         const card = this._shadow.getElementById('div-whatsapp');
 
-        // Hacer aparecer la tarjeta si no esta abierta o cerrarla si lo está.
         if (card.style.display === 'block') {
             card.style.display = 'none';
         } else {

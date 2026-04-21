@@ -1,15 +1,13 @@
-/* ==============================
-   VARIABLES GLOBALES (COLORES)
-   ============================== */
+
 :root {
-    --color-principal: #3962e9;  /* Azul principal */
-    --color-secundario: #2aa198; /* Teal accesible (antes verde) */
-    --color-terciario: #e67e22;  /* Naranja equilibrado */
-    --color-fondo: #f8fafc;      /* Fondo general */
-    --color-texto: #2d2d2d;      /* Texto principal con buen contraste */
-    --color-texto-secundario: #5a677d; /* Texto secundario más suave */
-    --color-boton: #0096c7;      /* Color base botones */
-    --color-boton-hover: #023e8a; /* Hover botones */
+    --color-principal: #3962e9;  
+    --color-secundario: #2aa198; 
+    --color-terciario: #e67e22;  
+    --color-fondo: #f8fafc;      
+    --color-texto: #2d2d2d;      
+    --color-texto-secundario: #5a677d; 
+    --color-boton: #0096c7;      
+    --color-boton-hover: #023e8a; 
 }
 
 body{
@@ -23,9 +21,7 @@ main{
     flex: 1;
 }
 
-/* ==============================
-   CONTENEDOR PRINCIPAL CONTACTO
-   ============================== */
+
 .contacto-main-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +33,6 @@ main{
     gap: 60px;
 }
 
-/* Columna de texto informativo */
 .contacto-info {
     flex: 1 1 500px;
     max-width: 600px;
@@ -45,7 +40,6 @@ main{
     margin-top: 60px;
 }
 
-/* Título principal de la sección */
 .info-titulo {
     font-size: 2.5rem;
     font-weight: 800;
@@ -54,13 +48,11 @@ main{
     color: #1a1a1a;
 }
 
-/* Subrayado decorativo animado */
 .subrayado-amarillo {
     background: linear-gradient(180deg, transparent 60%, #90e0ef 60%);
     display: inline;
 }
 
-/* Texto general de la sección */
 .info-cuerpo p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -68,7 +60,6 @@ main{
     color: var(--color-texto-secundario);
 }
 
-/* Bloque destacado con borde lateral */
 .destacado {
     border-top: 2px solid var(--color-secundario); 
     font-weight: 600;
@@ -77,9 +68,7 @@ main{
     padding-left: 15px;
 }
 
-/* ===========================
-   PILLS / ETIQUETAS INFORMATIVAS
-   =========================== */
+
 .info-detalles {
     display: flex;
     flex-wrap: wrap;
@@ -88,10 +77,9 @@ main{
     justify-content: flex-start;
 }
 
-/* Cada "pill" informativa */
 .detalle-item {
     display: inline-flex;
-    flex-direction: column; /* enlaces uno debajo de otro */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
@@ -109,13 +97,11 @@ main{
     word-wrap: break-word;
 }
 
-/* Efecto hover en pills */
 .detalle-item:hover {
     transform: translateY(-2px) scale(1.01);
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Variantes de color */
 .detalle-item.verde { 
     background: linear-gradient(135deg, #d0f0ec, #b8e1dd);
 }
@@ -124,7 +110,6 @@ main{
     background: linear-gradient(135deg, #e0d4ff, #cdb4ff);
 }
 
-/* Enlaces dentro de los pills */
 .detalle-item a {
     text-decoration: none;
     color: var(--color-texto);
@@ -132,15 +117,12 @@ main{
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover de enlaces */
 .detalle-item a:hover {
     color: #005f99;
     transform: scale(1.05);
 }
 
-/* ===========================
-   CONTENEDOR FORMULARIO
-   =========================== */
+
 .form-cont {
     display: flex;
     flex-wrap: wrap;
@@ -152,7 +134,6 @@ main{
     gap: 60px;
 }
 
-/* Caja del formulario */
 .formulario-responsivo {
     flex: 1 1 500px;
     max-width: 600px;
@@ -164,7 +145,6 @@ main{
     border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
-/* Título del formulario */
 .titulo-animado {
     color: var(--color-texto);
     font-size: 2rem;
@@ -173,23 +153,19 @@ main{
     font-weight: 800;
 }
 
-/* ===========================
-   CAMPOS DEL FORMULARIO
-   =========================== */
+
 .grupo-campo {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
-/* Filas del formulario */
 .fila-formulario {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-/* Etiquetas */
 label {
     font-weight: 600;
     margin-bottom: 8px;
@@ -197,7 +173,6 @@ label {
     font-size: 0.95rem;
 }
 
-/* Inputs generales */
 input, textarea, select {
     width: 100%;
     padding: 12px 16px;
@@ -209,20 +184,17 @@ input, textarea, select {
     background-color: var(--color-fondo);
 }
 
-/* Focus de inputs */
 input:focus, textarea:focus, select:focus {
     border-color: var(--color-principal);
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
-/* Textarea */
 textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-/* Contador de texto */
 .contador-texto {
     align-self: flex-end;
     font-size: 0.8rem;
@@ -230,9 +202,7 @@ textarea {
     margin-top: 5px;
 }
 
-/* ===========================
-   CHECKBOX
-   =========================== */
+
 .grupo-campo-checkbox {
     margin: 20px 0;
 }
@@ -252,9 +222,7 @@ input[type="checkbox"] {
     accent-color: var(--color-principal);
 }
 
-/* ===========================
-   BOTÓN ENVIAR
-   =========================== */
+
 .boton-enviar {
     width: 100%;
     background: linear-gradient(540deg, var(--color-boton), var(--color-principal));
@@ -270,7 +238,6 @@ input[type="checkbox"] {
     margin-top: 10px;
 }
 
-/* Hover botón */
 .boton-enviar:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(0, 150, 199, 0.25);
@@ -338,7 +305,6 @@ input[type="checkbox"] {
     }
 }
 
-/* Tamaño base responsivo del sitio */
 html {
     font-size: clamp(14px, 1vw, 18px);
 }
