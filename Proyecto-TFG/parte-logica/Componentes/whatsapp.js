@@ -119,7 +119,7 @@ class WhatsappComponent extends HTMLElement {
 
             .div-whatsapp {
                 width: 280px;
-                max-height: 500px;
+                max-height: 600px;
             }
         }
 
@@ -136,7 +136,7 @@ class WhatsappComponent extends HTMLElement {
 
             .div-whatsapp {
                 width: 300px;
-                max-height: 500px;
+                max-height: 600px;
             }
         }
 
