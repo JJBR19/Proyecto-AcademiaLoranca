@@ -190,7 +190,7 @@ class HeaderComponent extends HTMLElement {
 
                 <div id="div-logo">
                     <a href="./index.html">
-                        <img id="logo" src="../imagenes/logo.png" alt="Logo">
+                        <img id="logo" src="./imagenes/logo.png" alt="Logo">
                     </a>
 
                     <a href="./index.html">

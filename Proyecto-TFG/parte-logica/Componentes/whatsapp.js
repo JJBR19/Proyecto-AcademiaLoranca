@@ -1,80 +1,81 @@
 class WhatsappComponent extends HTMLElement {
-    constructor(){
+    constructor() {
         super();
-        this._shadow = this.attachShadow ({mode: 'open'});
+        this._shadow = this.attachShadow({ mode: 'open' });
     }
 
-    connectedCallback(){
-        this._shadow.innerHTML = `<style>
-        
+    connectedCallback() {
+        this._shadow.innerHTML = `
+        <style>
         .whatsapp-container {
             position: fixed;
             bottom: 15px;
-            right: 20px;
+            right: 15px;
             z-index: 1000;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            gap: 10px;
         }
 
+        /* BOTÓN */
         .boton-whatsapp {
             background-color: #25d366;
             border: none;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 56px;
+            height: 56px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
+            transition: transform 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .boton-whatsapp img {
-            width: 35px;
-            margin-top: 5px;
+            width: 30px;
+            height: 30px;
         }
 
         .boton-whatsapp:hover {
             transform: scale(1.1);
         }
 
+        /* PANEL */
         .div-whatsapp {
-            display: none; 
-            width: 400px;
+            width: 360px;
+            max-width: 90vw;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
             overflow: hidden;
-            animation: fadeIn 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: all 0.25s ease;
         }
 
+        .div-whatsapp.open {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* HEADER */
         .header {
             background: #075e54;
             color: white;
-            padding: 10px;
+            padding: 12px 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .body {
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .boton-enviar {
-            display: block;
-            background: #25d366;
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            border-radius: 5px;
-            margin-top: 10px;
+            font-size: 15px;
         }
 
         .boton-cerrar {
-            background-color: rgba(0, 0, 0, 0.2);
+            background: rgba(255,255,255,0.15);
             border: none;
             border-radius: 50%;
             color: white;
@@ -82,171 +83,164 @@ class WhatsappComponent extends HTMLElement {
             width: 28px;
             height: 28px;
             font-size: 18px;
-            line-height: 1;
-            font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.3s ease;
-            padding: 0;
+            transition: 0.2s;
         }
 
         .boton-cerrar:hover {
-            background-color: rgba(0, 0, 0, 0.4);
+            background: rgba(255,255,255,0.3);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* BODY */
+        .body {
+            padding: 14px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.4;
         }
 
+        .boton-enviar {
+            display: block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .boton-enviar:hover {
+            filter: brightness(1.05);
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        /* móviles pequeños */
         @media (max-width: 360px) {
-            .boton-whatsapp{
-                width: 30px;
-                height: 30px;
+            .boton-whatsapp {
+                width: 48px;
+                height: 48px;
             }
-            
             .boton-whatsapp img {
-                width: 15px;
-                margin-top: 5px;
+                width: 24px;
+                height: 24px;
             }
-
             .div-whatsapp {
-                width: 200px;
-                min-height: 100%;
+                width: 92vw;
             }
         }
 
+        /* móviles */
         @media (min-width: 361px) and (max-width: 480px) {
-            .boton-whatsapp{
-                width: 35px;
-                height: 35px;
+            .boton-whatsapp {
+                width: 50px;
+                height: 50px;
             }
-            
             .boton-whatsapp img {
-                width: 20px;
-                margin-top: 5px;
+                width: 26px;
+                height: 26px;
             }
-
             .div-whatsapp {
-                width: 200px;
+                width: 92vw;
             }
         }
 
+        /* tablets */
         @media (min-width: 481px) and (max-width: 768px) {
-            .boton-whatsapp{
-                width: 40px;
-                height: 40px;
+            .boton-whatsapp {
+                width: 54px;
+                height: 54px;
             }
-            
             .boton-whatsapp img {
-                width: 25px;
-                margin-top: 5px;
-            }
-        }
-        
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .boton-whatsapp{
-                width: 46px;
-                height: 46px;
-            }
-            
-            .boton-whatsapp img {
-                width: 30px;
-                margin-top: 5px;
+                width: 28px;
+                height: 28px;
             }
         }
 
-        @media (min-width: 1024px) and (max-width: 1440px) {
-            .boton-whatsapp{
-                width: 52px;
-                height: 52px;
-            }
-            
-            .boton-whatsapp img {
-                width: 35px;
-                margin-top: 5px;
+        /* laptops */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .boton-whatsapp {
+                width: 56px;
+                height: 56px;
             }
         }
 
-        @media (min-width: 1440px) and (max-width: 2560px) {
-            .boton-whatsapp{
-                width: 58px;
-                height: 58px;
+        /* pantallas grandes */
+        @media (min-width: 1440px) {
+            .div-whatsapp {
+                width: 380px;
             }
-            
-            .boton-whatsapp img {
-                width: 40px;
-                margin-top: 5px;
+            .boton-whatsapp {
+                width: 60px;
+                height: 60px;
             }
         }
 
-        @media (min-width: 2560px) {
-            .boton-whatsapp{
-                width: 70px;
-                height: 70px;
-            }
-            
-            .boton-whatsapp img {
-                width: 45px;
-                margin-top: 5px;
-            }
-        }
         </style>
-        `+ this.template;
+
+        ${this.template}
+        `;
 
         const btn = this._shadow.querySelector('.boton-whatsapp');
         const closeBtn = this._shadow.querySelector('.boton-cerrar');
-
-        btn.addEventListener('click', () => this.toggleWhatsapp());
-        closeBtn.addEventListener('click', () => this.toggleWhatsapp());
-    }
-
-    toggleWhatsapp() {
         const card = this._shadow.getElementById('div-whatsapp');
 
-        if (card.style.display === 'block') {
-            card.style.display = 'none';
-        } else {
-            card.style.display = 'block';
-        }
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleWhatsapp(card);
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleWhatsapp(card);
+        });
 
         document.addEventListener("click", (e) => {
-            const path = e.composedPath();
-            if (!path.includes(this)) {
-                card.style.display = 'none';
+            if (!e.composedPath().includes(this)) {
+                card.classList.remove('open');
             }
         });
     }
 
-    get template(){
+    toggleWhatsapp(card) {
+        card.classList.toggle('open');
+    }
+
+    get template() {
         return `
         <div class="whatsapp-container">
             <div class="div-whatsapp" id="div-whatsapp">
                 <div class="header">
                     <span>¿Necesitas ayuda?</span>
-                    <button class="boton-cerrar" onclick="toggleWhatsapp()">x</button>
+                    <button class="boton-cerrar">×</button>
                 </div>
+
                 <div class="body">
-                    <p><strong>¡Hola!👋</strong></p>
+                    <p><strong>¡Hola! 👋</strong></p>
                     <p>¿Buscas apoyo escolar o información sobre nuestros servicios?</p>
-                    <p>En nuestra academia ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas y lograr
-                        sus objetivos.</p>
-                    <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
-                    <a href="https://wa.me/652081700" target="_blank" class="boton-enviar">
-                        Información Grupo 1 (Isabel)
+                    <p>Ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas.</p>
+                    <p>Cuéntanos tu caso y te informamos sin compromiso 📚✨</p>
+
+                    <a class="boton-enviar" href="https://wa.me/652081700" target="_blank">
+                        Información Primaria y 1ºESO (Isabel)
                     </a>
-                    <a href="https://wa.me/665927240" target="_blank" class="boton-enviar">
-                        Información Grupo 2 (Laura)
+
+                    <a class="boton-enviar" href="https://wa.me/665927240" target="_blank">
+                         Información 2ºESO - 4ºESO-Bachillerato  (Laura)
                     </a>
                 </div>
             </div>
 
-            <button class="boton-whatsapp" onclick="toggleWhatsapp()">
+            <button class="boton-whatsapp">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
             </button>
         </div>
         `;
     }
 }
-export let etiquetaWhatsapp = window.customElements.define('whatsapp-componente', WhatsappComponent);
+
+window.customElements.define('whatsapp-componente', WhatsappComponent);
