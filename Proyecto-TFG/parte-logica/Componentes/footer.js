@@ -234,7 +234,7 @@ class FooterComponent extends HTMLElement {
 
                 <div class="footer-contactos"><br>
 
-                <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Calle+Alegría+4,+local+37,+28942+Fuenlabrada,+Madrid" target="_blank" rel="noopener">
+                <p>📍 <a href="https://maps.app.goo.gl/qMmnxELKV5qWs9Aj9" target="_blank" rel="noopener">
                     C/ Alegría, 4, local 37, 28942 Fuenlabrada, Madrid)
                 </a></p>
                 
