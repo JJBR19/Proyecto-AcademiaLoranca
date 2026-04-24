@@ -189,11 +189,11 @@ class HeaderComponent extends HTMLElement {
             <div>
 
                 <div id="div-logo">
-                    <a href="./Index.html">
+                    <a href="./index.html">
                         <img id="logo" src="../imagenes/logo.png" alt="Logo">
                     </a>
 
-                    <a href="./Index.html">
+                    <a href="./index.html">
                         <div id="nombre_academia">
                             ACADEMIA <br> LORANCA
                         </div>
@@ -203,9 +203,9 @@ class HeaderComponent extends HTMLElement {
                 <div class="boton-menu-movil" id="menuToggle">☰</div>
 
                 <menu id="menu-header">
-                    <a class="link-encabezado" href="./Index.html">Inicio</a>
+                    <a class="link-encabezado" href="./index.html">Inicio</a>
                     <a class="link-encabezado" href="./grupos.html">Cursos</a>
-                    <a class="link-encabezado" href="./Index.html#servicios">Servicios</a>
+                    <a class="link-encabezado" href="./index.html#servicios">Servicios</a>
                     <a class="link-encabezado" href="#horarios">Horarios</a>
                     <a class="link-encabezado" href="./contactos.html">Contacto</a>
                 </menu>

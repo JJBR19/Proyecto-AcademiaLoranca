@@ -248,11 +248,11 @@ class FooterComponent extends HTMLElement {
                 <div class="columnas-footer">
                     <h4>Navegación</h4>
                     <ul>
-                        <li><a href="./Index.html">Inicio</a></li>
+                        <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./grupos.html">Cursos</a></li>
-                        <li><a href="./Index.html#servicios">Servicios</a></li>
+                        <li><a href="./index.html#servicios">Servicios</a></li>
                         <li><a href="./contactos.html">Inscripción</a></li>
-                        <li><a href="./Index.html#contacto">Ubicación</a></li>
+                        <li><a href="./index.html#contacto">Ubicación</a></li>
                     </ul>
                 </div>
 
