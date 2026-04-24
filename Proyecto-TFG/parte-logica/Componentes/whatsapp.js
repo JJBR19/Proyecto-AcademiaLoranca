@@ -63,7 +63,17 @@ class WhatsappComponent extends HTMLElement {
             text-align: center;
         }
         
-        .boton-enviar {
+        .boton-enviar-g1 {
+            display: block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .boton-enviar-g2 {
             display: block;
             background: #25d366;
             color: white;
@@ -233,10 +243,10 @@ class WhatsappComponent extends HTMLElement {
                     <p>En nuestra academia ayudamos a alumnos de Primaria, ESO y Bachillerato a mejorar sus notas y lograr
                         sus objetivos.</p>
                     <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
-                    <a href="https://wa.me/652081700" target="_blank" class="boton-enviar">
+                    <a href="https://wa.me/652081700" target="_blank" class="boton-enviar-g1">
                         Información Grupo 1 (Isabel)
                     </a>
-                    <a href="https://wa.me/665927240" target="_blank" class="boton-enviar">
+                    <a href="https://wa.me/665927240" target="_blank" class="boton-enviar-g2">
                         Información Grupo 2 (Laura)
                     </a>
                 </div>
