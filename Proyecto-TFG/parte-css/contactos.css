@@ -93,7 +93,7 @@ main{
     background: linear-gradient(135deg, #c3eeff, #d4d9ff);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.25s ease;
-    max-width: 350px;
+    max-width: 300px;
     word-wrap: break-word;
 }
 
