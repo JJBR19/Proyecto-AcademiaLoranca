@@ -13,7 +13,7 @@ class HeaderComponent extends HTMLElement {
             display:block;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 2000;
         }
 
         header{
@@ -103,6 +103,9 @@ class HeaderComponent extends HTMLElement {
             user-select:none;
             padding:6px 10px;
             line-height:1;
+
+            position: relative;
+            z-index: 2100;
         }
 
         .boton-menu-movil:hover{
@@ -140,6 +143,8 @@ class HeaderComponent extends HTMLElement {
                 pointer-events:none;
 
                 margin:0;
+
+                z-index: 2100;
             }
 
             #menu-header.active{

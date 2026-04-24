@@ -24,11 +24,11 @@ class WhatsappComponent extends HTMLElement {
             background-color: #25d366;
             border: none;
             border-radius: 50%;
-            width: 56px;
-            height: 56px;
+            width: 58px;
+            height: 58px;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.25s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,20 +40,23 @@ class WhatsappComponent extends HTMLElement {
         }
 
         .boton-whatsapp:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.3);
         }
 
         /* PANEL */
         .div-whatsapp {
             width: 360px;
-            max-width: 90vw;
+            max-width: 92vw;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.22);
             overflow: hidden;
+
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateY(12px);
             pointer-events: none;
+
             transition: all 0.25s ease;
         }
 
@@ -68,25 +71,31 @@ class WhatsappComponent extends HTMLElement {
             background: #075e54;
             color: white;
             padding: 12px 14px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             font-size: 15px;
+            font-weight: 600;
         }
 
         .boton-cerrar {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.18);
             border: none;
             border-radius: 50%;
             color: white;
             cursor: pointer;
-            width: 28px;
-            height: 28px;
+
+            width: 30px;
+            height: 30px;
             font-size: 18px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.2s;
+
+            transition: 0.2s ease;
         }
 
         .boton-cerrar:hover {
@@ -95,10 +104,12 @@ class WhatsappComponent extends HTMLElement {
 
         /* BODY */
         .body {
-            padding: 14px;
+            padding: 16px;
             text-align: center;
+
             font-size: 14px;
-            line-height: 1.4;
+            line-height: 1.5;
+            color: #333;
         }
 
         .boton-enviar {
@@ -106,77 +117,69 @@ class WhatsappComponent extends HTMLElement {
             background: #25d366;
             color: white;
             text-decoration: none;
-            padding: 10px;
-            border-radius: 8px;
+
+            padding: 10px 12px;
+            border-radius: 10px;
+
             margin-top: 10px;
             font-size: 14px;
-            transition: 0.2s;
+
+            transition: 0.2s ease;
         }
 
         .boton-enviar:hover {
             filter: brightness(1.05);
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ================= RESPONSIVE ================= */
 
-        /* móviles pequeños */
-        @media (max-width: 360px) {
-            .boton-whatsapp {
-                width: 48px;
-                height: 48px;
+        @media (max-width: 900px) {
+            .whatsapp-container {
+                bottom: 12px;
+                right: 12px;
             }
-            .boton-whatsapp img {
-                width: 24px;
-                height: 24px;
-            }
-            .div-whatsapp {
-                width: 92vw;
-            }
-        }
 
-        /* móviles */
-        @media (min-width: 361px) and (max-width: 480px) {
-            .boton-whatsapp {
-                width: 50px;
-                height: 50px;
-            }
-            .boton-whatsapp img {
-                width: 26px;
-                height: 26px;
-            }
-            .div-whatsapp {
-                width: 92vw;
-            }
-        }
-
-        /* tablets */
-        @media (min-width: 481px) and (max-width: 768px) {
             .boton-whatsapp {
                 width: 54px;
                 height: 54px;
             }
+
             .boton-whatsapp img {
                 width: 28px;
                 height: 28px;
             }
         }
 
-        /* laptops */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .boton-whatsapp {
-                width: 56px;
-                height: 56px;
+        @media (max-width: 600px) {
+            .div-whatsapp {
+                width: 92vw;
+                border-radius: 12px;
+            }
+
+            .body {
+                font-size: 13.5px;
+                padding: 14px;
+            }
+
+            .header {
+                font-size: 14px;
+                padding: 10px 12px;
             }
         }
 
-        /* pantallas grandes */
-        @media (min-width: 1440px) {
-            .div-whatsapp {
-                width: 380px;
-            }
+        @media (max-width: 400px) {
             .boton-whatsapp {
-                width: 60px;
-                height: 60px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .boton-whatsapp img {
+                width: 24px;
+                height: 24px;
+            }
+
+            .body {
+                font-size: 13px;
             }
         }
 
@@ -213,7 +216,9 @@ class WhatsappComponent extends HTMLElement {
     get template() {
         return `
         <div class="whatsapp-container">
+
             <div class="div-whatsapp" id="div-whatsapp">
+
                 <div class="header">
                     <span>¿Necesitas ayuda?</span>
                     <button class="boton-cerrar">×</button>
@@ -230,14 +235,16 @@ class WhatsappComponent extends HTMLElement {
                     </a>
 
                     <a class="boton-enviar" href="https://wa.me/665927240" target="_blank">
-                         Información 2ºESO - 4ºESO-Bachillerato  (Laura)
+                        Información 2ºESO - 4ºESO - Bachillerato (Laura)
                     </a>
                 </div>
+
             </div>
 
             <button class="boton-whatsapp">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
             </button>
+
         </div>
         `;
     }
