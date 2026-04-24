@@ -13,9 +13,10 @@ class HeaderComponent extends HTMLElement {
             display:block;
             position: sticky;
             top: 0;
-            z-index: 2000;
+            z-index: 1000;
         }
 
+        /* ================= HEADER ================= */
         header{
             width:100%;
             background: linear-gradient(440deg, #2a17cf, #00d5ff);
@@ -33,6 +34,7 @@ class HeaderComponent extends HTMLElement {
             position:relative;
         }
 
+        /* ================= LOGO ================= */
         #div-logo{
             display:flex;
             align-items:center;
@@ -61,6 +63,7 @@ class HeaderComponent extends HTMLElement {
             text-decoration:none;
         }
 
+        /* ================= MENU (DESKTOP DEFAULT) ================= */
         #menu-header{
             display:flex;
             gap:22px;
@@ -95,6 +98,7 @@ class HeaderComponent extends HTMLElement {
             width:100%;
         }
 
+        /* ================= BURGER ================= */
         .boton-menu-movil{
             display:none;
             font-size:30px;
@@ -103,9 +107,6 @@ class HeaderComponent extends HTMLElement {
             user-select:none;
             padding:6px 10px;
             line-height:1;
-
-            position: relative;
-            z-index: 2100;
         }
 
         .boton-menu-movil:hover{
@@ -113,12 +114,14 @@ class HeaderComponent extends HTMLElement {
             border-radius:8px;
         }
 
+        /* ================= MOBILE DROPDOWN ================= */
         @media (max-width: 900px){
 
             .boton-menu-movil{
                 display:block;
             }
 
+            /* menú pasa a dropdown */
             #menu-header{
                 position:absolute;
                 top:100%;
@@ -143,8 +146,6 @@ class HeaderComponent extends HTMLElement {
                 pointer-events:none;
 
                 margin:0;
-
-                z-index: 2100;
             }
 
             #menu-header.active{
@@ -194,11 +195,11 @@ class HeaderComponent extends HTMLElement {
             <div>
 
                 <div id="div-logo">
-                    <a href="./index.html">
+                    <a href="./Index.html">
                         <img id="logo" src="./imagenes/logo.png" alt="Logo">
                     </a>
 
-                    <a href="./index.html">
+                    <a href="./Index.html">
                         <div id="nombre_academia">
                             ACADEMIA <br> LORANCA
                         </div>
@@ -208,9 +209,9 @@ class HeaderComponent extends HTMLElement {
                 <div class="boton-menu-movil" id="menuToggle">☰</div>
 
                 <menu id="menu-header">
-                    <a class="link-encabezado" href="./index.html">Inicio</a>
+                    <a class="link-encabezado" href="./Index.html">Inicio</a>
                     <a class="link-encabezado" href="./grupos.html">Cursos</a>
-                    <a class="link-encabezado" href="./index.html#servicios">Servicios</a>
+                    <a class="link-encabezado" href="./Index.html#servicios">Servicios</a>
                     <a class="link-encabezado" href="#horarios">Horarios</a>
                     <a class="link-encabezado" href="./contactos.html">Contacto</a>
                 </menu>
