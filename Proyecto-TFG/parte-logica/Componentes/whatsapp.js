@@ -234,7 +234,10 @@ class WhatsappComponent extends HTMLElement {
                         sus objetivos.</p>
                     <p>Cuéntanos qué asignatura se le resiste y te informamos sin compromiso. 📚✨</p>
                     <a href="https://wa.me/652081700" target="_blank" class="boton-enviar">
-                        Abrir chat
+                        Información Grupo 1 (Isabel)
+                    </a>
+                    <a href="https://wa.me/665927240" target="_blank" class="boton-enviar">
+                        Información Grupo 2 (Laura)
                     </a>
                 </div>
             </div>
