@@ -222,7 +222,7 @@ class FooterComponent extends HTMLElement {
                 
                 <div class="columnas-footer" id="columna-academia">
                     <div class="logo-footer">
-                        <img src="../imagenes/logo.png" alt="Academia Loranca">
+                        <img src="./imagenes/logo.png" alt="Academia Loranca">
                         <h3>Academia Loranca</h3>
                     </div>
 
