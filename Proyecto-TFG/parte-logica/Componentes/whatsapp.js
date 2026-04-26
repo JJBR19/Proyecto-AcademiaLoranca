@@ -247,7 +247,7 @@ class WhatsappComponent extends HTMLElement {
                     </a>
 
                     <a class="boton-enviar" href="https://wa.me/665927240" target="_blank">
-                         Información 2ºESO - 4ºESO-Bachillerato  (Laura)
+                         Información 2ºESO - 4ºESO - Bachillerato  (Laura)
                     </a>
                 </div>
             </div>
