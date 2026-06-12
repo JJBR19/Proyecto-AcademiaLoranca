@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "proyecto-academialoranca",
+  "compatibility_date": "2026-04-24",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "Proyecto-TFG"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
